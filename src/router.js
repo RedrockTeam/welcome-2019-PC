@@ -5,7 +5,8 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // 开启 history 模式需要后端配合
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
