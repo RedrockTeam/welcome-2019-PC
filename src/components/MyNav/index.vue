@@ -64,6 +64,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   .logo {
     margin-right: 30px;
     width: 141px;

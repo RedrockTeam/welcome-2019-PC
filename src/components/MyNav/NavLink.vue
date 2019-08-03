@@ -1,7 +1,8 @@
 <template>
   <div class="nav-link">
     <slot></slot>
-    <div class="contents">
+    <div class="contents" v-if="contents.length">
+      <div class="filler"></div>
       <div class="content" v-for="(content, index) of contents" :key="index">
         {{ content }}
       </div>
@@ -29,14 +30,14 @@ export default {
   font-size: $navFontSize;
   color: #fff;
   .contents {
-    display: none;
-  }
-}
-
-.nav-link:hover {
-  background: url(../../assets/img/Nav/NavLinkHoverBg.png);
-  color: #2d5eff;
-  .contents {
+    .filler {
+      min-height: 15px;
+      background: #21beff;
+    }
+    transform: translate(0, -13px);
+    transition: max-height .6s ease-out;
+    overflow: hidden;
+    max-height: 0;
     margin-left: 7px;
     border: 2px solid #007fea;
     border-top: none;
@@ -46,14 +47,22 @@ export default {
     background: #21beff;
     .content {
       width: 91px;
-      min-height: 32px;
+      padding: 2px;
       color: #fff;
       line-height: 32px;
-      &:hover {
-        color: #ff99b6;
-        font-size: $navHoverFontSize;
-        background: #007fea;
-      }
+    }
+  }
+}
+
+.nav-link:hover {
+  background: url(../../assets/img/Nav/NavLinkHoverBg.png);
+  color: #2d5eff;
+  .contents {
+    max-height: 1000px;
+    .content:hover {
+      color: #ff99b6;
+      font-size: $navHoverFontSize;
+      background: #007fea;
     }
   }
 }
