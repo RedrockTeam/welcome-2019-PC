@@ -33,7 +33,7 @@ export default {
   .contents {
     .filler-top {
       min-height: 15px;
-      background: #21beff;
+      background: #66b9ff;
     }
     .filler-bottom {
       min-height: 15px;

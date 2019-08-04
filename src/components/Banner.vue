@@ -1,12 +1,8 @@
 <template>
   <div id="banner">
     <img src="../assets/img/Banner/light.png" class="light" v-show="show">
-    <div class="left-drill">
-      <div class="left-light"></div>
-    </div>
-    <div class="right-drill">
-      <div class="right-light"></div>
-    </div>
+    <div class="left-drill"></div>
+    <div class="right-drill"></div>
     <ul class="time_ul">
       <li class="day" ref="day">{{ d }}</li>
       <li class="hour" ref="hour">{{ h }}</li>
@@ -84,8 +80,8 @@ export default {
   background-size: 1440px;
   .light {
     position: absolute;
-    left: 402px;
-    top: 164px;
+    left: 360px;
+    top: 166px;
     animation: showUp 1s, changeColor 2s infinite 1s;
   }
   @keyframes showUp {
