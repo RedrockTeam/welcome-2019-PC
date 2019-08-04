@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 div {
   background: #b0ceff;
 }

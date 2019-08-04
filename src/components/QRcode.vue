@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .qrcode_left {
   width: 220px;
   height: 251px;
