@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <my-header />
+    <QRcode />
     <router-view/>
   </div>
 </template>
 
 <script>
 import MyHeader from '@/components/layout/MyHeader.vue'
+import QRcode from '@/components/QRcode.vue'
 
 export default {
   components: {
     MyHeader,
+    QRcode,
   },
 }
 </script>
