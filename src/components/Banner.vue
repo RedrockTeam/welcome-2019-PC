@@ -1,6 +1,12 @@
 <template>
   <div id="banner">
-    <img src="../assets/img/Banner/light.png" class="light">
+    <img src="../assets/img/Banner/light.png" class="light" v-show="show">
+    <div class="left-drill">
+      <div class="left-light"></div>
+    </div>
+    <div class="right-drill">
+      <div class="right-light"></div>
+    </div>
     <ul class="time_ul">
       <li class="day" ref="day">{{ d }}</li>
       <li class="hour" ref="hour">{{ h }}</li>
@@ -15,6 +21,7 @@ export default {
   name: 'banner',
   data() {
     return {
+      show: false,
       d: '1',
       h: '2',
       m: '3',
@@ -23,15 +30,22 @@ export default {
   },
   mounted() {
     this.countTime()
+    this.showTime()
   },
   destroyed() {
     clearTimeout(this.timer)
+    clearTimeout(this.showTimer)
   },
   methods: {
+    showTime() {
+      this.showTimer = setTimeout(() => {
+        this.show = true
+      }, 3000)
+    },
     countTime() {
       const date = new Date();
       const now = date.getTime();
-      const endDate = new Date('2019-9-10 23:23:23');
+      const endDate = new Date('2019-9-4 23:23:23');
       const end = endDate.getTime();
       const leftTime = end - now;
       if (leftTime >= 0) {
@@ -72,12 +86,51 @@ export default {
     position: absolute;
     left: 402px;
     top: 164px;
-    animation: changeColor 3s infinite;
+    animation: showUp 1s, changeColor 2s infinite 1s;
+  }
+  @keyframes showUp {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   @keyframes changeColor {
-    0% { filter: saturate(50%) }
-    50% { filter: saturate(200%) }
-    100% { filter: saturate(50%) }
+    0% { filter: saturate(50%); }
+    50% { filter: saturate(200%); }
+    100% { filter: saturate(50%); }
+  }
+  .left-drill {
+    width: 227px;
+    height: 127px;
+    position: absolute;
+    top: 134px;
+    left: 142px;
+    transform: rotate(25deg);
+    transform-origin: 126px 127px;
+    background: url(../assets/img/Banner/left-drill.png);
+    animation: left-rotate 2s;
+  }
+  @keyframes left-rotate {
+    from { transform: rotate(-20deg); }
+    to { transform: rotate(25deg); }
+  }
+  .right-drill {
+    width: 230px;
+    height: 101px;
+    overflow: hidden;
+    position: absolute;
+    top: 73px;
+    right: 128px;
+    transform: rotate(-33deg);
+    transform-origin: 80px 100%;
+    background: url(../assets/img/Banner/right-drill.png);
+    animation: right-rotate 2s;
+  }
+  @keyframes right-rotate {
+    from {
+      transform: rotate(20deg);
+    }
+    to {
+      transform: rotate(-33deg);
+    }
   }
   .time_ul {
     list-style: none;

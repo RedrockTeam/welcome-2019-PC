@@ -2,10 +2,11 @@
   <div class="nav-link">
     <slot></slot>
     <div class="contents" v-if="contents.length">
-      <div class="filler"></div>
+      <div class="filler-top"></div>
       <div class="content" v-for="(content, index) of contents" :key="index">
         {{ content }}
       </div>
+      <div class="filler-bottom"></div>
     </div>
   </div>
 </template>
@@ -30,21 +31,25 @@ export default {
   font-size: $navFontSize;
   color: #fff;
   .contents {
-    .filler {
+    .filler-top {
       min-height: 15px;
       background: #21beff;
+    }
+    .filler-bottom {
+      min-height: 15px;
+      background: url(../../assets/img/Nav/NavLink-bottom.png);
     }
     transform: translate(0, -13px);
     transition: max-height .6s ease-out;
     overflow: hidden;
     max-height: 0;
     margin-left: 7px;
-    border: 2px solid #007fea;
+    border: 2px solid #3764e4;
     border-top: none;
     display: flex;
     width: 95px;
     flex-direction: column;
-    background: #21beff;
+    background: #66b9ff;
     .content {
       width: 91px;
       padding: 2px;
@@ -60,9 +65,9 @@ export default {
   .contents {
     max-height: 1000px;
     .content:hover {
-      color: #ff99b6;
+      color: #2d5eff;
       font-size: $navHoverFontSize;
-      background: #007fea;
+      background: #8aedff;
     }
   }
 }
