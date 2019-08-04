@@ -55,6 +55,7 @@ export default {
       padding: 2px;
       color: #fff;
       line-height: 32px;
+      font-size: $navLinkFontSize;
     }
   }
 }
@@ -66,7 +67,7 @@ export default {
     max-height: 1000px;
     .content:hover {
       color: #2d5eff;
-      font-size: $navHoverFontSize;
+      font-size: $navLinkHoverFontSize;
       background: #8aedff;
     }
   }
