@@ -1,19 +1,25 @@
 <template>
-  <div>
-    <Title>hah</Title>
-    <Button>hah</Button>
+  <div class="wrapper">
+    <Map class="map" />
   </div>
 </template>
 
 <script>
-import Title from '@/components/Title.vue'
-import Button from '@/components/Button.vue'
+import Map from '@/components/Map/Map.vue'
 
 export default {
   name: 'home',
   components: {
-    Title,
-    Button,
+    Map,
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  background: #b0ceff;
+  .map {
+    margin: 0 auto;
+  }
+}
+</style>
