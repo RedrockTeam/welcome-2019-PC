@@ -5,7 +5,7 @@
       <div class="header">
         <div class="header-left">
           <input type="text" v-model="searchText" placeholder="请输入搜索地点" />
-          <header-btn>
+          <header-btn @click="onSearch(searchText)">
             <img width="21" height="21" src="../../assets/img/Map/search.png" />
           </header-btn>
           <div class="search-result">{{ searchResult }}</div>
@@ -14,12 +14,12 @@
           <header-btn
             type="button"
             class="small-btn"
-            @zoom="onZoomOut"
+            @click="onZoomOut"
           ><span class="small"></span></header-btn>
           <header-btn
             type="button"
             class="plus-btn"
-            @zoom="onZoomUp"
+            @click="onZoomUp"
           ><span class="plus"></span></header-btn>
         </div>
       </div>
@@ -33,6 +33,7 @@
               class="map-btn"
               v-for="(address, index) in addresses"
               :key="index"
+              @go-place="onGoPlace(address)"
             >{{ address }}</map-btn>
           </div>
         </div>
@@ -56,6 +57,10 @@ import Title from '@/components/Title.vue'
 import MapBtn from './MapBtn.vue'
 import HeaderBtn from './HeaderBtn.vue'
 
+const ZOOMSTEP = 0.6
+const MAXSCALE = 4
+const MINSCALE = 1
+
 export default {
   data() {
     return {
@@ -72,7 +77,7 @@ export default {
         '四教',
       ],
       searchText: '',
-      searchResult: '',
+      result: [],
       scale: 1,
       mapLeft: 0,
       mapTop: 0,
@@ -537,6 +542,13 @@ export default {
     isFocused() {
       return (!this.mapLeft && !this.mapTop)
     },
+    searchResult() {
+      console.log(this.result)
+      if (this.result.length) {
+        return `您要找的是不是${this.result.map(r => r.name).join('，')}`
+      }
+      return ''
+    },
   },
 
   components: {
@@ -545,38 +557,32 @@ export default {
     HeaderBtn,
   },
 
-  mounted() {
-    this.moving = false
-    this.x = 0
-    this.y = 0
-    this.px = 0
-    this.py = 0
-  },
-
   methods: {
     focus() {
       return new Promise((resolve) => {
         const { map } = this.$refs
         map.style.transition = 'top .6s, left .6s'
-        map.addEventListener('transitionend', () => {
+        const cb = () => {
+          map.removeEventListener('transitionend', cb)
           map.style.transition = 'transform .6s'
           resolve()
-        })
+        }
+        map.addEventListener('transitionend', cb)
         this.mapLeft = 0
         this.mapTop = 0
       })
     },
-    async onZoomOut(zoomNum) {
-      if (this.scale >= 1.3) {
+    async onZoomOut() {
+      if (this.scale > MINSCALE) {
         if (!this.isFocused) {
           await this.focus()
         }
-        this.scale -= zoomNum
+        this.scale -= ZOOMSTEP
       }
     },
-    onZoomUp(zoomNum) {
-      if (this.scale <= 4) {
-        this.scale += zoomNum
+    onZoomUp() {
+      if (this.scale < MAXSCALE) {
+        this.scale += 0.6
       }
     },
     move(e) {
@@ -603,11 +609,40 @@ export default {
         document.onmouseup = null
       }
     },
+    zoomToMax() {
+      return new Promise((resolve) => {
+        this.scale = MAXSCALE
+        const { map } = this.$refs
+        const cb = () => {
+          map.removeEventListener('transitionend', cb)
+          resolve()
+        }
+        map.addEventListener('transitionend', cb)
+      })
+    },
+    async onGoPlace(address) {
+      if (this.scale !== MAXSCALE) {
+        await this.zoomToMax()
+      }
+      const [place] = this.list.filter(item => item.name === address)
+      const [left, top] = place.position
+      const { map } = this.$refs
+      map.style.transition = 'all .6s'
+      const cb = () => {
+        map.removeEventListener('transitionend', cb)
+        map.style.transition = 'transform .6s'
+      }
+      map.addEventListener('transitionend', cb)
+      this.mapLeft = left
+      this.mapTop = top
+    },
+    onSearch(text) {
+      this.result = this.list.filter(place => place.name.includes(text))
+    },
   },
 
   watch: {
     scale() {
-      console.log(this.scale)
       this.$refs.map.style.transform = `scale(${this.scale})`
     },
     mapLeft() {
