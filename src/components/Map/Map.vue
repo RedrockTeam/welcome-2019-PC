@@ -658,8 +658,10 @@ export default {
       this.mapTop = top
     },
     onSearch(text) {
-      this.result = this.list.filter(place => place.name.includes(text)).slice(0, 1) // 控制显示几个搜索结果
-      this.searched = true
+      if (text) {
+        this.result = this.list.filter(place => place.name.includes(text)).slice(0, 1) // 控制显示几个搜索结果
+        this.searched = true
+      }
     },
     addFlag(e) {
       this.flags.push({ left: e.offsetX, top: e.offsetY })
