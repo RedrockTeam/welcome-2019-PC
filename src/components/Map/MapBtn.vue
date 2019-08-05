@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div @click="$emit('go-place')">
     <slot></slot>
   </div>
 </template>
 
 <style scoped lang="scss">
   div {
+    /* font-family: 'coolfont'; */
     width: 78px;
     height: 42px;
     text-align: center;
