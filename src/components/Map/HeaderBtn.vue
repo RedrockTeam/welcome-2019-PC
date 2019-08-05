@@ -12,6 +12,7 @@ button {
   text-align: center;
   line-height: 45px;
   color: #fff;
+  cursor: pointer;
   &:hover {
     background: url(../../assets/img/Map/header-btn-hover.png);
   }

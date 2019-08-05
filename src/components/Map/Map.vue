@@ -4,11 +4,27 @@
     <div class="map-border">
       <div class="header">
         <div class="header-left">
-          <input type="text" v-model="searchText" placeholder="请输入搜索地点" />
+          <input
+            type="text"
+            v-model.trim="searchText"
+            placeholder="请输入搜索地点"
+            @keyup.enter="onSearch(searchText)"
+          />
           <header-btn @click="onSearch(searchText)">
             <img width="21" height="21" src="../../assets/img/Map/search.png" />
           </header-btn>
-          <div class="search-result">{{ searchResult }}</div>
+          <div class="search-result" v-show="searched">
+            <span class="result-tips" v-if="result.length">你要找的是不是：</span>
+            <span class="result-tips" v-else>未查询到此地点</span>
+            <span class="result-wrapper">
+              <span
+                class="result-place"
+                v-for="(place, index) of result"
+                :key="index"
+                @click="onGoPlace(place.name)"
+              >{{ place.name }}<span v-if="index < result.length - 1">、</span></span>
+            </span>
+          </div>
         </div>
         <div class="header-right">
           <header-btn
@@ -38,13 +54,19 @@
           </div>
         </div>
         <div class="map">
-          <img
+          <div
             id="map"
             ref="map"
-            src="../../assets/img/Map/map.jpg"
-            alt="地图"
             @mousedown.prevent="move"
-          />
+          >
+            <div
+              class="flag"
+              v-for="(flag, index) of flags"
+              :key="index"
+              :style="{ top: `${flag.top}px`, left: `${flag.left}px` }"
+              @click="removeFlag(flag)"
+            >X</div>
+          </div>
         </div>
         <div class="tips">tips: 点击地图可以添加标记，再次点击删除标记</div>
       </div>
@@ -81,6 +103,8 @@ export default {
       scale: 1,
       mapLeft: 0,
       mapTop: 0,
+      searched: false,
+      flags: [],
       list: [
         {
           name: '外国语学院',
@@ -542,13 +566,6 @@ export default {
     isFocused() {
       return (!this.mapLeft && !this.mapTop)
     },
-    searchResult() {
-      console.log(this.result)
-      if (this.result.length) {
-        return `您要找的是不是${this.result.map(r => r.name).join('，')}`
-      }
-      return ''
-    },
   },
 
   components: {
@@ -561,7 +578,7 @@ export default {
     focus() {
       return new Promise((resolve) => {
         const { map } = this.$refs
-        map.style.transition = 'top .6s, left .6s'
+        map.style.transition = 'top .1s, left .1s'
         const cb = () => {
           map.removeEventListener('transitionend', cb)
           map.style.transition = 'transform .6s'
@@ -590,10 +607,12 @@ export default {
       // 算出鼠标相对元素的位置
       const disX = e.clientX - map.offsetLeft
       const disY = e.clientY - map.offsetTop
+      let top
+      let left
       document.onmousemove = (ev) => { // 鼠标按下并移动的事件
         // 用鼠标的位置减去鼠标相对元素的位置，得到元素的位置
-        const left = ev.clientX - disX
-        const top = ev.clientY - disY
+        left = ev.clientX - disX
+        top = ev.clientY - disY
         // 移动当前元素
         const leftMovableDis = (this.scale - 1) * 646 / 2
         const topMovableDis = (this.scale - 1) * 381 / 2
@@ -605,6 +624,8 @@ export default {
         }
       }
       document.onmouseup = () => {
+        // 这里触发 addFlag，区分 click 和 mouseup
+        if (e.target === map && !left && !top) this.addFlag(e)
         document.onmousemove = null
         document.onmouseup = null
       }
@@ -637,12 +658,20 @@ export default {
       this.mapTop = top
     },
     onSearch(text) {
-      this.result = this.list.filter(place => place.name.includes(text))
+      this.result = this.list.filter(place => place.name.includes(text)).slice(0, 1) // 控制显示几个搜索结果
+      this.searched = true
+    },
+    addFlag(e) {
+      this.flags.push({ left: e.offsetX, top: e.offsetY })
+    },
+    removeFlag(flag) {
+      this.flags = this.flags.filter(f => f !== flag)
     },
   },
 
   watch: {
     scale() {
+      console.log(this.scale)
       this.$refs.map.style.transform = `scale(${this.scale})`
     },
     mapLeft() {
@@ -650,6 +679,11 @@ export default {
     },
     mapTop() {
       this.$refs.map.style.top = `${this.mapTop}px`
+    },
+    searchText() {
+      if (!this.searchText) {
+        this.searched = false
+      }
     },
   },
 }
@@ -674,7 +708,7 @@ export default {
         justify-content: space-around;
         align-items: center;
         input {
-          margin-left: 74px;
+          margin: 0 20px 0 74px;
           width: 238px;
           height: 39px;
           border: 2px solid #33b0ff;
@@ -692,6 +726,18 @@ export default {
           margin-left: 20px;
           font-family: 'MicrosoftYaHei', Arial, Helvetica, sans-serif;
           color: #11318d;
+          display: flex;
+          flex-direction: column;
+          .result-tips {
+            color: #c23960;
+          }
+          .result-wrapper {
+            width: 274px;
+            height: 20px;
+            .result-place {
+              cursor: pointer;
+            }
+          }
         }
       }
       .header-right {
@@ -769,6 +815,8 @@ export default {
         left: -243px;
         overflow: hidden;
         #map {
+          background-image: url(../../assets/img/Map/map.jpg);
+          background-size: 654px 389px;
           width: 100%;
           height: 100%;
           transition: transform .6s;
@@ -776,7 +824,13 @@ export default {
           position: absolute;
           top: 0;
           left: 0;
-          cursor: move,
+          cursor: pointer;
+          .flag {
+            display: inline-block;
+            color: red;
+            position: absolute;
+            transform: translate(-50%, -50%);
+          }
         }
       }
       .tips {
