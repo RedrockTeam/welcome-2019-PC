@@ -14,15 +14,13 @@
             <img width="21" height="21" src="../../assets/img/Map/search.png" />
           </header-btn>
           <div class="search-result" v-show="searched">
-            <span class="result-tips" v-if="result.length">你要找的是不是：</span>
+            <span class="result-tips" v-if="result">你要找的是不是：</span>
             <span class="result-tips" v-else>未查询到此地点</span>
             <span class="result-wrapper">
               <span
                 class="result-place"
-                v-for="(place, index) of result"
-                :key="index"
-                @click="onGoPlace(place.name)"
-              >{{ place.name }}<span v-if="index < result.length - 1">、</span></span>
+                @click="onGoPlace(result)"
+              >{{ result }}</span>
             </span>
           </div>
         </div>
@@ -99,7 +97,7 @@ export default {
         '四教',
       ],
       searchText: '',
-      result: [],
+      result: '',
       scale: 1,
       mapLeft: 0,
       mapTop: 0,
@@ -659,12 +657,15 @@ export default {
     },
     onSearch(text) {
       if (text) {
-        this.result = this.list.filter(place => place.name.includes(text)).slice(0, 1) // 控制显示几个搜索结果
+        this.result = this.list.filter(place => place.name.includes(text))[0].name // 控制显示几个搜索结果
         this.searched = true
+        if (this.result === text) {
+          this.onGoPlace(text)
+        }
       }
     },
     addFlag(e) {
-      this.flags.push({ left: e.offsetX, top: e.offsetY })
+      this.flags.push({ left: e.offsetX || e.layerX, top: e.offsetY || e.layerY })
     },
     removeFlag(flag) {
       this.flags = this.flags.filter(f => f !== flag)
