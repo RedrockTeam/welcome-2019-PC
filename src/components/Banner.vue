@@ -28,7 +28,7 @@ export default {
     this.countTime()
     this.showTime()
   },
-  destroyed() {
+  beforeDestroy() {
     clearTimeout(this.timer)
     clearTimeout(this.showTimer)
   },
