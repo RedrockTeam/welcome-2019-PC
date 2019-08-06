@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <my-header />
-    <!-- <QRcode /> -->
+    <QRcode />
     <Track />
     <router-view/>
     <my-footer />
@@ -10,14 +10,14 @@
 
 <script>
 import MyHeader from '@/components/layout/MyHeader.vue'
-// import QRcode from '@/components/QRcode.vue'
+import QRcode from '@/components/QRcode.vue'
 import MyFooter from '@/components/layout/MyFooter.vue'
 import Track from '@/components/layout/Track.vue'
 
 export default {
   components: {
     MyHeader,
-    // QRcode,
+    QRcode,
     MyFooter,
     Track,
   },

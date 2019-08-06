@@ -48,7 +48,7 @@ export default {
 #youzigonglue {
     margin:  0 auto;
     .title {
-      margin: 69px auto 12px;
+      margin: 0 auto 12px;
     }
 }
 .bg1 {
@@ -106,6 +106,4 @@ ul {
         color: white;
     }
 }
-
-
 </style>
