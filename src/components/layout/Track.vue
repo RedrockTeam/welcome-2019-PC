@@ -19,7 +19,7 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
-    top: 322px;
+    top: 310px;
     z-index: 0;
 }
 .left {

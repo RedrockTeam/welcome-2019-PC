@@ -696,7 +696,7 @@ export default {
   width: 1166px;
   height: 745px;
   padding-top: 60px;
-  margin: 0 auto 81px;
+  margin: 0 auto 69px;
   .map-border {
     margin: 20px auto 0;
     width: 1166px;
