@@ -1,15 +1,16 @@
 <template>
-    <transition
-        enter-active-class="animated bounceInUp"
-        leave-active-class="animated bounceOutUp faster">
-        <div class="go-top"
-            @click="goTop"
-            v-show="show"
-        >
-            <div class="rocket"></div>
-            <div class="fire"></div>
-        </div>
-    </transition>
+  <transition
+    enter-active-class="animated bounceInUp"
+    leave-active-class="animated bounceOutUp faster"
+  >
+    <div class="go-top"
+      @click="goTop"
+      v-show="show"
+    >
+      <div class="rocket"></div>
+      <div class="fire"></div>
+    </div>
+  </transition>
 </template>
 
 <script>

@@ -18,7 +18,7 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
-  destroyed() {
+  beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
@@ -27,6 +27,7 @@ export default {
         || document.documentElement.scrollTop
         || document.body.scrollTop
       const { offsetTop } = this.$refs.all
+      console.dir(this.$refs.all)
       if (scrollTop > offsetTop) {
         this.searchBarFixed = true
       } else {
@@ -56,7 +57,6 @@ export default {
   width: 220px;
   height: 251px;
   background-image: url(../assets/img/QRcode/qrcodeRight.png);
-
 }
 .qrcode {
   position: absolute;
@@ -69,6 +69,4 @@ export default {
   top: 5px;
   z-index: 4;
 }
-
-
 </style>

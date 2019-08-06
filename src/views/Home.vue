@@ -8,6 +8,8 @@
     <about-us />
     <!-- rocket -->
     <Rocket />
+    <!-- QRcode -->
+    <!-- <QRcode /> -->
     <!-- pipline -->
     <div class="map-pipline"></div>
     <div class="map-raider-pipline-right"></div><div class="map-raider-pipline-left"></div>
@@ -27,6 +29,7 @@ import MilitarySpecial from '@/components/MilitarySpecial.vue'
 import WelcomeEvent from '@/components/WelcomeEvent.vue'
 import AboutUs from '@/components/AboutUs.vue'
 import Rocket from '@/components/Rocket.vue'
+// import QRcode from '@/components/QRcode.vue'
 
 export default {
   name: 'home',
@@ -38,6 +41,7 @@ export default {
     WelcomeEvent,
     AboutUs,
     Rocket,
+    // QRcode,
   },
 };
 </script>
