@@ -1,5 +1,8 @@
 <template>
-  <div :class="searchBarFixed == true ? 'fixed' : 'qrcode'"  ref="all">
+  <div
+    :class="{ qrcode: true, animate: animated }"
+    ref="code"
+  >
     <div class="qrcode_left">
     </div>
     <div class="qrcode_right">
@@ -9,29 +12,21 @@
 
 <script>
 export default {
-  name: 'QRcode',
   data() {
     return {
-      searchBarFixed: false,
+      animated: false,
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
   methods: {
     handleScroll() {
-      const scrollTop = window.pageYOffset
-        || document.documentElement.scrollTop
-        || document.body.scrollTop
-      const { offsetTop } = this.$refs.all
-      if (scrollTop > offsetTop) {
-        console.log(offsetTop)
-        this.searchBarFixed = true
-      } else {
-        this.searchBarFixed = false
+      const { code } = this.$refs
+      if (code.getBoundingClientRect().top === 100 && !this.animated) {
+        this.animated = true
+      } else if (code.getBoundingClientRect().top > 100 && this.animated) {
+        this.animated = false
       }
     },
   },
@@ -53,14 +48,26 @@ export default {
   background-image: url(../assets/img/QRcode/qrcodeRight.png);
 }
 .qrcode {
-  position: absolute;
-  top: -400px;
+  position: sticky;
+  top: 100px;
   z-index: 2;
   transition: 1s;
+  float: left;
+  margin-top: -400px;
+  transition: 1s;
 }
-.fixed {
-  position: fixed;
-  top: 5px;
-  z-index: 2;
+.animate {
+  animation: shake .8s;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+  40% {
+    transform: translate(0, -30px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 </style>
