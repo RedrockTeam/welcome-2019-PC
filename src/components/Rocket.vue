@@ -1,118 +1,103 @@
 <template>
-<div class="totop">
-    <div id="rocket"  @click="toTop()" ref="show" :class="{flash : flag}">
-        <div class="rocket">
+    <transition
+        enter-active-class="animated bounceInUp"
+        leave-active-class="animated bounceOutUp faster">
+        <div class="go-top"
+            @click="goTop"
+            v-show="show"
+        >
+            <div class="rocket"></div>
+            <div class="fire"></div>
         </div>
-        <div class="fire">
-        </div>
-    </div>
-</div>
+    </transition>
 </template>
-
 
 <script>
 export default {
-  name: 'rocket',
   data() {
     return {
-      flag: false,
+      timer: null,
+      speed: 50, // 数值越小越快
+      show: false,
+      showHeight: 300, // 显示的高度,
     }
   },
   methods: {
-    toTop() {
-      const timer = setInterval(() => {
-        const speed = Math.floor(document.documentElement.scrollTop / 10)
-        document.documentElement.scrollTop -= speed
-        if (document.documentElement.scrollTop < 100) {
-          clearInterval(timer)
-        }
-      }, 20)
-    },
-    show() {
-      if (document.documentElement.scrollTop < 1500) {
-        this.$refs.show.style.display = 'none'
+    goTop() {
+      // 兼容了部分浏览器
+      if (!document.body.scrollTop) {
+        const length = document.documentElement.scrollTop / this.speed
+        this.timer = setInterval(() => {
+          if (!document.documentElement.scrollTop <= 0) {
+            document.documentElement.scrollTop -= length
+          } else {
+            clearInterval(this.timer)
+          }
+        })
       } else {
-        this.$refs.show.style.display = 'inline'
+        const length = document.body.scrollTop / this.speed
+        this.timer = setInterval(() => {
+          if (!document.body.scrollTop <= 0) {
+            document.body.scrollTop -= length
+          } else {
+            clearInterval(this.timer)
+          }
+        })
       }
     },
-    fly() {
-      setTimeout(this.toTop, 1000)
+    isShow() {
+      if (!document.body.scrollTop) {
+        this.show = document.documentElement.scrollTop > this.showHeight
+      } else {
+        this.show = document.body.scrollTop > this.showHeight
+      }
     },
   },
-  mounted() {
-    window.addEventListener('scroll', this.show)
+  created() {
+    document.addEventListener('scroll', this.isShow)
   },
-
+  beforeDestroy() {
+    document.removeEventListener('scroll', this.isShow)
+  },
 }
 </script>
 
-
-<style lang="scss">
-.totop {
-    position: fixed;
-    z-index: 1;
-    width: 1440px;
-    height: 300px;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
+<style lang="scss" scoped>
+@import '@/assets/style/animation.scss';
+@keyframes fire {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.go-top {
+  width: 150px;
+  height: 220px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 230px;
+  right: 0;
+  z-index: 8;
+  &:hover {
+    .fire {
+      animation: fire 0.3s infinite;
+    }
+  }
 }
 .rocket {
-    width: 103px;
-    height: 166px;
-    background: url("../assets/img/Rocket/rocket.png");
-    margin-bottom: -8px;
-
-
+  width: 103px;
+  height: 166px;
+  background: url("../assets/img/Rocket/rocket.png");
+  margin-bottom: -8px;
 }
 .fire {
-    width: 103px;
-    height: 97px;
-    background: url("../assets/img/Rocket/fire.png");
-
+  width: 103px;
+  height: 97px;
+  background: url("../assets/img/Rocket/fire.png");
 }
-#rocket {
-    cursor: pointer;
-    position: absolute;;
-    bottom: 70px;
-    width: 103px;
-    height: 170px;
-    z-index: 2;
-    right: 50px;
-}
-#rocket:hover {
-    .fire {
-        animation: fireMove 1S infinite;
-    }
-}
-.flash {
-    animation: fly 0.5S ;
-}
-
-@keyframes fireMove {
-    0% {
-        position: relative;
-        bottom: 0px;
-    }
-    50% {
-        position: relative;
-        bottom: -10px
-    }
-    100% {
-        position: relative;
-        bottom: 0px
-    }
-}
-@keyframes fly {
-    form {
-        bottom : 70px
-    }
-    to {
-        bottom : 1070px;
-    }
-}
-
-
 </style>

@@ -6,6 +6,8 @@
     <military-special />
     <welcome-event />
     <about-us />
+    <!-- rocket -->
+    <Rocket />
     <!-- pipline -->
     <div class="map-pipline"></div>
     <div class="map-raider-pipline-right"></div><div class="map-raider-pipline-left"></div>
@@ -24,6 +26,7 @@ import CyStyle from '@/components/CyStyle.vue'
 import MilitarySpecial from '@/components/MilitarySpecial.vue'
 import WelcomeEvent from '@/components/WelcomeEvent.vue'
 import AboutUs from '@/components/AboutUs.vue'
+import Rocket from '@/components/Rocket.vue'
 
 export default {
   name: 'home',
@@ -34,6 +37,7 @@ export default {
     MilitarySpecial,
     WelcomeEvent,
     AboutUs,
+    Rocket,
   },
 };
 </script>
