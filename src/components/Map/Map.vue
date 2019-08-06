@@ -694,8 +694,11 @@ export default {
 <style scoped lang="scss">
 .wrapper {
   width: 1166px;
-  height: 551px;
+  height: 745px;
+  padding-top: 60px;
+  margin: 0 auto 81px;
   .map-border {
+    margin-top: 20px;
     width: 1166px;
     height: 551px;
     background: url(../../assets/img/Map/border.png);
