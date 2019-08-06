@@ -1,5 +1,8 @@
 <template>
   <div class="wrapper">
+    <!-- QRcode -->
+    <QRcode />
+    <!-- content -->
     <Map />
     <student-raider />
     <cy-style />
@@ -8,8 +11,6 @@
     <about-us />
     <!-- rocket -->
     <Rocket />
-    <!-- QRcode -->
-    <QRcode />
     <!-- pipline -->
     <div class="map-pipline"></div>
     <div class="map-raider-pipline-right"></div><div class="map-raider-pipline-left"></div>
