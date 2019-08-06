@@ -5,7 +5,8 @@
   >
     <div class="go-top"
       @click="goTop"
-      v-show="show"
+      v-show="isShow"
+      :class="{ adjust: needAdjust }"
     >
       <div class="rocket"></div>
       <div class="fire"></div>
@@ -19,46 +20,40 @@ export default {
     return {
       timer: null,
       speed: 50, // 数值越小越快
-      show: false,
+      isShow: false,
       showHeight: 300, // 显示的高度,
+      needAdjust: false,
+      platformHeight: 4265,
     }
   },
   methods: {
     goTop() {
-      // 兼容了部分浏览器
-      if (!document.body.scrollTop) {
-        const length = document.documentElement.scrollTop / this.speed
-        this.timer = setInterval(() => {
-          if (!document.documentElement.scrollTop <= 0) {
-            document.documentElement.scrollTop -= length
-          } else {
-            clearInterval(this.timer)
-          }
-        })
-      } else {
-        const length = document.body.scrollTop / this.speed
-        this.timer = setInterval(() => {
-          if (!document.body.scrollTop <= 0) {
-            document.body.scrollTop -= length
-          } else {
-            clearInterval(this.timer)
-          }
-        })
-      }
+      const body = document.documentElement.scrollTop ? document.documentElement : document.body
+      const length = body.scrollTop / this.speed
+      this.timer = setInterval(() => {
+        if (!body.scrollTop <= 0) {
+          body.scrollTop -= length
+        } else {
+          clearInterval(this.timer)
+        }
+      })
     },
-    isShow() {
-      if (!document.body.scrollTop) {
-        this.show = document.documentElement.scrollTop > this.showHeight
-      } else {
-        this.show = document.body.scrollTop > this.showHeight
-      }
+    showUp() {
+      this.isShow = (document.documentElement.scrollTop || document.body.scrollTop)
+        > this.showHeight
+    },
+    adjust() {
+      this.needAdjust = (document.documentElement.scrollTop || document.body.scrollTop)
+        > this.platformHeight
     },
   },
-  created() {
-    document.addEventListener('scroll', this.isShow)
+  mounted() {
+    document.addEventListener('scroll', this.showUp)
+    document.addEventListener('scroll', this.adjust)
   },
   beforeDestroy() {
-    document.removeEventListener('scroll', this.isShow)
+    document.removeEventListener('scroll', this.showUp)
+    document.removeEventListener('scroll', this.adjust)
   },
 }
 </script>
@@ -81,7 +76,7 @@ export default {
   height: 220px;
   cursor: pointer;
   position: fixed;
-  bottom: 230px;
+  bottom: 60px;
   margin-left: 1290px;
   z-index: 8;
   &:hover {
@@ -100,5 +95,9 @@ export default {
   width: 103px;
   height: 97px;
   background: url("../assets/img/Rocket/fire.png");
+}
+.adjust {
+  position: absolute;
+  bottom: -50px;
 }
 </style>
