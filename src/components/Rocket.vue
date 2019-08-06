@@ -82,7 +82,7 @@ export default {
   cursor: pointer;
   position: fixed;
   bottom: 230px;
-  right: 0;
+  margin-left: 1290px;
   z-index: 8;
   &:hover {
     .fire {

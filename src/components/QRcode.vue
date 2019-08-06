@@ -27,8 +27,8 @@ export default {
         || document.documentElement.scrollTop
         || document.body.scrollTop
       const { offsetTop } = this.$refs.all
-      console.dir(this.$refs.all)
       if (scrollTop > offsetTop) {
+        console.log(offsetTop)
         this.searchBarFixed = true
       } else {
         this.searchBarFixed = false
@@ -40,33 +40,27 @@ export default {
 
 <style lang="scss" scoped>
 .qrcode_left {
-  position: absolute;
-  top: 100px;
-  float: left;
   width: 220px;
   height: 251px;
   background-image: url(../assets/img/QRcode/qrcodeLeft.png);
 }
 .qrcode_right {
-  float: left;
-  margin: 0 auto;
-  position: relative;
-  top: 100px;
+  position: absolute;
   left: 1220px;
-  right: 500px;
+  top: 0;
   width: 220px;
   height: 251px;
   background-image: url(../assets/img/QRcode/qrcodeRight.png);
 }
 .qrcode {
   position: absolute;
-  top: 200px;
+  top: -400px;
   z-index: 2;
   transition: 1s;
 }
 .fixed {
   position: fixed;
   top: 5px;
-  z-index: 4;
+  z-index: 2;
 }
 </style>
