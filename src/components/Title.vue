@@ -1,5 +1,5 @@
 <template>
-  <div id="title">
+  <div>
     <slot></slot>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#title {
+div {
   margin: 0 auto;
   text-align: center;
   line-height: 100px;
