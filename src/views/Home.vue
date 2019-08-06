@@ -40,10 +40,12 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  background: #b0ceff;
+  width: 1440px;
+  margin: 0 auto;
+  position: relative;
   .map-pipline {
     position: absolute;
-    top: 529px;
+    top: -166px;
     right: 118px;
     float: right;
     width: 69px;
@@ -53,7 +55,7 @@ export default {
   .map-raider-pipline-right {
     float: right;
     position: absolute;
-    top: 1439px;
+    top: 745px;
     right: 288px;
     background-image: url(../assets/img/Connect/img6.png);
     width: 79px;
@@ -62,7 +64,7 @@ export default {
   .map-raider-pipline-left {
     float: left;
     position: absolute;
-    top: 1439px;
+    top: 745px;
     left: 310px;
     background-image: url(../assets/img/Connect/img7.png);
     width: 95px;
@@ -70,7 +72,7 @@ export default {
   }
   .raider-style-pipline {
     position: absolute;
-    top: 1917px;
+    top: 1223px;
     left: 98px;
     background-image: url(../assets/img/Connect/img1.png);
     width: 89px;
@@ -79,7 +81,7 @@ export default {
   .style-special-pipline-right {
     position: absolute;
     float: right;
-    top: 2534px;
+    top: 1840px;
     right: 118px;
     background-image: url(../assets/img/Connect/img2.png);
     width: 69px;
@@ -88,7 +90,7 @@ export default {
   .style-special-pipline-left {
     margin: 0 auto;
     position: absolute;
-    top: 2750px;
+    top: 2055px;
     left: 319px;
     background-image: url(../assets/img/Connect/img3.png);
     width: 79px;
@@ -97,7 +99,7 @@ export default {
   .special-event-pipline {
     float: right;
     position: absolute;
-    top: 3387px;
+    top: 2692px;
     right: 288px;
     background-image: url(../assets/img/Connect/img4.png);
     width: 79px;
@@ -106,7 +108,7 @@ export default {
   .event-pipline {
     float: right;
     position: absolute;
-    top: 4104px;
+    top: 3409px;
     right: 288px;
     background-image: url(../assets/img/Connect/img4.png);
     width: 79px;

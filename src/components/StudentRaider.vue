@@ -48,8 +48,7 @@ export default {
 #youzigonglue {
     margin:  0 auto;
     .title {
-      position: relative;
-      top: -20px;
+      margin: 69px auto 12px;
     }
 }
 .bg1 {
@@ -58,7 +57,7 @@ export default {
     background-image: url(../assets/img/Youzigonglue/yzglBG.png);
     position: relative;
     margin: 0 auto;
-    left: 24px;
+    left: 25px;
 }
 ul {
     list-style: none;
