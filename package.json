@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "scss": "^0.2.4",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
@@ -27,7 +28,6 @@
     "webpack": "^4.39.1"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,vue}": [

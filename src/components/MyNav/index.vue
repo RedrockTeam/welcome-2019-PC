@@ -61,10 +61,12 @@ nav {
   background: url(../../assets/img/Nav/NavBg.png);
   font-size: 0;
   padding: 0 220px;
+  margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  right: 0;
+  z-index: 4;
   .logo {
     margin-right: 30px;
     width: 141px;
