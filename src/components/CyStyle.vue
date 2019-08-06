@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .title {
-  margin: 63px auto 20px;
+  margin: 63px auto 19px;
 }
 .bg {
     position: relative;

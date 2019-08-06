@@ -2,6 +2,7 @@
   <div id="app">
     <my-header />
     <!-- <QRcode /> -->
+    <Track />
     <router-view/>
     <my-footer />
   </div>
@@ -11,12 +12,14 @@
 import MyHeader from '@/components/layout/MyHeader.vue'
 // import QRcode from '@/components/QRcode.vue'
 import MyFooter from '@/components/layout/MyFooter.vue'
+import Track from '@/components/layout/Track.vue'
 
 export default {
   components: {
     MyHeader,
     // QRcode,
     MyFooter,
+    Track,
   },
 }
 </script>
@@ -31,6 +34,7 @@ export default {
   font-family: 'coolfont';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #b0ceff;
 }
 
 * {

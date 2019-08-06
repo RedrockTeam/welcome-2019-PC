@@ -1,9 +1,11 @@
 <template>
   <nav>
-    <img class="logo" src="../../assets/img/Nav/logo.png" />
-    <nav-link v-for="(data, index) of navLinkData" :key="index" :contents="data.contents">
-      {{ data.title }}
-    </nav-link>
+    <div class="wrapper">
+      <img class="logo" src="../../assets/img/Nav/logo.png" />
+      <nav-link v-for="(data, index) of navLinkData" :key="index" :contents="data.contents">
+        {{ data.title }}
+      </nav-link>
+    </div>
   </nav>
 </template>
 
@@ -54,24 +56,27 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  display: flex;
-  justify-content: space-between;
-  width: 1440px;
+  width: 100%;
   height: 63px;
-  background: url(../../assets/img/Nav/NavBg.png);
+  background-image: url(../../assets/img/Nav/NavBg.png);
   font-size: 0;
-  padding: 0 220px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
   z-index: 1;
-  .logo {
-    margin-right: 30px;
-    width: 141px;
-    height: 48px;
-    align-self: center;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1000px;
+    .logo {
+      margin-right: 30px;
+      width: 141px;
+      height: 48px;
+      align-self: center;
+    }
   }
 }
 </style>

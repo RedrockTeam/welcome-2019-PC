@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="m-wrapper">
     <Title>重邮地图</Title>
     <div class="map-border">
       <div class="header">
@@ -692,13 +692,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.wrapper {
+.m-wrapper {
   width: 1166px;
   height: 745px;
   padding-top: 60px;
   margin: 0 auto 81px;
   .map-border {
-    margin-top: 20px;
+    margin: 20px auto 0;
     width: 1166px;
     height: 551px;
     background: url(../../assets/img/Map/border.png);
