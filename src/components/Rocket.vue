@@ -76,7 +76,7 @@ export default {
   height: 220px;
   cursor: pointer;
   position: fixed;
-  bottom: 60px;
+  top: 400px;
   margin-left: 1290px;
   z-index: 8;
   &:hover {
@@ -98,6 +98,6 @@ export default {
 }
 .adjust {
   position: absolute;
-  bottom: -50px;
+  top: 3972px;
 }
 </style>
