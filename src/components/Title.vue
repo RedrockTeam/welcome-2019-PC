@@ -43,6 +43,7 @@ export default {
 }
 .right-fire {
   right: 61px;
+  animation-delay: .3s;
 }
 .left-fire {
   left: 61px;

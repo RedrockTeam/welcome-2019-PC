@@ -2,6 +2,7 @@
     <div id="junxunteji">
         <title1 class="title" :isFire="isFire">军训特辑</title1>
         <div class="bg" ref="bg">
+          <btn-animation class="btn-animation" />
             <ul>
                 <li>
                     <img class="img" src="../assets/img/Junxunteji/img1.png">
@@ -34,6 +35,7 @@
 import Title from '@/components/Title.vue'
 import Button from '@/components/Button.vue'
 import ContentBg from '@/components/ContentBg.vue'
+import BtnAnimation from '@/components/BtnAnimation.vue'
 
 export default {
   name: 'junxunteji',
@@ -41,6 +43,7 @@ export default {
     title1: Title,
     button1: Button,
     ContentBg,
+    BtnAnimation,
   },
   data() {
     return {
@@ -68,6 +71,11 @@ export default {
     width: 1116px;
     height: 440px;
     background: url("../assets/img/Junxunteji/jxtjBG.png");
+    .btn-animation {
+      position: absolute;
+      top: 49px;
+      left: 275px;
+    }
 }
 ul {
     position: absolute;

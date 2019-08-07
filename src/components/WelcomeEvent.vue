@@ -57,7 +57,7 @@ export default {
     position: relative;
     left: 42px;
     margin: 0 auto;
-    background: url("../assets/img/Yingxinhuodong/yxhdBG.png");
+    background: url(../assets/img/Yingxinhuodong/bg.png);
     .left-content {
         position: absolute;
         right: 140px;
