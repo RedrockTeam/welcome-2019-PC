@@ -1,7 +1,7 @@
 <template>
     <div id="junxunteji">
-        <title1 class="title">军训特辑</title1>
-        <div class="bg">
+        <title1 class="title" :isFire="isFire">军训特辑</title1>
+        <div class="bg" ref="bg">
             <ul>
                 <li>
                     <img class="img" src="../assets/img/Junxunteji/img1.png">
@@ -25,6 +25,7 @@
                 </li>
             </ul>
         </div>
+        <content-bg :isFire="isFire" @on-fire="fire()" />
     </div>
 </template>
 
@@ -32,12 +33,24 @@
 <script>
 import Title from '@/components/Title.vue'
 import Button from '@/components/Button.vue'
+import ContentBg from '@/components/ContentBg.vue'
 
 export default {
   name: 'junxunteji',
   components: {
     title1: Title,
     button1: Button,
+    ContentBg,
+  },
+  data() {
+    return {
+      isFire: false,
+    }
+  },
+  methods: {
+    fire() {
+      this.isFire = !this.isFire
+    },
   },
 }
 </script>

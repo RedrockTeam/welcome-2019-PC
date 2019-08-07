@@ -1,7 +1,7 @@
 <template>
     <div id="yingxinhuodong">
-        <title1 class="title">迎新活动</title1>
-        <div class="bg">
+        <title1 class="title" :isFire="isFire">迎新活动</title1>
+        <div class="bg" ref="bg">
             <div class="left-content">
                 <p class="content">
                     萌新你好，欢迎来鲜肉集中营报道！听说这里有好多萌新的照片，快来为你的班级注入萌新能量，美好的大学生活从认识新同学开始~
@@ -15,6 +15,7 @@
                 <button1 class="button">了解更多</button1>
             </div>
         </div>
+        <content-bg :isFire="isFire" @on-fire="fire()" />
     </div>
 </template>
 
@@ -22,12 +23,24 @@
 <script>
 import Title from '@/components/Title.vue'
 import Button from '@/components/Button.vue'
+import ContentBg from '@/components/ContentBg.vue'
 
 export default {
   name: 'yingxinhuodong',
   components: {
     title1: Title,
     button1: Button,
+    ContentBg,
+  },
+  data() {
+    return {
+      isFire: false,
+    }
+  },
+  methods: {
+    fire() {
+      this.isFire = !this.isFire
+    },
   },
 }
 </script>

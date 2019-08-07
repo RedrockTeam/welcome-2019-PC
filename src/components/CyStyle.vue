@@ -1,7 +1,7 @@
 <template>
     <div id="chongyoufengcai">
-        <title1 class="title">重邮风采</title1>
-        <div class="bg">
+        <title1 class="title" :isFire="isFire">重邮风采</title1>
+        <div class="bg" ref="bg">
             <ul>
                 <img class="img" src="../assets/img/Chongyoufengcai/img2.png">
                 <p>丰富多彩的组织生活是大学中绚丽的一抹色彩，不用犹豫不决，挑花眼，这里为你解开谜团！</p>
@@ -13,6 +13,7 @@
                 <button1 class="button">优秀代表</button1>
             </ul>
         </div>
+        <content-bg :isFire="isFire" @on-fire="fire()" />
     </div>
 </template>
 
@@ -20,12 +21,23 @@
 <script>
 import Title from '@/components/Title.vue'
 import Button from '@/components/Button.vue'
+import ContentBg from '@/components/ContentBg.vue'
 
 export default {
-  name: 'chongyoufengcai',
   components: {
     title1: Title,
     button1: Button,
+    ContentBg,
+  },
+  data() {
+    return {
+      isFire: false,
+    }
+  },
+  methods: {
+    fire() {
+      this.isFire = !this.isFire
+    },
   },
 }
 </script>
@@ -75,5 +87,4 @@ export default {
 
     }
 }
-
 </style>
