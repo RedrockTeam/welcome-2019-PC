@@ -45,6 +45,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '@/assets/style/variable.scss';
+
 #youzigonglue {
     margin:  0 auto;
     .title {
@@ -70,7 +72,6 @@ ul {
         .btn {
             position: absolute;
             top: 10px;
-            margin-top: 10px;
             margin-left: 25px;
         }
     }
@@ -99,11 +100,12 @@ ul {
 
     }
     p {
-        height: 20px;
+        height: 40px;
         width: 181px;
-        font-size: 12px;
+        font-size: $contentFontSize;
         font-family: "宋体";
         color: white;
+        margin: 10px 0 0;
     }
 }
 </style>
