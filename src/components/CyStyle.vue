@@ -32,6 +32,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '@/assets/style/variable.scss';
+
 .title {
   margin: 63px auto 19px;
 }
@@ -54,7 +56,7 @@ export default {
             height: 40px;
             overflow: hidden;
             margin-top: 20px;
-            font-size: 12px;
+            font-size: $contentFontSize;
             width: 346px;
             font-family: "宋体";
             color: white;

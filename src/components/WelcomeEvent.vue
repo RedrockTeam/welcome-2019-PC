@@ -2,17 +2,17 @@
     <div id="yingxinhuodong">
         <title1 class="title">迎新活动</title1>
         <div class="bg">
-            <div class="content">
-                <p class="left">
+            <div class="left-content">
+                <p class="content">
                     萌新你好，欢迎来鲜肉集中营报道！听说这里有好多萌新的照片，快来为你的班级注入萌新能量，美好的大学生活从认识新同学开始~
                 </p>
-                <button1 class="buttonL">了解更多</button1>
+                <button1 class="button">了解更多</button1>
             </div>
-            <div class="content">
-                <p class="right">
+            <div class="right-content">
+                <p class="content">
                     萌新你好，欢迎来鲜肉集中营报道！听说这里有好多萌新的照片，快来为你的班级注入萌新能量，美好的大学生活从认识新同学开始~
                 </p>
-                <button1 class="buttonR">了解更多</button1>
+                <button1 class="button">了解更多</button1>
             </div>
         </div>
     </div>
@@ -32,8 +32,9 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
+@import '@/assets/style/variable.scss';
+
 .title {
   margin: 70px auto 12px;
 }
@@ -44,40 +45,26 @@ export default {
     left: 42px;
     margin: 0 auto;
     background: url("../assets/img/Yingxinhuodong/yxhdBG.png");
-    .content {
-        position: relative;
+    .left-content {
+        position: absolute;
         right: 140px;
-        top: 380px;
-        float: left;
-        margin-left: 220px;
-        .right {
-            height: 55px;
-            font-size: 16px;
-            width: 318px;
-            overflow: hidden;
-            font-family: "宋体";
-            color: white;
-        }
-        .left {
-            height: 50px;
-            overflow: hidden;
-            margin-left: -10px;
-            font-size: 12px;
-            width: 318px;
-            font-family: "宋体";
-            color: white;
-        }
-        .buttonR {
-            margin-left:90px;
-            margin-top: 15px;
-
-        }
-        .buttonL {
-            margin-left:80px;
-            margin-top: 20px;
-
-        }
+        top: 360px;
     }
-
+    .content {
+      height: 80px;
+      overflow: hidden;
+      font-size: $contentFontSize;
+      width: 318px;
+      font-family: "宋体";
+      color: white;
+    }
+    .button {
+      margin: 0 auto;
+    }
+    .right-content {
+        position: absolute;
+        left: 70px;
+        top: 360px;
+    }
 }
 </style>

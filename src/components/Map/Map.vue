@@ -656,10 +656,8 @@ export default {
         map.style.transition = 'transform .6s'
       }
       map.addEventListener('transitionend', cb)
-      console.log(left, top)
       this.mapLeft = this.leftConvert(left)
       this.mapTop = this.topConvert(top)
-      console.log(left, top)
       this.addFlag({ left, top })
     },
     onSearch(text) {
@@ -675,7 +673,6 @@ export default {
       }
     },
     addFlag(position) {
-      console.log(position)
       // 防止重复
       if (this.flags.some(flag => flag.left === position.left && flag.top === position.top)) return
       this.flags.push(position)

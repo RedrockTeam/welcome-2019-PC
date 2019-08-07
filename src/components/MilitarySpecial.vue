@@ -42,8 +42,9 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
+@import '@/assets/style/variable.scss';
+
 .title {
   margin: 70px auto 12px;
 }
@@ -73,7 +74,7 @@ ul {
             width: 181px;
             height: 60px;
             overflow: hidden;
-            font-size: 14px;
+            font-size: $contentFontSize;
             font-family: "宋体";
             color: white;
         }

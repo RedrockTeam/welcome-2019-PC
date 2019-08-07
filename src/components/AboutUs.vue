@@ -33,6 +33,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '@/assets/style/variable.scss';
+
 #guanyuwomen {
   padding-bottom: 114px;
 }
@@ -72,7 +74,7 @@ export default {
         position: relative;
         height: 150px;
         width: 456px;
-        font-size: 14px;
+        font-size: $contentFontSize;
         font-family: "宋体";
         color: white;
     }
