@@ -82,6 +82,7 @@ export default {
   &:hover {
     .fire {
       animation: fire 0.3s infinite;
+      filter: sepia(100%);
     }
   }
 }
@@ -95,6 +96,7 @@ export default {
   width: 103px;
   height: 97px;
   background: url("../assets/img/Rocket/fire.png");
+  transition: filter .6s;
 }
 .adjust {
   position: absolute;
