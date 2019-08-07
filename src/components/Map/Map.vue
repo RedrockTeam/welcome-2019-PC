@@ -1,7 +1,7 @@
 <template>
   <div class="m-wrapper">
-    <Title>重邮地图</Title>
-    <div class="map-border">
+    <Title class="m-title" :isFire="isFire">重邮地图</Title>
+    <div class="map-border" ref="bg">
       <div class="header">
         <div class="header-left">
           <input
@@ -69,6 +69,7 @@
         <div class="tips">tips: 点击地图可以添加标记，再次点击删除标记</div>
       </div>
     </div>
+    <content-bg :isFire="isFire" @on-fire="fire()" />
   </div>
 </template>
 
@@ -76,6 +77,7 @@
 import Title from '@/components/Title.vue'
 import MapBtn from './MapBtn.vue'
 import HeaderBtn from './HeaderBtn.vue'
+import ContentBg from '@/components/ContentBg.vue'
 
 const ZOOMSTEP = 0.6
 const MAXSCALE = 4
@@ -86,6 +88,7 @@ const HEIGHTMIDPOINT = 190
 export default {
   data() {
     return {
+      isFire: false,
       addresses: [
         '中心食堂',
         '太极操场',
@@ -572,9 +575,14 @@ export default {
     Title,
     MapBtn,
     HeaderBtn,
+    ContentBg,
   },
 
   methods: {
+    fire() {
+      console.log(this.isFire)
+      this.isFire = !this.isFire
+    },
     focus() {
       return new Promise((resolve) => {
         const { map } = this.$refs
@@ -713,6 +721,10 @@ export default {
   height: 745px;
   padding-top: 60px;
   margin: 0 auto 69px;
+  .m-title {
+    margin: 0 auto;
+    width: 309px;
+  }
   .map-border {
     margin: 20px auto 0;
     width: 1166px;

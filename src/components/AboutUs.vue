@@ -1,7 +1,7 @@
 <template>
     <div id="guanyuwomen">
-        <title1 class="title">关于我们</title1>
-        <div class="bg">
+        <title1 class="title" :isFire="isFire">关于我们</title1>
+        <div class="bg" ref="bg">
             <div class="left">
             </div>
             <div class="right">
@@ -14,23 +14,33 @@
                 <button1 class="button">了解更多</button1>
             </div>
         </div>
+        <content-bg :isFire="isFire" @on-fire="fire()" />
     </div>
 </template>
-
 
 <script>
 import Title from '@/components/Title.vue'
 import Button from '@/components/Button.vue'
+import ContentBg from '@/components/ContentBg.vue'
 
 export default {
-  name: 'guanyuwomen',
+  data() {
+    return {
+      isFire: false,
+    }
+  },
   components: {
     title1: Title,
     button1: Button,
+    ContentBg,
+  },
+  methods: {
+    fire() {
+      this.isFire = !this.isFire
+    },
   },
 }
 </script>
-
 
 <style lang="scss" scoped>
 @import '@/assets/style/variable.scss';
@@ -47,7 +57,7 @@ export default {
     margin: 0 auto;
     width: 1136px;
     height: 422px;
-    background: url("../assets/img/Guanyuwomen/guanyuwomen.png");
+    background: url(../assets/img/Guanyuwomen/guanyuwomen.png);
     div {
         float: left;
     }
