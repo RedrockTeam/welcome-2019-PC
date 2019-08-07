@@ -20,5 +20,6 @@ div {
   width: 309px;
   height: 114px;
   background-image: url(../assets/img/Title/Title.png);
+  cursor: default;
 }
 </style>

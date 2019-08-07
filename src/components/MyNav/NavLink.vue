@@ -29,6 +29,7 @@ export default {
   line-height: 59px;
   text-align: center;
   font-size: $navFontSize;
+  cursor: default;
   color: #fff;
   .contents {
     .filler-top {
