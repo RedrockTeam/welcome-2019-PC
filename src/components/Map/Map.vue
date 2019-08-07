@@ -80,6 +80,8 @@ import HeaderBtn from './HeaderBtn.vue'
 const ZOOMSTEP = 0.6
 const MAXSCALE = 4
 const MINSCALE = 1
+const WIDTHMIDPOINT = 323
+const HEIGHTMIDPOINT = 190
 
 export default {
   data() {
@@ -186,7 +188,7 @@ export default {
         },
         {
           name: '新校门',
-          position: [782, -418],
+          position: [175, 305],
         },
         {
           name: '紫薇篮球场',
@@ -623,7 +625,9 @@ export default {
       }
       document.onmouseup = () => {
         // 这里触发 addFlag，区分 click 和 mouseup
-        if (e.target === map && !left && !top) this.addFlag(e)
+        if (e.target === map && !left && !top) {
+          this.addFlag({ left: e.offsetX || e.layerX, top: e.offsetY || e.layerY })
+        }
         document.onmousemove = null
         document.onmouseup = null
       }
@@ -652,23 +656,38 @@ export default {
         map.style.transition = 'transform .6s'
       }
       map.addEventListener('transitionend', cb)
-      this.mapLeft = left
-      this.mapTop = top
+      console.log(left, top)
+      this.mapLeft = this.leftConvert(left)
+      this.mapTop = this.topConvert(top)
+      console.log(left, top)
+      this.addFlag({ left, top })
     },
     onSearch(text) {
       if (text) {
-        this.result = this.list.filter(place => place.name.includes(text))[0].name // 控制显示几个搜索结果
+        const results = this.list.filter(place => place.name.includes(text))
+        if (results.length) {
+          this.result = results[0].name
+        }
         this.searched = true
         if (this.result === text) {
           this.onGoPlace(text)
         }
       }
     },
-    addFlag(e) {
-      this.flags.push({ left: e.offsetX || e.layerX, top: e.offsetY || e.layerY })
+    addFlag(position) {
+      console.log(position)
+      // 防止重复
+      if (this.flags.some(flag => flag.left === position.left && flag.top === position.top)) return
+      this.flags.push(position)
     },
     removeFlag(flag) {
       this.flags = this.flags.filter(f => f !== flag)
+    },
+    leftConvert(left) {
+      return (WIDTHMIDPOINT - left) * MAXSCALE
+    },
+    topConvert(top) {
+      return (HEIGHTMIDPOINT - top) * MAXSCALE
     },
   },
 
@@ -676,11 +695,11 @@ export default {
     scale() {
       this.$refs.map.style.transform = `scale(${this.scale})`
     },
-    mapLeft() {
-      this.$refs.map.style.left = `${this.mapLeft}px`
+    mapLeft(left) {
+      this.$refs.map.style.left = `${left}px`
     },
-    mapTop() {
-      this.$refs.map.style.top = `${this.mapTop}px`
+    mapTop(top) {
+      this.$refs.map.style.top = `${top}px`
     },
     searchText() {
       if (!this.searchText) {

@@ -52,7 +52,7 @@ export default {
         margin-left: 220px;
         .right {
             height: 55px;
-            font-size: 12px;
+            font-size: 16px;
             width: 318px;
             overflow: hidden;
             font-family: "宋体";
