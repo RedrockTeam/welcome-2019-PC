@@ -69,11 +69,11 @@ ul {
         p {
           text-align: center;
             position: relative;
-            top: 130px;
+            top: 120px;
             width: 181px;
-            height: 40px;
+            height: 60px;
             overflow: hidden;
-            font-size: 12px;
+            font-size: 14px;
             font-family: "宋体";
             color: white;
         }
@@ -86,7 +86,7 @@ ul {
         }
         .button {
             position: relative;
-            top: 150px;
+            top: 130px;
             left: 25px;
         }
     }

@@ -72,7 +72,7 @@ export default {
         position: relative;
         height: 150px;
         width: 456px;
-        font-size: 12px;
+        font-size: 14px;
         font-family: "宋体";
         color: white;
     }
