@@ -63,8 +63,14 @@ export default {
   0% {
     transform: translate(0);
   }
-  40% {
+  10% {
     transform: translate(0, -30px);
+  }
+  30% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(0, -10px);
   }
   100% {
     transform: translate(0);

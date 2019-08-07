@@ -51,10 +51,13 @@ export default {
     flex-direction: column;
     background: #66b9ff;
     .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 91px;
-      padding: 2px;
+      padding: 7px 2px;
       color: #fff;
-      line-height: 32px;
+      line-height: 20px;
       font-size: $navLinkFontSize;
     }
   }

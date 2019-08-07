@@ -674,7 +674,6 @@ export default {
 
   watch: {
     scale() {
-      console.log(this.scale)
       this.$refs.map.style.transform = `scale(${this.scale})`
     },
     mapLeft() {
