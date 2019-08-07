@@ -63,17 +63,18 @@ export default {
     }
 }
 .left {
-    width: 223px;
-    height: 208px;
+    width: 300px;
+    height: 212px;
     background-color: antiquewhite;
     position: relative;
-    top: 112px;
-    left: 280px;
-    background-image: url(../assets/img/Guanyuwomen/img1.png)
+    top: 111px;
+    left: 234px;
+    background: url(../assets/img/Guanyuwomen/img1.png) no-repeat center;
+    background-size: cover;
 }
 .right {
     position: relative;
-    left: 352px;
+    left: 282px;
     top: 115px;
     width: 455px;
     line-height: 24px;

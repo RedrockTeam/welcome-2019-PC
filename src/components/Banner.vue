@@ -35,6 +35,10 @@
         </div>
       </li>
     </ul>
+    <div class="lanterns">
+      <div class="lantern"></div>
+      <div class="lantern"></div>
+    </div>
   </div>
 </template>
 
@@ -306,6 +310,28 @@ export default {
     .seconds {
       position: absolute;
       right: 442px;
+    }
+  }
+  .lanterns {
+    position: absolute;
+    top: 573px;
+    left: 50%;
+    transform: translate(-46%, 0);
+    width: 341px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    @keyframes lantern {
+      from { filter: saturate(300%) blur(8px); }
+      50% { filter: saturate(100%) blur(8px); }
+    }
+    .lantern {
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      filter: saturate(300%) blur(8px);
+      background: url(../assets/img/Banner/lantern.png) no-repeat center, #73dcff;
+      animation: lantern 2s infinite;
     }
   }
 }
