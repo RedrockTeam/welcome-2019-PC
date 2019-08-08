@@ -12,7 +12,8 @@
     <!-- rocket -->
     <Rocket />
     <!-- track -->
-    <Track />
+    <Track class="left-track" />
+    <Track class="right-track" />
     <!-- pipline -->
     <div class="map-pipline"></div>
     <div class="map-raider-pipline-right"></div><div class="map-raider-pipline-left"></div>
@@ -56,6 +57,17 @@ export default {
   width: 1440px;
   margin: 0 auto;
   position: relative;
+  .left-track {
+    position: absolute;
+    top: -406px;
+    left: 0;
+    transform: rotateY(180deg);
+  }
+  .right-track {
+    position: absolute;
+    top: -406px;
+    right: 0;
+  }
   .map-pipline {
     position: absolute;
     top: -166px;

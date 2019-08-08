@@ -4,12 +4,12 @@
     <div class="contents" v-if="contents.length">
       <div class="filler-top"></div>
       <router-link
-        to="/raider"
+        :to="{ name: 'raider', params: { route: content.route } }"
         class="content"
         v-for="(content, index) of contents"
         :key="index"
       >
-        {{ content }}
+        {{ content.title }}
       </router-link>
       <div class="filler-bottom"></div>
     </div>
