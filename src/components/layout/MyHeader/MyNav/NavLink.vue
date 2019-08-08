@@ -4,7 +4,7 @@
     <div class="contents" v-if="contents.length">
       <div class="filler-top"></div>
       <router-link
-        :to="{ name: 'raider', params: { route: content.route } }"
+        :to="`/${route}/${content.route}`"
         class="content"
         v-for="(content, index) of contents"
         :key="index"
@@ -20,6 +20,7 @@
 export default {
   props: {
     contents: Array,
+    route: String,
   },
 }
 </script>

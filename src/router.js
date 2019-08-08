@@ -15,17 +15,10 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/raider',
-      name: 'raider',
-      component: () => import('./views/Frame.vue'),
-      props: { styles: 'bubble' },
-      children: [
-        {
-          path: '/list',
-          name: 'list',
-          component: () => import('./components/List.vue'),
-        },
-      ],
+      path: '/raider/list',
+      name: 'list',
+      props: { styles: 'belt' },
+      component: () => import('./views/raider/List.vue'),
     },
   ],
 })

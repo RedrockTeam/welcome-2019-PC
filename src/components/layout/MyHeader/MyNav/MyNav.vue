@@ -2,7 +2,12 @@
   <nav>
     <div class="wrapper">
       <img class="logo" src="../../../../assets/img/Nav/logo.png" />
-      <nav-link v-for="(data, index) of navLinkData" :key="index" :contents="data.contents">
+      <nav-link
+        v-for="(data, index) of navLinkData"
+        :key="index"
+        :contents="data.contents"
+        :route="data.route"
+      >
         <router-link to="/" v-if="index === 0">
           <div class="link">{{ data.title }}</div>
         </router-link>
@@ -21,10 +26,12 @@ export default {
       navLinkData: [
         {
           title: '首页',
+          route: '',
           contents: [],
         },
         {
           title: '邮子攻略',
+          route: 'raider',
           contents: [
             {
               title: '新生清单',
@@ -58,6 +65,7 @@ export default {
         },
         {
           title: '军训特辑',
+          route: 'training',
           contents: [
             {
               title: '军训贴士',
@@ -79,6 +87,7 @@ export default {
         },
         {
           title: '迎新活动',
+          route: 'event',
           contents: [
             {
               title: '学长学姐帮帮忙',
@@ -88,6 +97,7 @@ export default {
         },
         {
           title: '数据揭秘',
+          route: 'data',
           contents: [
             {
               title: '男女比例',
@@ -105,6 +115,7 @@ export default {
         },
         {
           title: '重邮风采',
+          route: 'styles',
           contents: [
             {
               title: '组织大全',
@@ -126,6 +137,7 @@ export default {
         },
         {
           title: '关于我们',
+          route: 'about',
           contents: [],
         },
       ],
