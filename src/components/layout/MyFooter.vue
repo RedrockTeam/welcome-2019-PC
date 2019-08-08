@@ -25,7 +25,7 @@ export default {
     margin: 0 auto;
     width: 1440px;
     height: 285px;
-    background-image: url(../../assets/img/Footer/footerBG.png);
+    background: url(../../assets/img/Footer/footerBG.png) no-repeat;
 }
 .car {
     width: 90px;

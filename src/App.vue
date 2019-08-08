@@ -24,7 +24,13 @@ export default {
   src: url(./assets/font/MFLiHei.ttf);
 }
 
+body {
+  background: #b0ceff;
+}
+
 #app {
+  width: 1440px;
+  margin: 0 auto;
   font-family: 'coolfont';
   font-size: 0;
   -webkit-font-smoothing: antialiased;

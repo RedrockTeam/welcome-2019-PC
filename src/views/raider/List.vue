@@ -1,6 +1,6 @@
 <template>
   <Frame :styles="styles">
-    List
+
   </Frame>
 </template>
 
@@ -8,8 +8,10 @@
 import Frame from '@/components/base/Frame.vue'
 
 export default {
-  props: {
-    styles: String,
+  data() {
+    return {
+      styles: 'belt',
+    }
   },
   components: {
     Frame,
