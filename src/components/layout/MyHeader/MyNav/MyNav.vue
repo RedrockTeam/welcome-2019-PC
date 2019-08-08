@@ -25,23 +25,104 @@ export default {
         },
         {
           title: '邮子攻略',
-          contents: ['新生清单', '交通路线', '学生食堂', '学生宿舍', '校园公众号', '周边生活', '网址大全'],
+          contents: [
+            {
+              title: '新生清单',
+              route: 'list',
+            },
+            {
+              title: '交通路线',
+              route: 'traffic',
+            },
+            {
+              title: '学生食堂',
+              route: 'cabteen',
+            },
+            {
+              title: '学生宿舍',
+              route: 'dorm',
+            },
+            {
+              title: '校园公众号',
+              route: 'public',
+            },
+            {
+              title: '周边生活',
+              route: 'life',
+            },
+            {
+              title: '网址大全',
+              route: 'website',
+            },
+          ],
         },
         {
           title: '军训特辑',
-          contents: ['军训贴士', '训练内容', '历年视频', '军训纪律'],
+          contents: [
+            {
+              title: '军训贴士',
+              route: 'tips',
+            },
+            {
+              title: '训练内容',
+              route: 'content',
+            },
+            {
+              title: '历年视频',
+              route: 'video',
+            },
+            {
+              title: '军训纪律',
+              route: 'discipline',
+            },
+          ],
         },
         {
           title: '迎新活动',
-          contents: ['学长学姐帮帮忙'],
+          contents: [
+            {
+              title: '学长学姐帮帮忙',
+              route: 'help',
+            },
+          ],
         },
         {
           title: '数据揭秘',
-          contents: ['男女比例', '最难科目', '生源比例'],
+          contents: [
+            {
+              title: '男女比例',
+              route: 'ratio',
+            },
+            {
+              title: '最难科目',
+              route: 'subject',
+            },
+            {
+              title: '生源比例',
+              route: 'source',
+            },
+          ],
         },
         {
           title: '重邮风采',
-          contents: ['组织大全', '宣传视频', '优秀代表', '邮苑风采'],
+          contents: [
+            {
+              title: '组织大全',
+              route: 'organization',
+            },
+            {
+              title: '宣传视频',
+              route: 'propaganda',
+            },
+            {
+              title: '优秀代表',
+              route: 'excellent',
+            },
+            {
+              title: '邮苑风采',
+              route: 'style',
+            },
+          ],
         },
         {
           title: '关于我们',

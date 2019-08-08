@@ -17,7 +17,15 @@ export default new Router({
     {
       path: '/raider',
       name: 'raider',
-      component: () => import('./views/Raider.vue'),
+      component: () => import('./views/Frame.vue'),
+      props: { styles: 'bubble' },
+      children: [
+        {
+          path: '/list',
+          name: 'list',
+          component: () => import('./components/List.vue'),
+        },
+      ],
     },
   ],
 })
