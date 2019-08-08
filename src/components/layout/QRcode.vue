@@ -20,6 +20,9 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
     handleScroll() {
       const { code } = this.$refs
@@ -37,7 +40,7 @@ export default {
 .qrcode_left {
   width: 220px;
   height: 251px;
-  background-image: url(../assets/img/QRcode/qrcodeLeft.png);
+  background-image: url(../../assets/img/QRcode/qrcodeLeft.png);
 }
 .qrcode_right {
   position: absolute;
@@ -45,7 +48,7 @@ export default {
   top: 0;
   width: 220px;
   height: 251px;
-  background-image: url(../assets/img/QRcode/qrcodeRight.png);
+  background-image: url(../../assets/img/QRcode/qrcodeRight.png);
 }
 .qrcode {
   position: sticky;

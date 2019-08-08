@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import MyNav from '@/components/MyNav/MyNav.vue'
-import Banner from '@/components/Banner.vue'
+import MyNav from './MyNav/MyNav.vue'
+import Banner from './Banner.vue'
 
 export default {
   components: {

@@ -1,9 +1,12 @@
 <template>
   <nav>
     <div class="wrapper">
-      <img class="logo" src="../../assets/img/Nav/logo.png" />
+      <img class="logo" src="../../../../assets/img/Nav/logo.png" />
       <nav-link v-for="(data, index) of navLinkData" :key="index" :contents="data.contents">
-        {{ data.title }}
+        <router-link to="/" v-if="index === 0">
+          <div class="link">{{ data.title }}</div>
+        </router-link>
+        <div class="link" v-else>{{ data.title }}</div>
       </nav-link>
     </div>
   </nav>
@@ -59,9 +62,9 @@ nav {
   width: 100%;
   height: 63px;
   background:
-    url(../../assets/img/Nav/NavBgLeft.png) no-repeat left top,
-    url(../../assets/img/Nav/NavBgRight.png) no-repeat right top,
-    url(../../assets/img/Nav/NavBg.png) repeat center top;
+    url(../../../../assets/img/Nav/NavBgLeft.png) no-repeat left top,
+    url(../../../../assets/img/Nav/NavBgRight.png) no-repeat right top,
+    url(../../../../assets/img/Nav/NavBg.png) repeat center top;
   font-size: 0;
   position: fixed;
   top: 0;
@@ -79,6 +82,11 @@ nav {
       width: 141px;
       height: 48px;
       align-self: center;
+    }
+    .link {
+      width: 100%;
+      height: 100%;
+      color: #fff;
     }
   }
 }

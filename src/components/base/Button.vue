@@ -20,11 +20,11 @@ export default {
   justify-content: center;
   width: 133px ;
   height: 48px ;
-  background: url(../assets/img/Button/button.png);
+  background: url(../../assets/img/Button/button.png);
   cursor: pointer;
 }
 #button:hover {
-  background-image: url(../assets/img/Button/buttonHover.png);
+  background-image: url(../../assets/img/Button/buttonHover.png);
   color: white;
 }
 </style>

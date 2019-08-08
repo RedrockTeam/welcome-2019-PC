@@ -74,10 +74,10 @@
 </template>
 
 <script>
-import Title from '@/components/Title.vue'
+import Title from '@/components/base/Title.vue'
 import MapBtn from './MapBtn.vue'
 import HeaderBtn from './HeaderBtn.vue'
-import ContentBg from '@/components/ContentBg.vue'
+import ContentBg from '@/components/base/ContentBg.vue'
 
 const ZOOMSTEP = 0.6
 const MAXSCALE = 4

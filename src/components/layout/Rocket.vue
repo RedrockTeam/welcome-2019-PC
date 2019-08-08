@@ -89,13 +89,13 @@ export default {
 .rocket {
   width: 103px;
   height: 166px;
-  background: url("../assets/img/Rocket/rocket.png");
+  background: url(../../assets/img/Rocket/rocket.png);
   margin-bottom: -8px;
 }
 .fire {
   width: 103px;
   height: 97px;
-  background: url("../assets/img/Rocket/fire.png");
+  background: url(../../assets/img/Rocket/fire.png);
   transition: filter .6s;
 }
 .adjust {

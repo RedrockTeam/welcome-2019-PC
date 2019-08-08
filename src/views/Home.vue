@@ -11,6 +11,8 @@
     <about-us />
     <!-- rocket -->
     <Rocket />
+    <!-- track -->
+    <Track />
     <!-- pipline -->
     <div class="map-pipline"></div>
     <div class="map-raider-pipline-right"></div><div class="map-raider-pipline-left"></div>
@@ -29,8 +31,9 @@ import CyStyle from '@/components/CyStyle.vue'
 import MilitarySpecial from '@/components/MilitarySpecial.vue'
 import WelcomeEvent from '@/components/WelcomeEvent.vue'
 import AboutUs from '@/components/AboutUs.vue'
-import Rocket from '@/components/Rocket.vue'
-import QRcode from '@/components/QRcode.vue'
+import Rocket from '@/components/layout/Rocket.vue'
+import QRcode from '@/components/layout/QRcode.vue'
+import Track from '@/components/layout/Track.vue'
 
 export default {
   name: 'home',
@@ -43,6 +46,7 @@ export default {
     AboutUs,
     Rocket,
     QRcode,
+    Track,
   },
 };
 </script>
