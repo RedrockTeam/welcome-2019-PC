@@ -9,7 +9,7 @@
 export default {
   name: 'Title',
   props: {
-    content: ,
+    content: "",
   },
 }
 </script>

@@ -8,29 +8,42 @@
 </template>
 <script>
 import xinshengqingdan from '../components/strategy/xinshengqingdan'
+import xueshengshitang from '../components/strategy/xueshengshitang'
+import xueshengsushe from '../components/strategy/xueshengsushe'
+import jiaotongluxian from '../components/strategy/jiaotongluxian'
+import gongzhonghao from '../components/strategy/gzh'
+import zhoubianshenghuo from '../components/strategy/zhoubianshenghuo'
+
 
 export default {
   components: {
     xinshengqingdan,
+    xueshengshitang,
+    xueshengsushe,
+    jiaotongluxian,
+    gongzhonghao,
+    zhoubianshenghuo,
   },
   data() {
     return {
-      Mycomponent: 'xinshengqingdan',
+      Mycomponent: 'xueshengsushe',
     }
   },
 }
 </script>
 <style lang="scss" scoped>
 .connect {
+ 
     position: relative;
     bottom: 176px;
-    right: 130px;
+    right: 117px;
     float: right;
     width: 69px;
     height: 692px;
     background-image: url(../assets/img/Strategy/connect.png);
 }
 .content {
+
     height: 900px;
     width: 1440px;
     background-color: rgb(176, 206, 255);

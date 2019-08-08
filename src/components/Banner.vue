@@ -1,13 +1,39 @@
 <template>
   <div id="banner">
+    <div class="plane"></div>
+    <div class="cars"></div>
     <img src="../assets/img/Banner/light.png" class="light" v-show="show">
     <div class="left-drill"></div>
     <div class="right-drill"></div>
     <ul class="time_ul">
-      <li class="day" ref="day">{{ d }}</li>
-      <li class="hour" ref="hour">{{ h }}</li>
-      <li class="minute" ref="minute">{{ m }}</li>
-      <li class="seconds" ref="seconds">{{ s }}</li>
+      <li class="day" ref="day">{{ d }}
+        <div class="deng">
+          <div class="deng1"></div>
+          <div class="deng2"></div>
+          <div class="deng3"></div>
+        </div>
+      </li>
+      <li class="hour" ref="hour">{{ h }}
+        <div class="deng">
+          <div class="deng1"></div>
+          <div class="deng2"></div>
+          <div class="deng3"></div>
+        </div>
+      </li>
+      <li class="minute" ref="minute">{{ m }}
+        <div class="deng">
+          <div class="deng1"></div>
+          <div class="deng2"></div>
+          <div class="deng3"></div>
+        </div>
+      </li>
+      <li class="seconds" ref="seconds">{{ s }}
+        <div class="deng">
+          <div class="deng1"></div>
+          <div class="deng2"></div>
+          <div class="deng3"></div>
+        </div>
+      </li>
     </ul>
   </div>
 </template>
@@ -28,7 +54,7 @@ export default {
     this.countTime()
     this.showTime()
   },
-  destroyed() {
+  beforeDestroy() {
     clearTimeout(this.timer)
     clearTimeout(this.showTimer)
   },
@@ -69,6 +95,132 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.cars {
+  float: left;
+  width: 157px;
+  height: 76px;
+  position: absolute;
+  right: 30px;
+  top: 150px;
+  background-image: url(../assets/img/Banner/cars.png);
+  animation: cars 5s infinite;
+}
+@keyframes cars {
+  0% {
+    right: 30px;
+  }
+  50% {
+    right: 80px
+  }
+  100% {
+    right: 30px;
+  }
+}
+.deng {
+  margin: 0 auto;
+  width: 10px;
+  height: 30px;
+  position: relative;
+  top:8px;
+  .deng1 {
+    width: 7px;
+    height: 3px;
+    background-color: rgb(79, 232, 255);
+    margin-top: 4px;
+    animation: 4s deng1  infinite;
+  }
+  .deng2 {
+    width: 7px;
+    height: 3px;
+    background-color: rgb(79, 232, 255);
+    margin-top: 3px;
+    animation: 4s deng2  infinite;
+    
+  }
+  .deng3 {
+    width: 7px;
+    height: 3px;
+    background-color: rgb(79, 232, 255);
+    margin-top: 3px;
+    animation: 4s deng3  infinite;
+    
+  }
+}
+@keyframes deng1 {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes deng2 {
+  0% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes deng3 {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.plane {
+  float: left;
+  width:52px;
+  height: 22px;
+  background-image: url(../assets/img/Banner/plane.png);
+  position: absolute;
+  top: 315px;
+  left: 80px;
+  animation: 4s plane linear infinite;
+}
+@keyframes plane {
+  0% {
+    top: 315px;
+  }
+  50% {
+    top: 280px
+  }
+  100% {
+    top: 315px;
+  }
+}
 #banner {
   position: relative;
   top:63px;
@@ -80,7 +232,7 @@ export default {
   background-size: 1440px;
   .light {
     position: absolute;
-    left: 400px;
+    left: 360px;
     top: 166px;
     animation: showUp 1s, changeColor 2s infinite 1s;
   }
