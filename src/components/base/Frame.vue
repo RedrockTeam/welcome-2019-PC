@@ -12,6 +12,7 @@
     }">
       <div class="wrapper">
         <slot></slot>
+        <!-- <div class="scroll"></div> -->
       </div>
     </div>
   </div>
@@ -62,6 +63,7 @@ export default {
     height: 512px;
     margin: 114px 0 0 148px;
     background: #87a6ff;
+    overflow: auto;
   }
   .belt-animation {
     position: absolute;

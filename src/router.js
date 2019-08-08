@@ -17,7 +17,6 @@ export default new Router({
     {
       path: '/raider/list',
       name: 'list',
-      props: { styles: 'belt' },
       component: () => import('./views/raider/List.vue'),
     },
   ],
