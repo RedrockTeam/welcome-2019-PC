@@ -1,15 +1,7 @@
 <template>
-    <div class="all">
-        <div id="bubble">
-        </div>
-    </div>
+  <div id="bubble">
+  </div>
 </template>
-
-<script>
-export default {
-  name: 'horizontalBubble',
-}
-</script>
 
 <style lang="scss" scoped>
 #bubble {

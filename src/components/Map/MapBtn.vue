@@ -11,6 +11,7 @@
     text-align: center;
     line-height: 42px;
     color: #1646c4;
+    font-size: 16px;
     background: url(../../assets/img/Map/btn.png);
     cursor: pointer;
     &:hover {

@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="light-wrapper">
     <div class="red light"></div>
     <div class="blue light"></div>
     <div class="green light"></div>
@@ -7,7 +7,7 @@
 </template>
 
 <style scoped lang="scss">
-.wrapper {
+.light-wrapper {
   display: flex;
   width: 47px;
   height: 3px;

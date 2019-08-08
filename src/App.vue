@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <my-header />
-    <router-view/>
+    <router-view />
     <my-footer />
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
 
 #app {
   font-family: 'coolfont';
+  font-size: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #b0ceff;

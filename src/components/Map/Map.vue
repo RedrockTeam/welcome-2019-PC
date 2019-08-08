@@ -580,7 +580,6 @@ export default {
 
   methods: {
     fire() {
-      console.log(this.isFire)
       this.isFire = !this.isFire
     },
     focus() {
@@ -860,6 +859,7 @@ export default {
           cursor: pointer;
           .flag {
             display: inline-block;
+            font-size: 16px;
             color: red;
             position: absolute;
             transform: translate(-50%, -50%);
