@@ -1,22 +1,19 @@
 <template>
   <div id="app">
     <my-header />
-    <Track />
     <router-view/>
     <my-footer />
   </div>
 </template>
 
 <script>
-import MyHeader from '@/components/layout/MyHeader.vue'
+import MyHeader from '@/components/layout/MyHeader/MyHeader.vue'
 import MyFooter from '@/components/layout/MyFooter.vue'
-import Track from '@/components/layout/Track.vue'
 
 export default {
   components: {
     MyHeader,
     MyFooter,
-    Track,
   },
 }
 </script>
@@ -32,6 +29,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #b0ceff;
+  a {
+    text-decoration: none;
+  }
 }
 
 * {

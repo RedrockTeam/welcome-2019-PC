@@ -2,7 +2,7 @@
   <div id="banner">
     <div class="plane"></div>
     <div class="cars"></div>
-    <img src="../assets/img/Banner/light.png" class="light" v-show="show">
+    <img src="../../../assets/img/Banner/light.png" class="light" v-show="show">
     <div class="left-drill"></div>
     <div class="right-drill"></div>
     <ul class="time_ul">
@@ -106,7 +106,7 @@ export default {
   position: absolute;
   right: 30px;
   top: 150px;
-  background-image: url(../assets/img/Banner/cars.png);
+  background-image: url(../../../assets/img/Banner/cars.png);
   animation: cars 5s infinite;
 }
 @keyframes cars {
@@ -206,7 +206,7 @@ export default {
   float: left;
   width:52px;
   height: 22px;
-  background-image: url(../assets/img/Banner/plane.png);
+  background-image: url(../../../assets/img/Banner/plane.png);
   position: absolute;
   top: 315px;
   left: 80px;
@@ -229,7 +229,7 @@ export default {
   margin: 0 auto;
   height: 631px;
   width: 1440px;
-  background-image: url(../assets/img/Banner/banner.png);
+  background-image: url(../../../assets/img/Banner/banner.png);
   background-repeat: no-repeat;
   background-size: 1440px;
   .light {
@@ -255,7 +255,7 @@ export default {
     left: 142px;
     transform: rotate(25deg);
     transform-origin: 126px 127px;
-    background: url(../assets/img/Banner/left-drill.png);
+    background: url(../../../assets/img/Banner/left-drill.png);
     animation: left-rotate 2s;
   }
   @keyframes left-rotate {
@@ -271,7 +271,7 @@ export default {
     right: 128px;
     transform: rotate(-33deg);
     transform-origin: 80px 100%;
-    background: url(../assets/img/Banner/right-drill.png);
+    background: url(../../../assets/img/Banner/right-drill.png);
     animation: right-rotate 2s;
   }
   @keyframes right-rotate {
@@ -323,14 +323,14 @@ export default {
     justify-content: space-between;
     @keyframes lantern {
       from { filter: saturate(300%) blur(8px); }
-      50% { filter: saturate(100%) blur(8px); }
+      50% { filter: saturate(100%) blur(2px); }
     }
     .lantern {
       width: 36px;
       height: 36px;
       border-radius: 18px;
       filter: saturate(300%) blur(8px);
-      background: url(../assets/img/Banner/lantern.png) no-repeat center, #73dcff;
+      background: url(../../../assets/img/Banner/lantern.png) no-repeat center, #73dcff;
       animation: lantern 2s infinite;
     }
   }

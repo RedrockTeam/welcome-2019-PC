@@ -3,9 +3,14 @@
     <slot></slot>
     <div class="contents" v-if="contents.length">
       <div class="filler-top"></div>
-      <div class="content" v-for="(content, index) of contents" :key="index">
+      <router-link
+        to="/raider"
+        class="content"
+        v-for="(content, index) of contents"
+        :key="index"
+      >
         {{ content }}
-      </div>
+      </router-link>
       <div class="filler-bottom"></div>
     </div>
   </div>
@@ -25,7 +30,7 @@ export default {
 .nav-link {
   width: 107px;
   height: 59px;
-  background: url(../../assets/img/Nav/NavLinkBg.png);
+  background: url(../../../../assets/img/Nav/NavLinkBg.png);
   line-height: 59px;
   text-align: center;
   font-size: $navFontSize;
@@ -38,7 +43,7 @@ export default {
     }
     .filler-bottom {
       min-height: 15px;
-      background: url(../../assets/img/Nav/NavLink-bottom.png);
+      background: url(../../../../assets/img/Nav/NavLink-bottom.png);
     }
     transform: translate(0, -13px);
     transition: max-height .6s ease-out;
@@ -65,7 +70,7 @@ export default {
 }
 
 .nav-link:hover {
-  background: url(../../assets/img/Nav/NavLinkHoverBg.png);
+  background: url(../../../../assets/img/Nav/NavLinkHoverBg.png);
   color: #2d5eff;
   .contents {
     max-height: 1000px;

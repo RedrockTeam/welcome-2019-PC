@@ -31,9 +31,9 @@
 
 
 <script>
-import Title from '@/components/Title.vue'
-import Button from '@/components/Button.vue'
-import ContentBg from '@/components/ContentBg.vue'
+import Title from '@/components/base/Title.vue'
+import Button from '@/components/base/Button.vue'
+import ContentBg from '@/components/base/ContentBg.vue'
 
 export default {
   name: 'youzigonglue',
