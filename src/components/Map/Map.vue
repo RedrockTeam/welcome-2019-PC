@@ -1,6 +1,7 @@
 <template>
   <div class="m-wrapper">
     <Title class="m-title" :isFire="isFire">重邮地图</Title>
+    <v-bubble-animation class="v-bubble-animation" />
     <div class="map-border" ref="bg">
       <div class="header">
         <div class="header-left">
@@ -78,6 +79,7 @@ import Title from '@/components/base/Title.vue'
 import MapBtn from './MapBtn.vue'
 import HeaderBtn from './HeaderBtn.vue'
 import ContentBg from '@/components/base/ContentBg.vue'
+import VBubbleAnimation from '@/components/base/VBubbleAnimation.vue'
 
 const ZOOMSTEP = 0.6
 const MAXSCALE = 4
@@ -576,6 +578,7 @@ export default {
     MapBtn,
     HeaderBtn,
     ContentBg,
+    VBubbleAnimation,
   },
 
   methods: {
@@ -720,15 +723,23 @@ export default {
   height: 745px;
   padding-top: 60px;
   margin: 0 auto 69px;
+  position: relative;
   .m-title {
     margin: 0 auto;
     width: 309px;
   }
+  .v-bubble-animation {
+    position: absolute;
+    top: 13px;
+    left: 6px;
+    filter: hue-rotate(130deg);
+    z-index: 1;
+  }
   .map-border {
     margin: 20px auto 0;
     width: 1166px;
-    height: 551px;
-    background: url(../../assets/img/Map/border.png);
+    height: 550px;
+    background: url(../../assets/img/Map/border.png) no-repeat;
     .header {
       display: flex;
       justify-content: space-between;
