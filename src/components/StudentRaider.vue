@@ -1,6 +1,8 @@
 <template>
     <div id="youzigonglue">
         <title1 class="title" :isFire="isFire">邮子攻略</title1>
+        <v-bubble-animation class="v-bubble-animation" />
+        <h-bubble-animation class="h-bubble-animation" />
         <div class="bg1" ref="bg">
             <ul>
                 <li class="li1">
@@ -34,6 +36,8 @@
 import Title from '@/components/base/Title.vue'
 import Button from '@/components/base/Button.vue'
 import ContentBg from '@/components/base/ContentBg.vue'
+import VBubbleAnimation from '@/components/base/VBubbleAnimation.vue'
+import HBubbleAnimation from '@/components/base/HBubbleAnimation.vue'
 
 export default {
   name: 'youzigonglue',
@@ -41,6 +45,8 @@ export default {
     title1: Title,
     button1: Button,
     ContentBg,
+    VBubbleAnimation,
+    HBubbleAnimation,
   },
   data() {
     return {
@@ -61,14 +67,27 @@ export default {
 
 #youzigonglue {
     margin:  0 auto;
+    position: relative;
     .title {
       margin: 0 auto 12px;
     }
 }
+.v-bubble-animation {
+  position: absolute;
+  top: -57px;
+  right: 144px;
+  z-index: 1;
+}
+.h-bubble-animation {
+  position: absolute;
+  top: 85px;
+  left: 320px;
+  z-index: 1;
+}
 .bg1 {
     width: 1117px;
     height: 406px;
-    background-image: url(../assets/img/Youzigonglue/yzglBG.png);
+    background: url(../assets/img/Youzigonglue/yzglBG.png) no-repeat;
     position: relative;
     margin: 0 auto;
     left: 25px;

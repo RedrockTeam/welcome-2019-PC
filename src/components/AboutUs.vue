@@ -1,6 +1,7 @@
 <template>
     <div id="guanyuwomen">
         <title1 class="title" :isFire="isFire">关于我们</title1>
+        <h-bubble-animation class="h-bubble-animation" />
         <div class="bg" ref="bg">
             <div class="left">
             </div>
@@ -22,6 +23,7 @@
 import Title from '@/components/base/Title.vue'
 import Button from '@/components/base/Button.vue'
 import ContentBg from '@/components/base/ContentBg.vue'
+import HBubbleAnimation from '@/components/base/HBubbleAnimation.vue'
 
 export default {
   data() {
@@ -33,6 +35,7 @@ export default {
     title1: Title,
     button1: Button,
     ContentBg,
+    HBubbleAnimation,
   },
   methods: {
     fire() {
@@ -47,9 +50,16 @@ export default {
 
 #guanyuwomen {
   padding-bottom: 114px;
+  position: relative;
 }
 .title {
   margin: 70px auto 12px;
+}
+.h-bubble-animation {
+  position: absolute;
+  top: 82px;
+  left: 320px;
+  z-index: 1;
 }
 .bg {
     position: relative;
@@ -57,7 +67,7 @@ export default {
     margin: 0 auto;
     width: 1136px;
     height: 422px;
-    background: url(../assets/img/Guanyuwomen/guanyuwomen.png);
+    background: url(../assets/img/Guanyuwomen/guanyuwomen.png) no-repeat;
     div {
         float: left;
     }
@@ -67,7 +77,7 @@ export default {
     height: 212px;
     background-color: antiquewhite;
     position: relative;
-    top: 111px;
+    top: 110px;
     left: 234px;
     background: url(../assets/img/Guanyuwomen/img1.png) no-repeat center;
     background-size: cover;

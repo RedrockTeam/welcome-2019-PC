@@ -1,6 +1,7 @@
 <template>
     <div id="junxunteji">
         <title1 class="title" :isFire="isFire">军训特辑</title1>
+        <v-bubble-animation class="v-bubble-animation" />
         <div class="bg" ref="bg">
           <btn-animation class="btn-animation" />
             <ul>
@@ -36,6 +37,7 @@ import Title from '@/components/base/Title.vue'
 import Button from '@/components/base/Button.vue'
 import ContentBg from '@/components/base/ContentBg.vue'
 import BtnAnimation from '@/components/base/BtnAnimation.vue'
+import VBubbleAnimation from '@/components/base/VBubbleAnimation.vue'
 
 export default {
   name: 'junxunteji',
@@ -44,6 +46,7 @@ export default {
     button1: Button,
     ContentBg,
     BtnAnimation,
+    VBubbleAnimation,
   },
   data() {
     return {
@@ -61,8 +64,18 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/style/variable.scss';
 
+#junxunteji {
+  position: relative;
+}
 .title {
   margin: 70px auto 12px;
+}
+.v-bubble-animation {
+  position: absolute;
+  top: 120px;
+  left: 145px;
+  filter: hue-rotate(130deg);
+  z-index: 1;
 }
 .bg {
     position: relative;

@@ -80,7 +80,7 @@ export default {
   .map-raider-pipline-right {
     float: right;
     position: absolute;
-    top: 745px;
+    top: 744px;
     right: 288px;
     background-image: url(../assets/img/Connect/img6.png);
     width: 79px;
@@ -89,7 +89,7 @@ export default {
   .map-raider-pipline-left {
     float: left;
     position: absolute;
-    top: 745px;
+    top: 744px;
     left: 310px;
     background-image: url(../assets/img/Connect/img7.png);
     width: 95px;
