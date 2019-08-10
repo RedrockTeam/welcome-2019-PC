@@ -127,8 +127,6 @@ export default {
   @include frameContentStyle;
   margin-top: 0;
   font-size: 10px;
-  padding: 20px;
-  padding-top: 0;
   display: flex;
   flex-wrap: wrap;
   padding: 30px 0;
