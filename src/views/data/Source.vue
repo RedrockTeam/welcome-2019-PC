@@ -107,6 +107,7 @@ export default {
             name: '学生人数',
             type: 'bar',
             data: Object.values(this.sourceRatio),
+            barWidth: '50%',
             itemStyle: {
               normal: {
                 color(params) {
@@ -141,7 +142,7 @@ export default {
 }
 .chart-wrapper {
   width: 700px;
-  height: 1000px;
+  height: 1500px;
   margin: 0 auto;
 }
 .echarts {
