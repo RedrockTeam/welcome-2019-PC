@@ -12,7 +12,6 @@
     }">
       <div class="wrapper">
         <slot></slot>
-        <!-- <div class="scroll"></div> -->
       </div>
     </div>
   </div>
@@ -25,7 +24,9 @@ import BeltAnimation from '@/components/base/BeltAnimation.vue'
 import HBubbleAnimation from '@/components/base/HBubbleAnimation.vue'
 
 export default {
-  props: ['styles'],
+  props: {
+    styles: String,
+  },
   components: {
     BtnAnimation,
     VBubbleAnimation,
@@ -41,6 +42,10 @@ export default {
 }
 .belt {
   background: url(../../assets/img/Frame/beltFrame.png) no-repeat;
+  div.wrapper {
+    margin-top: 112px;
+    height: 514px;
+  }
 }
 .bubble {
   background: url(../../assets/img/Frame/bubbleFrame.png) no-repeat;
@@ -60,10 +65,12 @@ export default {
   }
   .wrapper {
     width: 909px;
-    height: 512px;
+    height: 515px;
     margin: 114px 0 0 148px;
     background: #87a6ff;
     overflow: auto;
+    position: relative;
+    padding-left: 16px;
   }
   .belt-animation {
     position: absolute;
