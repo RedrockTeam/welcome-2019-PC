@@ -164,7 +164,7 @@ nav {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 6;
   .wrapper {
     display: flex;
     justify-content: space-between;

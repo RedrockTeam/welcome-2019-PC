@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Strategy from './views/Strategy.vue'
+import Landscape from './views/Landscape.vue'
 
 Vue.use(Router)
 
@@ -43,6 +45,16 @@ export default new Router({
       path: '/training/discipline',
       name: 'discipline',
       component: () => import('./views/training/Discipline.vue'),
+    },
+    {
+      path: '/strategy',
+      name: 'strategy',
+      component: Strategy,
+    },
+    {
+      path: '/landscape',
+      name: 'landscape',
+      component: Landscape,
     },
   ],
 })
