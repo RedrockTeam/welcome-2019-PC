@@ -1,0 +1,17 @@
+@import '@/assets/style/variable.scss';
+
+@mixin frameContentStyle {
+  width: $frameContentWidth - 22;
+  margin-top: 126px;
+  padding: 10px 0;
+}
+
+@mixin frameHeaderStyle {
+  width: $frameContentWidth;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  background: #87a6ff;
+  padding-top: 39px;
+}
