@@ -44,5 +44,20 @@ export default new Router({
       name: 'discipline',
       component: () => import('./views/training/Discipline.vue'),
     },
+    {
+      path: '/data/ratio',
+      name: 'ratio',
+      component: () => import('./views/data/Ratio.vue'),
+    },
+    {
+      path: '/data/subject',
+      name: 'subject',
+      component: () => import('./views/data/Subject.vue'),
+    },
+    {
+      path: '/data/source',
+      name: 'source',
+      component: () => import('./views/data/Source.vue'),
+    },
   ],
 })
