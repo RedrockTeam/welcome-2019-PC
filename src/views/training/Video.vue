@@ -120,7 +120,7 @@ export default {
     align-items: center;
     video {
       width: 483px;
-      height: 280px;
+      height: 276px;
       border: 3px solid #0235c7;
     }
   }

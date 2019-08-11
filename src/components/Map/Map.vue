@@ -11,6 +11,7 @@
             placeholder="请输入搜索地点"
             @keyup.enter="onSearch(searchText)"
           />
+          <div class="clear" @click="clear"></div>
           <header-btn @click="onSearch(searchText)">
             <img width="21" height="21" src="../../assets/img/Map/search.png" />
           </header-btn>
@@ -696,6 +697,9 @@ export default {
     topConvert(top) {
       return (HEIGHTMIDPOINT - top) * MAXSCALE
     },
+    clear() {
+      this.searchText = ''
+    },
   },
 
   watch: {
@@ -747,6 +751,7 @@ export default {
       height: 77px;
       margin: 0 auto;
       .header-left {
+        position: relative;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -760,6 +765,25 @@ export default {
           text-indent: 12px;
           font-size: 16px;
           outline: none;
+        }
+        .clear {
+          width: 18px;
+          height: 4px;
+          position: absolute;
+          top: 36px;
+          left: 284px;
+          transform: rotate(45deg);
+          background: #87a6ff;
+          cursor: pointer;
+          &::after {
+            content: '';
+            width: 4px;
+            height: 18px;
+            position: absolute;
+            top: -7px;
+            left: 7px;
+            background: #87a6ff;
+          }
         }
         img {
           margin-top: 12px;
