@@ -3,9 +3,19 @@
         <div class="car">
         </div>
         <div class="content">
-            <p>关于红岩网校 | 网站地图 | 指出错误 | 管理入口</p>
+            <p>
+              <a href="https://redrock.team/aboutus/" target="block">
+                关于红岩网校
+              </a> | <a href="mailto:web@redrock.team" target="block">
+                指出错误
+              </a>
+            </p>
             <p>本网站由红岩网校工作站负责开发，管理，不经红岩网校委员会书面同意，不得进行转载</p>
-            <p>地址：重庆市南岸区崇文路2号（重庆邮电大学内） 400065 E-mail :redrock@cqupt.edu.cn (023-62461084)</p>
+            <p>地址：重庆市南岸区崇文路2号（重庆邮电大学内）400065
+              <a href="https://redrock.team/aboutus/" target="block">
+                E-mail: redrock@cqupt.edu.cn (023-62461084)
+              </a>
+            </p>
         </div>
     </div>
 </template>
@@ -44,6 +54,9 @@ export default {
     position: relative;
     top:153px;
     line-height: 25px;
+    a {
+      color: #fff;
+    }
 }
 @keyframes carMove {
     0% {
