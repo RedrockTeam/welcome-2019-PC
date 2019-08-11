@@ -12,7 +12,9 @@
                   红岩网校工作站在校团委老师的指导下，由学生自我管理，多年来走出了一大批优秀的IT人才，深受电信运营商和BAT等知名互联网企业的青睐。
                   团队先后获评“全国五四红旗团支部”“团中央新媒体专业工作室”“重庆市IT杰出青年群体”等系列荣誉。
                 </article>
-                <button1 class="button">了解更多</button1>
+                <a href="https://redrock.team/aboutus/" target="block">
+                  <button1 class="button">了解更多</button1>
+                </a>
             </div>
         </div>
         <content-bg :isFire="isFire" @on-fire="fire()" />
