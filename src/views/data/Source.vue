@@ -110,6 +110,9 @@ export default {
             barWidth: '50%',
             itemStyle: {
               normal: {
+                barBorderRadius: [0, 10, 10, 0],
+                barBorderColor: '#432a92',
+                barBorderWidth: 2,
                 color(params) {
                   // build a color map as your need.
                   const colorList = ['#ff9dba', '#ffd1a0', '#fff5b4', '#7ef7ff', '#7095ff']
