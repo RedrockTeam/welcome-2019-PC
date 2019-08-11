@@ -4,7 +4,7 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   // 开启 history 模式需要后端配合
   // mode: 'history',
   base: process.env.BASE_URL,
@@ -61,3 +61,19 @@ export default new Router({
     },
   ],
 })
+
+router.afterEach((to) => {
+  if (to.name === 'home') {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  } else {
+    window.scrollTo({
+      top: 645,
+      behavior: 'smooth',
+    });
+  }
+})
+
+export default router
