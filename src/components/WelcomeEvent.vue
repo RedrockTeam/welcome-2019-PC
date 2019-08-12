@@ -2,13 +2,19 @@
     <div id="yingxinhuodong">
         <title1 class="title" :isFire="isFire">迎新活动</title1>
         <div class="bg" ref="bg">
-            <div class="left-content">
-                <p class="content">
-                    萌新你好，欢迎来鲜肉集中营报道！听说这里有好多萌新的照片，快来为你的班级注入萌新能量，美好的大学生活从认识新同学开始~
-                </p>
-                <button1 class="button">了解更多</button1>
-            </div>
             <div class="right-content">
+              <div class="right-head"></div>
+              <div class="gantanhao"></div>
+              <div class="right-title"></div>
+              <p class="content">
+                  萌新你好，欢迎来鲜肉集中营报道！听说这里有好多萌新的照片，快来为你的班级注入萌新能量，美好的大学生活从认识新同学开始~
+              </p>
+              <button1 class="button">了解更多</button1>
+            </div>
+            <div class="left-content">
+              <div class="left-head"></div>
+              <div class="wenhao"></div>
+              <div class="left-title"></div>
                 <p class="content">
                     萌新你好，欢迎来鲜肉集中营报道！听说这里有好多萌新的照片，快来为你的班级注入萌新能量，美好的大学生活从认识新同学开始~
                 </p>
@@ -58,10 +64,37 @@ export default {
     left: 42px;
     margin: 0 auto;
     background: url(../assets/img/Yingxinhuodong/bg.png);
-    .left-content {
+    .right-content {
         position: absolute;
         right: 140px;
         top: 360px;
+      .right-head {
+        position: absolute;
+        top: -267px;
+        left: 52px;
+        width: 225px;
+        height: 144px;
+        background: url(../assets/img/Yingxinhuodong/right-head.png);
+        animation: shake 2s infinite;
+      }
+      .gantanhao {
+        position: absolute;
+        top: -246px;
+        left: 19px;
+        width: 23px;
+        height: 37px;
+        background: url(../assets/img/Yingxinhuodong/gantanhao.png);
+        animation: doudong 2s infinite;
+        transform-origin: center bottom;
+      }
+      .right-title {
+        position: absolute;
+        top: -165px;
+        left: 49px;
+        width: 243px;
+        height: 99px;
+        background: url(../assets/img/Yingxinhuodong/right-title.png);
+      }
     }
     .content {
       height: 80px;
@@ -74,10 +107,49 @@ export default {
     .button {
       margin: 0 auto;
     }
-    .right-content {
+    .left-content {
         position: absolute;
         left: 70px;
         top: 360px;
+      .left-head {
+        position: absolute;
+        top: -244px;
+        left: 35px;
+        width: 213px;
+        height: 120px;
+        background: url(../assets/img/Yingxinhuodong/left-head.png);
+        animation: shake 2s infinite;
+      }
+      .wenhao {
+        position: absolute;
+        top: -248px;
+        right: 44px;
+        width: 32px;
+        height: 40px;
+        background: url(../assets/img/Yingxinhuodong/wenhao.png);
+        animation: doudong 2s infinite;
+        transform-origin: center bottom;
+      }
+      .left-title {
+        position: absolute;
+        top: -131px;
+        left: 28px;
+        width: 227px;
+        height: 66px;
+        background: url(../assets/img/Yingxinhuodong/left-title.png);
+      }
     }
+}
+@keyframes shake {
+  from { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+  to { transform: rotate(0deg); }
+}
+@keyframes doudong {
+  0% { transform: rotate(0deg); }
+  5% { transform: rotate(10deg); }
+  10% { transform: rotate(0deg); }
+  15% { transform: rotate(10deg); }
+  20% { transform: rotate(0deg); }
 }
 </style>
