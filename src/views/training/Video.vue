@@ -16,7 +16,7 @@
           :class="{ title: true, active: title === activeTitle }"
           :key="index"
           @click="changeVideo(title)"
-        >{{ title }}</div>
+        >{{ title }}<div class="dec"></div></div>
       </div>
       <div class="video-wrapper">
         <video :src="video[activeTitle]" controls>求求你换个浏览器吧。。。1551。。。</video>
@@ -102,10 +102,21 @@ export default {
       text-align: center;
       line-height: 40px;
       color: #c0f7fe;
+      padding-bottom: 4px;
       cursor: pointer;
       &.active {
         background: #43b2ff;
         color: #fff;
+        .dec {
+          height: 4px;
+          margin-top: -2px;
+          background: #174bdd;
+        }
+      }
+      .dec {
+        height: 2px;
+        margin-top: -2px;
+        background: #fff;
       }
     }
   }
