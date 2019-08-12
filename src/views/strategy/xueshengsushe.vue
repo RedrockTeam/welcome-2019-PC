@@ -1,5 +1,7 @@
 <template>
 <div class="all">
+  <div class="connect"></div>
+  <BtnAnimation class="btnflash"></BtnAnimation>
     <div id="v">
         <verticalBubble class="v"></verticalBubble>
     </div>
@@ -19,12 +21,13 @@
 
 <script>
 import { setInterval } from 'timers';
-import button1 from '../Button1'
-import mingliyuan from './xsssCarousel/mingliyuan'
-import xingyeyuan from './xsssCarousel/xingyeyuan'
-import ningjingyuan from './xsssCarousel/ningjingyuan'
-import zhixingyuan from './xsssCarousel/zhixingyuan'
-import verticalBubble from '../flash/verticalBubble'
+import button1 from '../../components/Button1'
+import mingliyuan from '../../components/strategy/xsssCarousel/mingliyuan'
+import xingyeyuan from '../../components/strategy/xsssCarousel/xingyeyuan'
+import ningjingyuan from '../../components/strategy/xsssCarousel/ningjingyuan'
+import zhixingyuan from '../../components/strategy/xsssCarousel/zhixingyuan'
+import verticalBubble from '../../components/flash/verticalBubble'
+import BtnAnimation from '../../components/base/BtnAnimation'
 
 export default {
   name: 'xueshengsushe',
@@ -35,6 +38,7 @@ export default {
     ningjingyuan,
     zhixingyuan,
     verticalBubble,
+    BtnAnimation
   },
   data() {
     return {
@@ -61,12 +65,13 @@ export default {
     top: 40px;
     left:137px;
     width: 1117px;
-    height: 713px;
+    height: 863px;
     background-image: url(../../assets/img/Strategy/xueshengsushe/xsssBG.png);
+    background-repeat: no-repeat;
 }
 .allButtons {
     position: relative;
-    left: 100px;
+    left: 35px;
     top: 85px;
     width: 1070px;
     height: 200px;
@@ -97,5 +102,20 @@ export default {
 .v {
     position: absolute;
 
+}
+.connect {
+    width: 69px;
+    height: 692px;
+    background-image: url(../../assets/img/Strategy/connect.png);
+    position: relative;
+    left: 1253px;
+    bottom: 173px;
+    float: left;
+}
+.btnflash{
+    position: relative;
+    top:92px;
+    left: 344px;
+    z-index: 5;
 }
 </style>

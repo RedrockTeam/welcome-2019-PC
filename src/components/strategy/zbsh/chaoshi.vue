@@ -1,6 +1,7 @@
 <template>
     <div id="yinhang">
         <ul>
+            <div class="nth"></div>
             <li>
                 <div class="img1 img"></div>
                 <span>渝芳百货商场</span>
@@ -96,5 +97,8 @@ ul {
     position: relative;
     top: 20px
 }
-
+.nth {
+    width: 100%;
+    height: 120px;
+}
 </style>

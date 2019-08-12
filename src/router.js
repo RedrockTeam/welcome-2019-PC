@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Strategy from './views/Strategy.vue'
 import Landscape from './views/Landscape.vue'
 
 Vue.use(Router)
@@ -20,6 +19,36 @@ export default new Router({
       path: '/raider/list',
       name: 'list',
       component: () => import('./views/raider/List.vue'),
+    },
+    {
+      path: '/strategy/canteen',
+      name: 'canteen',
+      component: () => import('./views/strategy/xueshengshitang.vue'),
+    },
+    {
+      path: '/strategy/dormitory',
+      name: 'dormitory',
+      component: () => import('./views/strategy/xueshengsushe.vue'),
+    },
+    {
+      path: '/strategy/gzh',
+      name: 'gzh',
+      component: () => import('./views/strategy/gzh.vue'),
+    },
+    {
+      path: '/strategy/traffic',
+      name: 'traffic',
+      component: () => import('./views/strategy/jiaotongluxian.vue'),
+    },
+    {
+      path: '/strategy/list',
+      name: 'list',
+      component: () => import('./views/strategy/xinshengqingdan.vue'),
+    },
+    {
+      path: '/strategy/life',
+      name: 'life',
+      component: () => import('./views/strategy/zhoubianshenghuo.vue'),
     },
     {
       path: '/raider/life',
@@ -45,11 +74,6 @@ export default new Router({
       path: '/training/discipline',
       name: 'discipline',
       component: () => import('./views/training/Discipline.vue'),
-    },
-    {
-      path: '/strategy',
-      name: 'strategy',
-      component: Strategy,
     },
     {
       path: '/landscape',

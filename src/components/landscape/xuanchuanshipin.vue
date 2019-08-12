@@ -2,25 +2,31 @@
     <div id="xuanchuanshipin">
         <ul>
             <li>
+                <a href="https://v.qq.com/x/page/i0518koxz3b.html" target="blank">
                 <div class="img"></div>
                 <div class="grey"></div>
                 <div class="p">
                     <span>重邮2017招生宣传片</span>
                 </div>
+                </a>
             </li>
             <li>
+                <a href="https://v.qq.com/x/page/b0556ldsq1r.html" target="blank">
                 <div class="img2 img"></div>
                 <div class="grey"></div>
                 <div class="p">
                     <span>重邮2017级学生军训汇演</span>
                 </div>
+                </a>
             </li>
             <li>
+                <a href="https://v.qq.com/x/page/o05597e7vw2.html" target="blank">
                 <div class="img3 img"></div>
                 <div class="grey"></div>
                 <div class="p">
                     <span>2017年红岩网校招新视频</span>
                 </div>
+                </a>
             </li>
             <li>
                 <div class="img4 img"></div>
@@ -37,18 +43,22 @@
                 </div>
             </li>
             <li>
+                <a href="https://v.qq.com/x/page/p0157qsmcuj.html" target="blank">
                 <div class="img6 img"></div>
                 <div class="grey"></div>
                 <div class="p">
                     <span>乌瞰新重邮</span>
                 </div>
+                </a>
             </li>
             <li>
+                <a href="https://v.qq.com/x/page/u061866c94o.html" target="blank">
                 <div class="img7 img"></div>
                 <div class="grey"></div>
                 <div class="p">
                     <span>重邮2018樱花季专题</span>
                 </div>
+                </a>
             </li>
             <li>
                 <div class="img8 img"></div>
@@ -58,11 +68,13 @@
                 </div>
             </li>
             <li>
+                <a href="https://v.qq.com/x/page/p0161krhz05.html" target="blank">
                 <div class="img9 img"></div>
                 <div class="grey"></div>
                 <div class="p">
                     <span>航拍重邮第九届校运会</span>
                 </div>
+                </a>
             </li>
         </ul>
     </div>
@@ -100,6 +112,8 @@ ul::-webkit-scrollbar-track {
     width: 100%;
     height: 100%;
     background-color: rgb(176, 207, 255);
+    position: absolute;
+    top: 124px;
 }
 .bottom {
     width: 100%;
@@ -108,7 +122,7 @@ ul::-webkit-scrollbar-track {
     top: -20px;
 }
 ul {
-    width: 890px;
+    width: 899px;
     height: 650px;
     overflow-x: hidden;
     overflow-y: scroll;

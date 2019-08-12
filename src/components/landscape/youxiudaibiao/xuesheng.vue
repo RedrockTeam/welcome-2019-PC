@@ -1,6 +1,7 @@
 <template>
     <div id="xuesheng">
         <ul>
+            <div class="nth"></div>
             <li v-for="(image,index) in images">
                 <img class="img" :src="images[index]">
                 <div class="info">
@@ -84,14 +85,16 @@ ul::-webkit-scrollbar-track {
 
 }
 ul {
-    width: 890px;
-    height: 600px;
+    width: 900px;
+    height: 779px;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: rgb(135, 166, 255);
     list-style: none;
+    position: relative;
+    bottom: 4px;
     li {
-        margin-left: 15px;
+        margin-left: 12px;
         float: left;
         width: 414px;
         height: 265px;
@@ -155,6 +158,9 @@ ul {
         }
     }
 }
-
+.nth {
+    width: 100%;
+    height: 150px;;
+}
 
 </style>

@@ -1,14 +1,22 @@
 <template>
     <div id="jiaotongluxian">
+        <div class="connect"></div>
+        <BtnAnimation class="btnflash"></BtnAnimation>
+        <div id="v">
+            <verticalBubble class="v"></verticalBubble>
+        </div>
         <div id="bg">
             <div class="content">
-                <ul>
+                <div id="topic">
                     <li class="topic">
                         <p class="p1">出发地</p>
                         <p class="p2">预计时间</p>
                         <p class="p3">预计价格</p>
                         <p class="p4">乘车路线</p>
                     </li>
+                </div>
+                <ul>
+                    <div class="nth"></div>
                     <li>
                         <p class="pp1">重庆江北机场：(距离学校约40公里)</p>
                         <p class="pp2">60分钟</p>
@@ -52,12 +60,16 @@
 </template>
 
 <script>
-import button1 from '../Button1'
+import button1 from '../../components/Button1'
+import BtnAnimation from '../../components/base/BtnAnimation'
+import verticalBubble from '../../components/flash/verticalBubble'
 
 export default {
   name: 'jiaotongluxian',
   components: {
     button1,
+    BtnAnimation,
+    verticalBubble
   },
   data() {
     return {
@@ -67,6 +79,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 ul {
     list-style: none;
     li {
@@ -91,7 +104,7 @@ ul {
             font-family: '微软雅黑';
             color: rgb(76, 117, 234);
             width: 100px;
-            margin-left: 40px;
+            margin-left: 100px;
         }
         .pp3 {
             font-size: 14px;
@@ -113,16 +126,16 @@ ul {
     left: 137px;
     top: 42px;
     width: 1117px;
-    height: 666px;
-    background-image: url(../../assets/img/Strategy/jiaotongluxian/jtlxBG.png)
+    height: 816px;
+    background-image: url(../../assets/img/Strategy/jiaotongluxian/jtlxBG.png);
+    background-repeat: no-repeat;
 }
 .content {
     width: 900px;
     height: 580px;
     position: relative;
     top: 75px;
-    left: 140px;
-
+    left: 71px;
     display: flex;
     justify-content: center;
     ul {
@@ -132,7 +145,21 @@ ul {
         overflow-y: scroll;
     }
 }
-
+#topic {
+    position: absolute;
+    width: 856px;
+    height: 88px;
+    background-color: rgb(136, 166, 255);
+    border-top: 2px solid rgb(2, 53, 199);
+    left: 0px;
+}
+.nth {
+    margin-top: 23px;
+    width: 856px;
+    height: 81px;
+    display: flex;
+    align-items: center;
+}
 .topic {
     width: 856px;
     height: 38px;
@@ -143,6 +170,7 @@ ul {
     color: rgb(0, 54, 215);
     display: flex;
     align-items: center;
+    position: absolute;
 
     p {
         float: left;
@@ -161,7 +189,15 @@ ul {
         margin-left: 200px;
     }
 }
-
+.connect {
+    width: 69px;
+    height: 692px;
+    background-image: url(../../assets/img/Strategy/connect.png);
+    position: relative;
+    left: 1253px;
+    bottom: 173px;
+    float: left;
+}
 
 ul::-webkit-scrollbar { width: 17px;}
 ul::-webkit-scrollbar-thumb {
@@ -182,5 +218,18 @@ ul::-webkit-scrollbar-button:end {
 }
 ul::-webkit-scrollbar-track {
     background-image: url(../../assets/img/Scroll/rail.png);
+}
+.btnflash{
+    position: relative;
+    top:92px;
+    left: 344px;
+    z-index: 5;
+}
+#v {
+    position: relative;
+}
+.v {
+    position: absolute;
+
 }
 </style>

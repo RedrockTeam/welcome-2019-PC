@@ -1,5 +1,6 @@
 <template>
     <div id="gzh">
+        <div class="connect"></div>
         <horizontalBubble></horizontalBubble>
         <verticalBubble></verticalBubble>
         <div class="bg">
@@ -51,8 +52,8 @@
 
 
 <script>
-import horizontalBubble from '../flash/horizontalBubble'
-import verticalBubble from '../flash/verticalBubble'
+import horizontalBubble from '../../components/flash/horizontalBubble'
+import verticalBubble from '../../components/flash/verticalBubble'
 
 export default {
   name: 'gongzhonghao',
@@ -88,16 +89,17 @@ ul::-webkit-scrollbar-track {
     position: relative;
     top: 41px;
     width: 1118px;
-    height: 740px;
+    height: 890px;
     left: 136px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/gzhBG.png)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/gzhBG.png);
+    background-repeat: no-repeat;
 }
 ul {
     overflow-x: hidden;
     overflow-y: scroll;
     list-style: none;
     position: relative;
-    left: 140px;
+    left: 71px;
     width: 900px;
     height: 649px;
     top: 77px;
@@ -133,6 +135,15 @@ ul {
             color: rgb(76, 117, 234);
         }
     }
+}
+.connect {
+    width: 69px;
+    height: 692px;
+    background-image: url(../../assets/img/Strategy/connect.png);
+    position: relative;
+    left: 1253px;
+    bottom: 173px;
+    float: left;
 }
 .img1 {
     background-image: url(../../assets/img/Strategy/gongzhonghao/img1.jpg)

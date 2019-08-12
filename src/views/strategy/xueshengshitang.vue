@@ -1,5 +1,6 @@
 <template>
 <div class="all">
+    <div class="connect"></div>
     <div class="road">
         <div class="car1">
         </div>
@@ -33,14 +34,14 @@
 
 <script>
 import { setInterval } from 'timers';
-import button1 from '../Button1'
-import xyyCarousel from './xsstCarousel/xyyCarousel'
-import qxhCarousel from './xsstCarousel/qxhCarousel'
-import ysCarousel from './xsstCarousel/ysCarousel'
-import dxbCarousel from './xsstCarousel/dxbCarousel'
-import hglCarousel from './xsstCarousel/hglCarousel'
-import zxstCarousel from './xsstCarousel/zxstCarousel'
-import verticalBubble from '../flash/verticalBubble'
+import button1 from '../../components/Button1'
+import xyyCarousel from '../../components/strategy/xsstCarousel/xyyCarousel'
+import qxhCarousel from '../../components/strategy/xsstCarousel/qxhCarousel'
+import ysCarousel from '../../components/strategy/xsstCarousel/ysCarousel'
+import dxbCarousel from '../../components/strategy/xsstCarousel/dxbCarousel'
+import hglCarousel from '../../components/strategy/xsstCarousel/hglCarousel'
+import zxstCarousel from '../../components/strategy/xsstCarousel/zxstCarousel'
+import verticalBubble from '../../components/flash/verticalBubble'
 
 export default {
   name: 'xueshengshitang',
@@ -77,13 +78,15 @@ export default {
 #xueshengshitang {
     position: relative;;
     margin-left: 272px;
+    padding-bottom: 100px;
     margin: 0 auto;
     z-index: 2;
-    top: 35px;
+    top: 40px;
     left:0px;
     width: 1117px;
-    height: 838px;
+    height: 988px;
     background-image: url(../../assets/img/Strategy/xueshengshitang/xsstBG1.png);
+    background-repeat: no-repeat;
 }
 .allButtons {
     position: relative;
@@ -117,8 +120,8 @@ export default {
     float: left;
     width: 980px;
     position: relative;
-    top: 30px;
-    left: 245px;
+    top: 33px;
+    left: 180px;
     .car1 {
         float: left;
         background-color: rgb(120, 155, 255);
@@ -130,6 +133,7 @@ export default {
         z-index: 0;
         animation: car1 10s linear infinite;
         left: 100px;
+        animation-delay: 2s;
     }
     .car2 {
         float: left;
@@ -141,7 +145,7 @@ export default {
         top: 20px;
         z-index: 0;
         animation: car1 10s linear infinite;
-        animation-delay: 1.5s;
+        animation-delay: 4s;
 
     }
     .car3 {
@@ -154,7 +158,7 @@ export default {
         top: 20px;
         z-index: 0;
         animation: car1 10s linear infinite;
-        animation-delay: 3s;
+        animation-delay: 6s;
 
     }
     .car4 {
@@ -167,7 +171,7 @@ export default {
         top: 20px;
         z-index: 0;
         animation: car1 10s linear infinite;
-        animation-delay: 4.5s;
+        animation-delay: 8s;
 
     }
     .car5 {
@@ -180,7 +184,7 @@ export default {
         top: 20px;
         z-index: 0;
         animation: car1 10s linear infinite;
-        animation-delay: 6s;
+        animation-delay: 10s;
     }
 }
 
@@ -204,7 +208,7 @@ export default {
     67% {
         top: 20px;
         left: 670px;
-        transform: rotate(60deg)
+        transform: rotate(70deg)
     }
     90% {
         top: 100px;
@@ -233,5 +237,14 @@ export default {
 .v {
     position: absolute;
     left: 25px;
+}
+.connect {
+    width: 69px;
+    height: 692px;
+    background-image: url(../../assets/img/Strategy/connect.png);
+    position: relative;
+    left: 1253px;
+    bottom: 173px;
+    float: left;
 }
 </style>

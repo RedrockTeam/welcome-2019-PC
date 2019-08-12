@@ -1,5 +1,6 @@
 <template>
     <div id="xinshengqingdan">
+        <div class="connect"></div>
         <verticalBubble class="v"></verticalBubble>
         <horizontalBubble class="h"></horizontalBubble>
         <div class="content">
@@ -34,8 +35,8 @@
 </template>
 
 <script>
-import horizontalBubble from '../flash/horizontalBubble'
-import verticalBubble from '../flash/verticalBubble'
+import horizontalBubble from '../../components/flash/horizontalBubble'
+import verticalBubble from '../../components/flash/verticalBubble'
 
 export default {
   name: 'xinshengqingdan',
@@ -55,12 +56,14 @@ export default {
     margin:  0 auto;
     width: 1117px;
     height: 786px;
+    margin-bottom: 150px;
     background-image: url(../../assets/img/Strategy/xinshengqingdan/xsqdBG.png);
+    background-repeat: no-repeat;
 }
 .content {
     position: relative;
-    top: -10px;
-    left: 10px;
+    top: 100px;
+    left: -31px;
     width: 1070px;
     height: 793px;
 }
@@ -92,13 +95,22 @@ ul {
 
 }
 .v {
-    position: relative;
+    position: absolute;
     left: -135px;
     top: -40px
 }
 .h {
-    position: relative;
-    bottom: 120px;
+    position: absolute;
+    top:-45px;
     left: -150px;
+}
+.connect {
+    width: 69px;
+    height: 692px;
+    background-image: url(../../assets/img/Strategy/connect.png);
+    position: relative;
+    left: 1115px;
+    bottom: 216px;
+    float: left;
 }
 </style>

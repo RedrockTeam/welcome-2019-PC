@@ -1,7 +1,7 @@
 <template>
     <div id="strategy">
-
         <div class="content">
+            <BtnAnimation class="btnflash"></BtnAnimation>
             <div id="v">
                 <verticalBubble class="v"></verticalBubble>
             </div>
@@ -29,6 +29,7 @@ import xuanchuanshipin from '../components/landscape/xuanchuanshipin'
 import youxiudaibiao from '../components/landscape/youxiudaibiao'
 import zuzhidaquan from '../components/landscape/zuzhidaquan'
 import button1 from '../components/Button1'
+import BtnAnimation from '../components/base/BtnAnimation'
 import verticalBubble from '../components/flash/verticalBubble'
 
 export default {
@@ -44,6 +45,7 @@ export default {
     youxiudaibiao,
     zuzhidaquan,
     verticalBubble,
+    BtnAnimation,
   },
   methods: {
     change(x) {
@@ -58,15 +60,7 @@ export default {
     background-image: url(../assets/img/Button/button1Hover.png);
     color: white;
 }
-.v-enter,
-.v-leave-to{
-    opacity: 0;
-    transform: translateY(100px)
-}
-.v-enter-active,
-.v-leave-active{
-    transition: all 1s ease;
-}
+
 .connect {
     position: relative;
     bottom: 176px;
@@ -84,12 +78,15 @@ export default {
     margin-top: 60px;
 }
 .allbtns {
-    position: relative;
-    top: 112px;
-    left: 124px;
-    width: 900px;
-    height: 122px;
-
+    position: absolute;
+    top: 76px;
+    left: 135px;
+    width: 897px;
+    height: 126px;
+    background-color: rgb(136, 166, 255); 
+    z-index: 4;
+    display: flex;
+    align-items: center;
     .btn {
         float: left;
         margin-left: 30px;
@@ -119,5 +116,11 @@ export default {
     position: absolute;
     top:5px;
     z-index: 1;
+}
+.btnflash{
+    position: relative;
+    top:95px;
+    left: 350px;
+    z-index: 5;
 }
 </style>

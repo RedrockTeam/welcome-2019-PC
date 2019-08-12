@@ -1,5 +1,7 @@
 <template>
     <div id="zhoubianshenghuo">
+        <div class="connect"></div>
+        <BtnAnimation class="btnflash"></BtnAnimation>
         <verticalBubble class="v"></verticalBubble>
         <div class="content">
             <div class="allbtns">
@@ -16,12 +18,13 @@
 </template>
 
 <script>
-import yinhang from './zbsh/yinhang'
-import kuaidi from './zbsh/kuaidi'
-import chaoshi from './zbsh/chaoshi'
-import meishi from './zbsh/meishi'
-import verticalBubble from '../flash/verticalBubble'
-import button1 from '../Button1'
+import yinhang from '../../components/strategy/zbsh/yinhang'
+import kuaidi from '../../components/strategy/zbsh/kuaidi'
+import chaoshi from '../../components/strategy/zbsh/chaoshi'
+import meishi from '../../components/strategy/zbsh/meishi'
+import verticalBubble from '../../components/flash/verticalBubble'
+import button1 from '../../components/Button1'
+import BtnAnimation from '../../components/base/BtnAnimation'
 
 export default {
   name: 'zhoubianshenghuo',
@@ -32,6 +35,7 @@ export default {
     kuaidi,
     chaoshi,
     meishi,
+    BtnAnimation,
   },
   data() {
     return {
@@ -56,23 +60,29 @@ export default {
     top: 41px;
     left: 136px;
     width: 1117px;
-    height: 740px;
-    background-image: url(../../assets/img/Strategy/zhoubianshenghuo/zbshBG.png)
+    height: 890px;
+    background-image: url(../../assets/img/Strategy/zhoubianshenghuo/zbshBG.png);
+    background-repeat: no-repeat;
 }
 .v {
     position: relative;
     left: -135px;
-    top: -40px
+    top: -730px
 }
 .content {
     width: 900px;
     height: 650px;
-    position: relative;
+    position: absolute;
     left: 140px;
 }
 .allbtns {
-    width: 900px;
+    width: 880px;
     height: 130px;
+    position: absolute;
+    top: 0px;
+    left: 0px;;
+    background-color: rgb(136, 166, 255);
+    z-index: 2;
     .btn {
         float: left;
         margin-left: 30px;
@@ -90,5 +100,19 @@ export default {
     transition: all 1s ease;
 }
 
-
+.connect {
+    width: 69px;
+    height: 692px;
+    background-image: url(../../assets/img/Strategy/connect.png);
+    position: relative;
+    left: 1117px;
+    bottom: 216px;
+    float: left;
+}
+.btnflash{
+    position: relative;
+    top:48px;
+    left: 202px;
+    z-index: 5;
+}
 </style>

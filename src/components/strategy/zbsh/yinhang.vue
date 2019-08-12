@@ -1,6 +1,7 @@
 <template>
     <div id="yinhang">
         <ul>
+            <div class="nth"></div>
             <li>
                 <div class="img1 img"></div>
                 <span>农业银行</span>
@@ -97,7 +98,7 @@ li {
 ul {
     list-style: none;
     width: 905px;
-    height: 520px;
+    height: 651px;
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
@@ -128,5 +129,9 @@ ul::-webkit-scrollbar-button:end {
 }
 ul::-webkit-scrollbar-track {
     background-image: url(../../../assets/img/Scroll/rail.png);
+}
+.nth {
+    width: 100%;
+    height:120px;
 }
 </style>
