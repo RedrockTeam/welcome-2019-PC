@@ -15,3 +15,9 @@
   background: #87a6ff;
   padding-top: 39px;
 }
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

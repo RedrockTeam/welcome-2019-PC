@@ -140,7 +140,7 @@ export default {
         ],
         series: [
           {
-            name: '挂科比例',
+            name: '难度系数',
             type: 'bar',
             barWidth: '30%',
             data: this.difficultSubject[this.selected].map(s => s.percentage),

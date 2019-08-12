@@ -20,6 +20,7 @@
       </div>
       <div class="video-wrapper">
         <video :src="video[activeTitle]" controls>求求你换个浏览器吧。。。1551。。。</video>
+        <div class="from">资料来源于重邮小卫士</div>
       </div>
     </div>
   </Frame>
@@ -28,9 +29,9 @@
 <script>
 import Frame from '@/components/base/Frame.vue'
 import FrameButton from '@/components/base/FrameButton.vue'
-import huiyan from '@/assets/video/1.mp4'
-import xuanchuanpian from '@/assets/video/2.mp4'
-import pianduan from '@/assets/video/3.mp4'
+import huiyan from '@/assets/video/汇演.mp4'
+import xuanchuanpian from '@/assets/video/宣传片.mp4'
+import pianduan from '@/assets/video/片段.mp4'
 
 export default {
   components: {
@@ -127,12 +128,19 @@ export default {
     border: 3px solid #397dda;
     background: #b0cfff;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
     video {
+      margin-top: 24px;
       width: 483px;
       height: 276px;
       border: 3px solid #0235c7;
+    }
+    .from {
+      font-size: 10px;
+      margin-top: 3px;
+      font-family: '微软雅黑';
     }
   }
 }
