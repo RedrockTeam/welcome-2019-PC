@@ -19,7 +19,9 @@
         >{{ title }}<div class="dec"></div></div>
       </div>
       <div class="video-wrapper">
-        <video :src="video[activeTitle]" controls>求求你换个浏览器吧。。。1551。。。</video>
+        <video :poster="video[activeTitle].poster" :src="video[activeTitle].src" controls>
+          求求你换个浏览器吧。。。1551。。。
+        </video>
         <div class="from">资料来源于重邮小卫士</div>
       </div>
     </div>
@@ -32,6 +34,9 @@ import FrameButton from '@/components/base/FrameButton.vue'
 import huiyan from '@/assets/video/汇演.mp4'
 import xuanchuanpian from '@/assets/video/宣传片.mp4'
 import pianduan from '@/assets/video/片段.mp4'
+import huiyanPoster from '@/assets/img/Junxunteji/汇演poster.png'
+import pianduanPoster from '@/assets/img/Junxunteji/片段poster.png'
+import xuanchuanpisnPoster from '@/assets/img/Junxunteji/宣传片poster.png'
 
 export default {
   components: {
@@ -66,9 +71,18 @@ export default {
         '军训片段',
       ],
       video: {
-        军训汇演: huiyan,
-        军训宣传片: xuanchuanpian,
-        军训片段: pianduan,
+        军训汇演: {
+          src: huiyan,
+          poster: huiyanPoster,
+        },
+        军训宣传片: {
+          src: xuanchuanpian,
+          poster: xuanchuanpisnPoster,
+        },
+        军训片段: {
+          src: pianduan,
+          poster: pianduanPoster,
+        },
       },
     }
   },

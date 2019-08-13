@@ -96,6 +96,10 @@ export default {
               title: '学长学姐帮帮忙',
               route: 'help',
             },
+            {
+              title: '邮子画像',
+              route: 'portrait',
+            },
           ],
         },
         {

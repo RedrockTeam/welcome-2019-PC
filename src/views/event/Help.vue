@@ -98,6 +98,7 @@
 <script>
 import Frame from '@/components/base/Frame.vue'
 import ScrollBar from '@/components/base/ScrollBar.vue'
+import API from '@/config'
 
 export default {
   components: {
@@ -122,8 +123,14 @@ export default {
       this.activeTitle = title
     },
     async getQuestions() {
-      const res = await fetch('/mock.json').then(r => r.json())
-      this.questions = res
+      try {
+        const res = await fetch(`${API}?pageNo=5`, {
+          mode: 'no-cors',
+        }).then(r => r.json())
+        this.questions = res
+      } catch (e) {
+        console.log(e)
+      }
     },
     changePage(page) {
       this.page = page
