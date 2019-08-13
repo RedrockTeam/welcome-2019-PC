@@ -127,6 +127,8 @@ ul::-webkit-scrollbar-track {
     width: 100%;
     height: 100%;
     background-color: rgb(176, 207, 255);
+    position: absolute;
+    top: 124px;
 }
 .bottom {
     width: 100%;
@@ -135,7 +137,7 @@ ul::-webkit-scrollbar-track {
     top: -20px;
 }
 ul {
-    width: 890px;
+    width: 900px;
     height: 650px;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -143,7 +145,7 @@ ul {
     li {
         width: 247px;
         height: 303px;
-        margin-left: 25px;
+        margin-left: 35px;
         margin-top: 26px;
         float: left;
         .img {

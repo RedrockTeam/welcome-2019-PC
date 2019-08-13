@@ -1,6 +1,7 @@
 <template>
     <div id="kuaidi">
         <ul>
+            <div class="nth"></div>
             <li>
                 <div class="img1 img"></div>
                 <span>京东&顺丰&圆通</span>
@@ -101,6 +102,10 @@ li {
 
     }
 }
+.nth {
+    width: 100%;
+    height: 120px;
+}
 .img1 {
     background-image: url(../../../assets/img/Strategy/zhoubianshenghuo/kuaidi/img1.jpg)
 }
@@ -126,12 +131,13 @@ li {
 
 ul {
     list-style: none;
-    width: 905px;
-    height: 520px;
+    width: 904px;
+    height: 651px;
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
     right:5px;
+    top:-3px;
 }
 .bottom {
     width: 100%;

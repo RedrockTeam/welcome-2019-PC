@@ -1,21 +1,21 @@
 <template>
     <div id="zuzhidaquan">
         <div class="allbtns">
-            <div @click="change('xiaojizuzhi')" class="btn" :class="{'btn2' : now == 'xiaojizuzhi' ,'btn1' : !(now == 'xiaojizuzhi')}">
+            <div @click="change('xiaojizuzhi')" class="btn76" :class="{'btn1' : now == 'xiaojizuzhi' ,'btn2' : !(now == 'xiaojizuzhi')}">
                 <p>校级组织</p>
                 <div  :class="{'hr1' : now == 'xiaojizuzhi' ,'hr2' : !(now == 'xiaojizuzhi')}"></div>
             </div>
-            <div @click="change('hongyanwangxiao')" class="btn" :class="{'btn2' : now == 'hongyanwangxiao' ,'btn1' : !(now == 'hongyanwangxiao')}">
+            <div @click="change('hongyanwangxiao')" class="btn76" :class="{'btn1' : now == 'hongyanwangxiao' ,'btn2' : !(now == 'hongyanwangxiao')}">
                 <p>红岩网校</p>
                 <div  :class="{'hr1' : now == 'hongyanwangxiao' ,'hr2' : !(now == 'hongyanwangxiao')}"></div>
             </div>
-            <div @click="change('xueshengshetuan')" class="btn" :class="{'btn2' : now == 'xueshengshetuan' ,'btn1' : !(now == 'xueshengshetuan')}">
+            <div @click="change('xueshengshetuan')" class="btn76" :class="{'btn1' : now == 'xueshengshetuan' ,'btn2' : !(now == 'xueshengshetuan')}">
                 <p>学生社团</p>
                 <div  :class="{'hr1' : now == 'xueshengshetuan' ,'hr2' : !(now == 'xueshengshetuan')}"></div>
             </div>
         </div><div class="content">
             <transition mode="out-in">
-                <component :is="now"></component>
+                <component :is="now" class="myC"></component>
             </transition></div>
     </div>
 </template>
@@ -50,11 +50,19 @@ export default {
     width: 890px;
     height: 650px;
 }
-.btn {
-    font-size: 18px;
+.allbtns {
+    width: 870px;
+    position: relative;
+    top: 100px;
+    z-index: 5;
+    left: 25px;
+    background-color: rgb(136, 166, 255); 
+}
+.btn76 {
+    font-size: 20px;
     cursor: pointer;
     float: left;
-    width: 295px;
+    width: 278px;
     height: 45px;
     text-align: center;
     color: white;
@@ -71,8 +79,8 @@ export default {
 .btn2 {
     background-color: rgb(23, 75, 221);
 }
-.hr1 {
-    width: 293px;
+.hr2 {
+    width: 276px;
     height: 3px;
     background-color: white;
     position: relative;
@@ -80,8 +88,8 @@ export default {
     z-index: 1;
     float: left;
 }
-.hr2 {
-    width: 293px;
+.hr1 {
+    width: 276px;
     height: 6px;
     background-color: rgb(21, 79, 241);
     position: relative;
@@ -97,5 +105,10 @@ export default {
 .v-enter-active,
 .v-leave-active{
     transition: all 1s ease;
+}
+
+.myC {
+    position: relative;
+    top: 120px;
 }
 </style>

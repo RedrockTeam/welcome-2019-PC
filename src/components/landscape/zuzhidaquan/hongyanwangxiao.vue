@@ -26,33 +26,34 @@ export default {
 
 
 <style lang="scss" scoped>
-ul::-webkit-scrollbar { width: 17px;}
-ul::-webkit-scrollbar-thumb {
+.content::-webkit-scrollbar { width: 17px;}
+.content::-webkit-scrollbar-thumb {
     background:
         url(../../../assets/img/Scroll/scroll-thumb-top.png) no-repeat top,
         url(../../../assets/img/Scroll/scroll-thumb-bottom.png) no-repeat bottom,
         url(../../../assets/img/Scroll/scroll-thumb-content.png);
 }
-ul::-webkit-scrollbar-button:start {
+.content::-webkit-scrollbar-button:start {
     height: 16px;
     background-image: url(../../../assets/img/Scroll/arrowUp.png);
     background-repeat: no-repeat;
 }
-ul::-webkit-scrollbar-button:end {
+.content::-webkit-scrollbar-button:end {
     height: 16px;
     background-image: url(../../../assets/img/Scroll/arrowDown.png);
     background-repeat: no-repeat;
 }
-ul::-webkit-scrollbar-track {
+.content::-webkit-scrollbar-track {
     background-image: url(../../../assets/img/Scroll/rail.png);
 }
+
 
 #hongyanwangxiao {
     width: 890px;
     height: 600px;
 
     .content {
-        width: 895px;
+        width: 899px;
         height: 570px;
         border: 2px solid rgb(57, 125, 218);
         background-color: rgb(176, 207, 255);

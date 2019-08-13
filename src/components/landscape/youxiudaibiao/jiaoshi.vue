@@ -1,6 +1,7 @@
 <template>
     <div id="jiaoshi">
         <ul>
+            <div class="nth"></div>
             <li v-for="(image,index) in images">
                 <img class="img" :src="images[index]">
                 <div class="info">
@@ -74,14 +75,17 @@ ul::-webkit-scrollbar-track {
 
 }
 ul {
-    width: 890px;
-    height: 600px;
+    width: 897px;
+    height: 778px;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: rgb(135, 166, 255);
     list-style: none;
+    position: relative;
+    left: 3px;
+    top: -4px;
     li {
-        margin-left: 15px;
+        margin-left: 9px;
         float: left;
         width: 274px;
         height: 201px;
@@ -143,6 +147,9 @@ ul {
         }
     }
 }
-
+.nth {
+    width: 100%;
+    height: 150px;
+}
 
 </style>

@@ -8,7 +8,7 @@
 export default {
   name: 'Button1',
   props: {
-    content: ,
+    content:"" ,
   },
 }
 </script>
