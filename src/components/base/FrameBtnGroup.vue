@@ -56,6 +56,7 @@ export default {
   height: 120px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   position: absolute;
   background: #87a6ff;
   padding-top: 39px;

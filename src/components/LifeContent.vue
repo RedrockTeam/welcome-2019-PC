@@ -29,17 +29,30 @@ export default {
   flex-direction: column;
   padding: 30px 20px;
   img {
-    width: 234px;
+    width: 225px;
     height: 139px;
+    border: 2px solid #0235c7;
   }
   .title {
     font-size: 18px;
+    margin: 10px 0 7px;
+    font-family: '微软雅黑';
+    font-size: 18px;
+    color: #0231a9;
   }
   .location {
     span {
+      display: block;
+      width: 13px;
+      height: 17px;
+      float: left;
       background: url(../assets/img/life/locationIcon.png);
     }
+    text-indent: 6px;
     font-size: 14px;
+    color: #124ce3;
+    line-height: 20px;
+    font-family: '微软雅黑';
   }
 }
 </style>

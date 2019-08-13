@@ -20,6 +20,26 @@ const router = new Router({
       component: () => import('./views/raider/List.vue'),
     },
     {
+      path: '/raider/traffic',
+      name: 'traffic',
+      component: () => import('./views/raider/Traffic.vue'),
+    },
+    {
+      path: '/raider/canteen',
+      name: 'canteen',
+      component: () => import('./views/raider/Canteen.vue'),
+    },
+    {
+      path: '/raider/dorm',
+      name: 'dorm',
+      component: () => import('./views/raider/Dorm.vue'),
+    },
+    {
+      path: '/raider/public',
+      name: 'public',
+      component: () => import('./views/raider/Public.vue'),
+    },
+    {
       path: '/raider/life',
       name: 'life',
       component: () => import('./views/raider/Life.vue'),
