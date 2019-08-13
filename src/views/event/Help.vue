@@ -340,7 +340,7 @@ export default {
   flex-direction: column;
   .tit-bg {
     width: 862px;
-    height: 482px;
+    height: 433px;
     margin: 18px 0;
     background:
       url(../../assets/img/help/helpBg.png) no-repeat center,
