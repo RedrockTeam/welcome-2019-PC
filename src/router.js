@@ -64,6 +64,11 @@ const router = new Router({
       name: 'help',
       component: () => import('./views/event/Help.vue'),
     },
+    {
+      path: '/event/portrait',
+      name: 'portrait',
+      component: () => import('./views/event/Portrait.vue'),
+    },
   ],
 })
 
