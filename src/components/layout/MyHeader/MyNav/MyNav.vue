@@ -46,7 +46,7 @@ export default {
             },
             {
               title: '学生食堂',
-              route: 'cabteen',
+              route: 'canteen',
             },
             {
               title: '学生宿舍',
