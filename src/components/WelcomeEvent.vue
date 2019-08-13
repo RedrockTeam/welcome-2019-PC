@@ -7,7 +7,7 @@
               <div class="gantanhao"></div>
               <div class="right-title"></div>
               <p class="content">
-                  萌新你好，欢迎来鲜肉集中营报道！听说这里有好多萌新的照片，快来为你的班级注入萌新能量，美好的大学生活从认识新同学开始~
+                  简单选择形成叙述自我，绘出完整邮子画像，由你碰撞发现更多精彩。
               </p>
               <button1 class="button">了解更多</button1>
             </div>
@@ -16,7 +16,7 @@
               <div class="wenhao"></div>
               <div class="left-title"></div>
                 <p class="content">
-                    萌新你好，欢迎来鲜肉集中营报道！听说这里有好多萌新的照片，快来为你的班级注入萌新能量，美好的大学生活从认识新同学开始~
+                    想知道重邮校园的秘密？想和学长学姐零距离接触？热心的学长学姐都在这里，他们是重邮小百科，为你答疑解惑！
                 </p>
                 <button1 class="button">了解更多</button1>
             </div>
@@ -103,6 +103,7 @@ export default {
       width: 318px;
       font-family: "宋体";
       color: white;
+      text-align: center;
     }
     .button {
       margin: 0 auto;
