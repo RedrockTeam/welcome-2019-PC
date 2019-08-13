@@ -4,7 +4,7 @@
       <div class="tit-bg"></div>
       <div class="contents">
         <div class="text" v-for="(text, index) of texts" :key="index">
-          <div class="title">{{ text.title }}</div>
+          <div class="title">{{ text.title }}：</div>
           <div class="content">{{ text.content }}</div>
         </div>
       </div>
@@ -26,15 +26,15 @@ export default {
       texts: [
         {
           title: '活动主题',
-          content: '本科新生2017年9月5、6日报道',
+          content: '简单选择形成叙述自我，绘出完整邮子画像，由你碰撞发现更多精彩。',
         },
         {
-          title: '活动主题',
-          content: '本科新生2017年9月5、6日报道',
+          title: '活动时间',
+          content: '2019.XX.XX',
         },
         {
-          title: '活动主题',
-          content: '本科新生2017年9月5、6日报道',
+          title: '活动形式',
+          content: '线上公众号“重游小帮手”中参与',
         },
       ],
     }
