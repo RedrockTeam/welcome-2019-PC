@@ -95,7 +95,7 @@ export default {
 ul {
     list-style: none;
     position: absolute;
-    top: 300px;
+    top: 283px;
     left: 20px;
     li {
         float: left;
