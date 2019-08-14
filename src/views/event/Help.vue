@@ -1,5 +1,8 @@
 <template>
   <div>
+    <Track class="left-track" />
+    <Track class="right-track" />
+    <QRcode />
     <div class="dialog" :style="{ display: isOpen ? 'flex' : 'none' }">
       <div class="wrapper">
         <div class="close" @click="close()">
@@ -72,7 +75,7 @@
                 </div>
                 <div class="con">{{ question.content }}</div>
                 <div class="foot">
-                  <div class="talk">{{ question.answer.length }} 评论</div>
+                  <div class="talk">{{ question.answersCount }} 评论</div>
                   <button class="check" @click="open(question)">查看</button>
                 </div>
               </div>
@@ -98,12 +101,16 @@
 <script>
 import Frame from '@/components/base/Frame.vue'
 import ScrollBar from '@/components/base/ScrollBar.vue'
-import API from '@/config'
+import Track from '@/components/layout/Track.vue'
+import QRcode from '@/components/layout/QRcode.vue'
+// import API from '@/config'
 
 export default {
   components: {
     Frame,
     ScrollBar,
+    Track,
+    QRcode,
   },
   data() {
     return {
@@ -124,10 +131,9 @@ export default {
     },
     async getQuestions() {
       try {
-        const res = await fetch(`${API}?pageNo=5`, {
-          mode: 'no-cors',
-        }).then(r => r.json())
-        this.questions = res
+        const res = await fetch('/mock.json').then(r => r.json())
+        this.questions = res.filter(r => r.photoUrls.length === 0)
+        console.log(this.questions)
       } catch (e) {
         console.log(e)
       }
@@ -162,6 +168,20 @@ export default {
 <style scoped lang="scss">
 @import '@/assets/style/mixin.scss';
 
+.left-track {
+  height: 1146px;
+  position: absolute;
+  top: 288px;
+  left: 0;
+  transform: rotateY(180deg);
+}
+.right-track {
+  height: 1146px;
+  position: absolute;
+  top: 288px;
+  right: 0;
+}
+
 @mixin question {
   height: 127px;
   border: 3px solid #397dda;
@@ -180,6 +200,7 @@ export default {
     background-repeat: no-repeat;
     background-size: 83px 83px;
     border-radius: 50%;
+    border: 2px solid #7ca0ff;
   }
   .con-wrapper {
     margin: 20px 18px 14px 123px;
@@ -296,6 +317,7 @@ export default {
             background-repeat: no-repeat;
             background-size: 83px 83px;
             border-radius: 50%;
+            border: 2px solid #7ca0ff;
           }
           .con-wrapper {
             margin-left: 86px;

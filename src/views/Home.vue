@@ -58,12 +58,14 @@ export default {
   margin: 0 auto;
   position: relative;
   .left-track {
+    height: 4585px;
     position: absolute;
     top: -406px;
     left: 0;
     transform: rotateY(180deg);
   }
   .right-track {
+    height: 4585px;
     position: absolute;
     top: -406px;
     right: 0;
@@ -90,8 +92,9 @@ export default {
     float: left;
     position: absolute;
     top: 744px;
-    left: 310px;
+    left: 318px;
     background-image: url(../assets/img/Connect/img7.png);
+    background-repeat: no-repeat;
     width: 95px;
     height: 210px;
   }

@@ -726,7 +726,6 @@ export default {
       }
     },
     addFlag(position) {
-      console.log(position)
       // 防止重复
       if (this.flags.some(flag => flag.left === position.left && flag.top === position.top)) return
       this.flags.push(position)
@@ -940,11 +939,12 @@ export default {
           cursor: pointer;
           .flag {
             display: inline-block;
-            width: 17px;
-            height: 21.5px;
+            width: 11px;
+            height: 14px;
+            filter: brightness(140%);
             background-image: url(../../assets/img/Map/flag.png);
             background-repeat: no-repeat;
-            background-size: 17px 21.5px;
+            background-size: 11px 14px;
             background-position: top right;
             position: absolute;
             transform: translate(-50%, -50%);
@@ -955,7 +955,8 @@ export default {
         float: right;
         color: #fff;
         margin-right: 20px;
-        margin-top: 396px;
+        margin-top: 400px;
+        font-size: 14px;
       }
     }
   }

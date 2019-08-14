@@ -146,15 +146,16 @@ export default {
     align-items: center;
     flex-direction: column;
     video {
-      margin-top: 24px;
+      margin-top: 14px;
       width: 483px;
       height: 276px;
       border: 3px solid #0235c7;
     }
     .from {
-      font-size: 10px;
-      margin-top: 3px;
+      font-size: 14px;
+      margin-top: 6px;
       font-family: '微软雅黑';
+      color: #fff;
     }
   }
 }

@@ -113,7 +113,7 @@ ul {
           text-align: center;
             position: relative;
             top: 120px;
-            width: 181px;
+            width: 182px;
             height: 60px;
             overflow: hidden;
             font-size: $contentFontSize;

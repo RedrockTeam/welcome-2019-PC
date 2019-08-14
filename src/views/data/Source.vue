@@ -70,7 +70,7 @@ export default {
         tooltip: {
           trigger: 'axis',
           axisPointer: {
-            type: 'shadow',
+            type: 'none',
           },
         },
         legend: {
@@ -118,6 +118,10 @@ export default {
                   const colorList = ['#ff9dba', '#ffd1a0', '#fff5b4', '#7ef7ff', '#7095ff']
                   return colorList[params.dataIndex % 5]
                 },
+              },
+              emphasis: {
+                shadowBlur: 20,
+                shadowColor: 'rgba(0, 0, 0, 0.3)',
               },
             },
           },

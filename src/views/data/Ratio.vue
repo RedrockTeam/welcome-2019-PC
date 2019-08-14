@@ -82,7 +82,7 @@ export default {
           {
             name: '男女比例',
             type: 'pie',
-            radius: '55%',
+            radius: '94%',
             center: ['50%', '50%'],
             color: ['#97ffff', '#ff9dba'],
             hoverOffset: 5,
@@ -91,9 +91,16 @@ export default {
               { value: this.genderRatio[this.selected].female, name: '女' },
             ],
             itemStyle: {
-              show: false,
-              borderColor: '#4d75e8',
-              borderWidth: 1,
+              normal: {
+                show: false,
+                borderColor: '#4d75e8',
+                borderWidth: 3,
+              },
+              emphasis: {
+                shadowBlur: 30,
+                shadowOffsetX: 10,
+                shadowColor: 'rgba(0, 0, 0, 0.2)',
+              },
             },
             label: {
               normal: {
@@ -208,6 +215,5 @@ export default {
 .echarts {
   width: 100%;
   height: 100%;
-  transform: scale(1.65);
 }
 </style>

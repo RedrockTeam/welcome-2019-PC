@@ -1,3 +1,3 @@
-const API = 'http://202.202.43.234/seniorhelpme/questions'
+const API = 'https://wx.idsbllp.cn/234/seniorhelpme/'
 
 export default API

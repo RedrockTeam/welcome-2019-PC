@@ -1,6 +1,7 @@
 <template>
     <div id="yingxinhuodong">
         <title1 class="title" :isFire="isFire">迎新活动</title1>
+        <v-bubble-animation class="v-bubble-animation" />
         <div class="bg" ref="bg">
             <div class="right-content">
               <div class="right-head"></div>
@@ -34,6 +35,7 @@
 import Title from '@/components/base/Title.vue'
 import Button from '@/components/base/Button.vue'
 import ContentBg from '@/components/base/ContentBg.vue'
+import VBubbleAnimation from '@/components/base/VBubbleAnimation.vue'
 
 export default {
   name: 'yingxinhuodong',
@@ -41,6 +43,7 @@ export default {
     title1: Title,
     button1: Button,
     ContentBg,
+    VBubbleAnimation,
   },
   data() {
     return {
@@ -58,8 +61,17 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/style/variable.scss';
 
+#yingxinhuodong {
+  position: relative;
+}
 .title {
   margin: 70px auto 12px;
+}
+.v-bubble-animation {
+  position: absolute;
+  top: 58px;
+  right: 145px;
+  z-index: 1;
 }
 .bg {
     width: 1083px;

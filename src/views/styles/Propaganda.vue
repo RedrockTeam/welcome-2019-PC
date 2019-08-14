@@ -23,17 +23,10 @@
     </div>
     <scroll-bar class="scroll-bar">
       <li>
-          <div class="img1 img"  @click="showIt(0)"></div>
+          <div class="img4 img" @click="showIt(3)"></div>
           <div class="grey"></div>
           <div class="p">
-              <span >重邮2017招生宣传片</span>
-          </div>
-      </li>
-      <li>
-          <div class="img2 img" @click="showIt(1)"></div>
-          <div class="grey"></div>
-          <div class="p">
-              <span>重邮2017级学生军训汇演</span>
+              <span>2018年红岩网校招新视频</span>
           </div>
       </li>
       <li>
@@ -41,13 +34,6 @@
           <div class="grey"></div>
           <div class="p">
               <span>2017年红岩网校招新视频</span>
-          </div>
-      </li>
-      <li>
-          <div class="img4 img" @click="showIt(3)"></div>
-          <div class="grey"></div>
-          <div class="p">
-              <span>2015年红岩网校招新视频</span>
           </div>
       </li>
       <li>
@@ -61,7 +47,7 @@
           <div class="img6 img" @click="showIt(5)"></div>
           <div class="grey"></div>
           <div class="p">
-              <span>乌瞰新重邮</span>
+              <span>鸟瞰新重邮</span>
           </div>
       </li>
       <li>
@@ -69,6 +55,20 @@
           <div class="grey"></div>
           <div class="p">
               <span>重邮2018樱花季专题</span>
+          </div>
+      </li>
+      <li>
+          <div class="img1 img"  @click="showIt(0)"></div>
+          <div class="grey"></div>
+          <div class="p">
+              <span >重邮2017招生宣传片</span>
+          </div>
+      </li>
+      <li>
+          <div class="img2 img" @click="showIt(1)"></div>
+          <div class="grey"></div>
+          <div class="p">
+              <span>重邮2017级学生军训汇演</span>
           </div>
       </li>
       <li>
@@ -282,7 +282,7 @@ export default {
             font-family: '微软雅黑';
             color: white;
             position: relative;
-            top: 10px;
+            top: 7px;
             opacity: 1;
         }
         img {

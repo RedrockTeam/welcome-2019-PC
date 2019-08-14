@@ -13,7 +13,6 @@ export default {
 <style lang="scss" scoped>
 #guidao {
     width: 20px;
-    height: 4585px;
     background:
       url(../../assets/img/Connect/track.png) no-repeat,
       url(../../assets/img/Connect/trackbg.png);

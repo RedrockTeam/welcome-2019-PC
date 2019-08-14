@@ -19,14 +19,14 @@
         >{{ title }}<div class="dec"></div></div>
       </div>
       <scroll-bar class="scroll-bar">
-        <select id="selecter" v-model="selected" v-if="activeTitle === '校级组织'">
-          <option
-            v-for="(organization, index) of organizations"
-            :key="index"
-            :value="organization.title"
-          >{{ organization.title }}</option>
-        </select>
         <div class="content-title-wrapper">
+          <select id="selecter" v-model="selected" v-if="activeTitle === '校级组织'">
+            <option
+              v-for="(organization, index) of organizations"
+              :key="index"
+              :value="organization.title"
+            >{{ organization.title }}</option>
+          </select>
           <div class="content-title" v-if="activeTitle === '校级组织'">{{ current.title }}</div>
         </div>
         <div class="content-wrapper" v-html="current.content" v-if="activeTitle === '校级组织'"></div>
@@ -236,7 +236,7 @@ export default {
             <p>大学生艺术团舞蹈团是以民族舞、古典舞、现代舞为主的为各大舞台筹划演出和准备比赛的校级组织。老师会对所有成员根据自己擅长的舞种分组，比如民族舞、爵士舞、拉丁舞、街舞等等，再依据实际情况组织训练，保证每个人各施所长。平时会组织基本功、舞感训练和舞蹈组合的排练。学校的大型演出都有舞蹈团的身影，热爱舞蹈和舞台的你不要错过哟！<p>
             <h2 style="margin: 10px 0;">合唱团</h2>
             <p>重庆邮电大学合唱团自1995年成立以来，旨在丰富在校大学生的文化艺术生活，传承和发扬校园文化，服务人才培养，普及美育教育，传承重邮精神。重庆邮电大学合唱团用他们的歌声响彻南山之巅。全团分为四个声部，男高音声部、男低音声部、女高音声部、女低音声部，到时候会根据个人音色、音域进行初步划分，在平时训练中会根据情况进行细微的调整。<p>
-            <p style="margin-left: 470px;">话剧团</p>
+            <h2 style="margin: 10px 0;">话剧团</h2>
             <p style="margin-bottom: 20px;">话剧团是重庆邮电大学大学生艺术团下的分支团体，主要进行话剧舞台表演与展示。用剧本，演员，表演，灯光，舞台效果等带给每一个人话剧的非凡魅力。</p>
           `,
         },
@@ -367,8 +367,8 @@ export default {
     }
     #selecter {
       position: absolute;
-      top: 20px;
-      right: 80px;
+      right: 95px;
+      top: 30px;
       width: 150px;
       height: 26px;
       color: #225bec;
@@ -377,6 +377,7 @@ export default {
       border: 1px solid #225bec;
     }
     .content-title-wrapper {
+      position: relative;
       text-align: center;
       .content-title {
         display: inline-block;
@@ -387,7 +388,7 @@ export default {
         background: linear-gradient(-135deg, transparent 6px, #4d75e8 0);
         text-align: center;
         line-height: 53px;
-        margin: 20px auto;
+        margin: 30px auto 20px;
         padding: 0 20px;
       }
     }

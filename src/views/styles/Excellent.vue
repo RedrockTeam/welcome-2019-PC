@@ -23,7 +23,6 @@
         <div v-for="(image,index) in images" :key="index" class="content">
             <img class="img" :src="images[index]">
             <div class="info">
-                <span class="sp1">姓名：</span>
                 <span class="p1">{{name[index]}}</span>
             </div>
         </div>
@@ -40,9 +39,11 @@
             }"
           >
           <div class="info">
-              <span class="sp1">姓名:</span>
+              <span class="sp1" v-if="index === stuimages.length - 2">寝室：</span>
+              <span class="sp1" v-else-if="index === stuimages.length - 1">班级：</span>
+              <span class="sp1" v-else>姓名：</span>
               <p class="p1">{{stuname[index]}}</p>
-              <span class="sp2">简介:</span>
+              <span class="sp2">简介：</span>
               <article class="p2">{{stuinfo[index]}}</article>
           </div>
       </div></div>
@@ -261,6 +262,8 @@ export default {
       line-height: 22px;
       font-family: '微软雅黑';
       color: #0231a9;
+        font-size: 16px;
+        color: #0a3cca;
       }
     }
   }
@@ -280,19 +283,18 @@ export default {
     margin-top: 20px;
     background-color: rgb(176, 207, 255);
     overflow: hidden;
+    position: relative;
     .img {
-        float: left;
-        position: relative;
-        top: 30px;
-        left: 15px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 20px;
         width: 158px;
         height: 231px;
         border: 2px solid rgb(1, 52, 199);
     }
     .info {
-        position: relative;
-        left: 30px;
-        float: left;
+        float: right;
         width: 220px;
         height: 250px;
         padding-top: 10px;
@@ -311,7 +313,6 @@ export default {
         position: relative;
         top: 23px;
         width: 200px;
-        left: 10px;
     }
     .sp1 {
         float: left;
@@ -321,7 +322,7 @@ export default {
     }
     .sp2 {
         position: relative;
-        right:35px ;
+        right:48px;
         top: 40px;
     }
     .p2 {
