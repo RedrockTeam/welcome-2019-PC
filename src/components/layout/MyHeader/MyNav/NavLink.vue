@@ -3,14 +3,18 @@
     <slot></slot>
     <div class="contents" v-if="contents.length">
       <div class="filler-top"></div>
-      <router-link
-        :to="`/${route}/${content.route}`"
+      <div
         class="content"
         v-for="(content, index) of contents"
         :key="index"
       >
-        {{ content.title }}
-      </router-link>
+        <a href="https://www.google.com/" target="block" v-if="content.route === 'website'">
+          {{ content.title }}
+        </a>
+        <router-link :to="`/${route}/${content.route}`" v-else>
+          {{ content.title }}
+        </router-link>
+      </div>
       <div class="filler-bottom"></div>
     </div>
   </div>
@@ -66,6 +70,11 @@ export default {
       color: #fff;
       line-height: 20px;
       font-size: $navLinkFontSize;
+      position: relative;
+      a {
+        color: #fff;
+        display: block;
+      }
     }
   }
 }
@@ -76,8 +85,10 @@ export default {
   .contents {
     max-height: 1000px;
     .content:hover {
-      color: #2d5eff;
-      font-size: $navLinkHoverFontSize;
+      a {
+        color: #2d5eff;
+        font-size: $navLinkHoverFontSize;
+      }
       background: #8aedff;
     }
   }

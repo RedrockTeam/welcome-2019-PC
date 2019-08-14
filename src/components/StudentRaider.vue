@@ -8,22 +8,30 @@
                 <li class="li1">
                     <span>新生清单</span>
                     <p>大学新生报道必备清单尽快启程新生活</p>
-                    <button1 class="btn">了解更多</button1>
+                    <router-link to="/raider/list">
+                      <button1 class="btn">了解更多</button1>
+                    </router-link>
                 </li>
                 <li class="li2">
                     <span>交通路线</span>
                     <p>交通路线四通八达，终汇重邮</p>
+                    <router-link to="/raider/traffic">
                     <button1 class="btn">了解更多</button1>
+                    </router-link>
                 </li>
                 <li class="li3">
                     <span>周边生活</span>
                     <p>汇总周边美食，集结生活信息</p>
+                    <router-link to="/raider/life">
                     <button1 class="btn">了解更多</button1>
+                    </router-link>
                 </li>
                 <li class="li4">
                     <span>网址大全</span>
                     <p>你想要的我都“邮”，通往各网站的窗口</p>
-                    <button1 class="btn">了解更多 </button1>
+                    <a href="https://www.google.com/" target="block">
+                      <button1 class="btn">了解更多</button1>
+                    </a>
                 </li>
             </ul>
         </div>

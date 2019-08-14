@@ -6,12 +6,16 @@
             <ul class="left">
                 <img class="img" src="../assets/img/Chongyoufengcai/img2.png">
                 <p>丰富多彩的组织生活是大学中绚丽的一抹色彩，不用犹豫不决，挑花眼，这里为你解开谜团！</p>
+                <router-link to="/styles/organization">
                 <button1 class="button">组织大全</button1>
+                </router-link>
             </ul>
             <ul class="right">
                 <img class="img" src="../assets/img/Chongyoufengcai/img1.png">
                 <p>短短文字记录了他们在大学青春美好时光里，用实干、奋斗谱写的“化鱼成龙”的征程，致敬前辈，畅想未来。</p>
-                <button1 class="button">优秀代表</button1>
+                <router-link to="/styles/excellent">
+                  <button1 class="button">优秀代表</button1>
+                </router-link>
             </ul>
         </div>
         <content-bg :isFire="isFire" @on-fire="fire()" />

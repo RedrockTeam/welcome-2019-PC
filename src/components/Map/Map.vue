@@ -65,7 +65,7 @@
               :key="index"
               :style="{ top: `${flag.top}px`, left: `${flag.left}px` }"
               @click="removeFlag(flag)"
-            >X</div>
+            ></div>
           </div>
         </div>
         <div class="tips">tips: 点击地图可以添加标记，再次点击删除标记</div>
@@ -194,7 +194,7 @@ export default {
         },
         {
           name: '新校门',
-          position: [175, 305],
+          position: [165, 308],
         },
         {
           name: '紫薇篮球场',
@@ -684,6 +684,7 @@ export default {
       }
     },
     addFlag(position) {
+      console.log(position)
       // 防止重复
       if (this.flags.some(flag => flag.left === position.left && flag.top === position.top)) return
       this.flags.push(position)
@@ -882,7 +883,7 @@ export default {
         left: -243px;
         overflow: hidden;
         #map {
-          background-image: url(../../assets/img/Map/map.jpg);
+          background-image: url(../../assets/img/Map/map.png);
           background-size: 654px 389px;
           width: 100%;
           height: 100%;
@@ -894,8 +895,12 @@ export default {
           cursor: pointer;
           .flag {
             display: inline-block;
-            font-size: 16px;
-            color: red;
+            width: 26px;
+            height: 34px;
+            background-image: url(../../assets/img/Map/flag.png);
+            background-repeat: no-repeat;
+            background-size: 17px 21.5px;
+            background-position: top right;
             position: absolute;
             transform: translate(-50%, -50%);
           }
