@@ -9,7 +9,9 @@
               <p class="content">
                   简单选择形成叙述自我，绘出完整邮子画像，由你碰撞发现更多精彩。
               </p>
-              <button1 class="button">了解更多</button1>
+              <router-link to="/event/portrait">
+                <button1 class="button">了解更多</button1>
+              </router-link>
             </div>
             <div class="left-content">
               <div class="left-head"></div>
@@ -18,7 +20,9 @@
                 <p class="content">
                     想知道重邮校园的秘密？想和学长学姐零距离接触？热心的学长学姐都在这里，他们是重邮小百科，为你答疑解惑！
                 </p>
-                <button1 class="button">了解更多</button1>
+                <router-link to="/event/help">
+                  <button1 class="button">了解更多</button1>
+                </router-link>
             </div>
         </div>
         <content-bg :isFire="isFire" @on-fire="fire()" />

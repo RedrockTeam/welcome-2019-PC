@@ -30,7 +30,15 @@
       </div>
       <div class="contents" v-if="activeTitle === '学生代表'">
       <div v-for="(image,index) in stuimages" :key="index" class="student">
-          <img class="img" :src="stuimages[index]">
+          <img class="img" :src="stuimages[index]"
+            :style="{
+              height: index === stuimages.length - 1
+                ? '100px'
+                : index === stuimages.length - 2
+                  ? '150px'
+                  : '200px',
+            }"
+          >
           <div class="info">
               <span class="sp1">姓名:</span>
               <p class="p1">{{stuname[index]}}</p>
@@ -275,7 +283,7 @@ export default {
     .img {
         float: left;
         position: relative;
-        top: 15px;
+        top: 30px;
         left: 15px;
         width: 158px;
         height: 231px;
@@ -287,7 +295,7 @@ export default {
         float: left;
         width: 220px;
         height: 250px;
-
+        padding-top: 10px;
     }
     span {
         font-size:16px;
