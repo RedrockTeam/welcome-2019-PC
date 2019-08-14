@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <Frame styles="bubble">
+    <Frame styles="belt">
       <scroll-bar class="scroll-bar">
         <div class="tit-bg"></div>
         <div class="contents">
