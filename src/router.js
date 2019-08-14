@@ -89,6 +89,26 @@ const router = new Router({
       name: 'portrait',
       component: () => import('./views/event/Portrait.vue'),
     },
+    {
+      path: '/styles/organization',
+      name: 'organization',
+      component: () => import('./views/styles/Organization.vue'),
+    },
+    {
+      path: '/styles/propaganda',
+      name: 'propaganda',
+      component: () => import('./views/styles/Propaganda.vue'),
+    },
+    {
+      path: '/styles/excellent',
+      name: 'excellent',
+      component: () => import('./views/styles/Excellent.vue'),
+    },
+    {
+      path: '/styles/style',
+      name: 'style',
+      component: () => import('./views/styles/Style.vue'),
+    },
   ],
 })
 
