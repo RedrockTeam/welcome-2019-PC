@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <Frame styles="belt">
+  <Frame styles="bubble">
     <div class="header">
       <router-link
         v-for="(btn, index) of btns"

@@ -1,5 +1,5 @@
 <template>
-  <Frame styles="belt">
+  <Frame styles="lantern">
     <div class="header">
       <router-link
         v-for="(btn, index) of btns"

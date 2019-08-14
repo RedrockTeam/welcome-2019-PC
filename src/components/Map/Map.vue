@@ -117,6 +117,10 @@ export default {
           position: [167, 115],
         },
         {
+          name: '传媒艺术学院',
+          position: [167, 115],
+        },
+        {
           name: '兴业苑',
           position: [270, 108],
         },
@@ -206,6 +210,10 @@ export default {
         },
         {
           name: '第三教学楼',
+          position: [150, 172],
+        },
+        {
+          name: '研究生院',
           position: [150, 172],
         },
         {
@@ -301,7 +309,7 @@ export default {
           position: [406, 177],
         },
         {
-          name: '学工部/学生处',
+          name: '学工部 / 学生处',
           position: [406, 177],
         },
         {
@@ -381,7 +389,15 @@ export default {
           position: [333, 209],
         },
         {
-          name: '风雨操场',
+          name: '红房子',
+          position: [333, 209],
+        },
+        {
+          name: '风华运动场',
+          position: [270, 218],
+        },
+        {
+          name: '老操场',
           position: [270, 218],
         },
         {
@@ -389,7 +405,11 @@ export default {
           position: [189, 222],
         },
         {
-          name: '通讯学院',
+          name: '紫薇篮球场',
+          position: [189, 222],
+        },
+        {
+          name: '通信学院',
           position: [151, 212],
         },
         {
@@ -417,6 +437,10 @@ export default {
           position: [190, 260],
         },
         {
+          name: '信息中心',
+          position: [190, 260],
+        },
+        {
           name: '招生就业处',
           position: [207, 286],
         },
@@ -430,6 +454,14 @@ export default {
         },
         {
           name: '第二教学楼',
+          position: [255, 247],
+        },
+        {
+          name: '计算机学院',
+          position: [255, 247],
+        },
+        {
+          name: '软件学院',
           position: [255, 247],
         },
         {
@@ -465,6 +497,10 @@ export default {
           position: [349, 296],
         },
         {
+          name: '安法学院',
+          position: [349, 296],
+        },
+        {
           name: '长波楼',
           position: [311, 275],
         },
@@ -473,11 +509,23 @@ export default {
           position: [339, 273],
         },
         {
+          name: '光电工程学院',
+          position: [339, 273],
+        },
+        {
+          name: '国际半导体学院',
+          position: [339, 273],
+        },
+        {
           name: '老图书馆',
           position: [321, 255],
         },
         {
           name: '老校门',
+          position: [284, 322],
+        },
+        {
+          name: '崇文门',
           position: [284, 322],
         },
         {
@@ -497,12 +545,28 @@ export default {
           position: [367, 295],
         },
         {
+          name: '信科大厦',
+          position: [367, 295],
+        },
+        {
+          name: '财务处',
+          position: [367, 295],
+        },
+        {
+          name: '一卡通中心',
+          position: [367, 295],
+        },
+        {
           name: '理学院',
           position: [378, 270],
         },
         {
           name: '情人坡',
           position: [390, 238],
+        },
+        {
+          name: '武装部 / 保卫处',
+          position: [414, 228],
         },
         {
           name: '重邮宾馆',
@@ -526,6 +590,14 @@ export default {
         },
         {
           name: '综合实验大楼',
+          position: [534, 252],
+        },
+        {
+          name: '通鼎实验大楼',
+          position: [534, 252],
+        },
+        {
+          name: '二维码大楼',
           position: [534, 252],
         },
       ],
@@ -654,6 +726,7 @@ export default {
       }
     },
     addFlag(position) {
+      console.log(position)
       // 防止重复
       if (this.flags.some(flag => flag.left === position.left && flag.top === position.top)) return
       this.flags.push(position)
@@ -686,6 +759,7 @@ export default {
     searchText() {
       if (!this.searchText) {
         this.searched = false
+        this.clear()
       }
     },
   },

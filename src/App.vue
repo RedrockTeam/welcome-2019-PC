@@ -2,10 +2,9 @@
   <div id="app">
     <my-header />
       <transition
-        name="fade"
+        name="slide-fade"
         mode="out-in"
-        enter-active-class="animated bounceIn fast"
-        leave-active-class="animated fadeOut faster">
+      >
         <keep-alive>
           <router-view />
         </keep-alive>
@@ -72,5 +71,16 @@ body {
   padding: 0;
   border: none;
   outline: none;
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateY(-20px);
+  opacity: 0;
 }
 </style>
