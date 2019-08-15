@@ -31,52 +31,52 @@
         </div>
         <div class="content-wrapper" v-html="current.content" v-if="activeTitle === '校级组织'"></div>
         <div class="hongyan" v-if="activeTitle === '红岩网校'">
-          <h1>红岩网校工作站简介:</h1>
+          <div><h1 class="title">红岩网校工作站简介</h1></div>
           <p>
             重庆邮电大学红岩网校工作站是学校唯一一个从事互联网产品开发运营的校级学生组织。
             该团队自创立以来，始终坚持以技术见长，充分结合同学们的话语体系和视觉风格建设网络平台，繁荣网络文化。红岩网校工作站在校团委的指导下，
             由学生自我管理，多年来走出了一大批优秀的IT互联网人才，深受电信运营商、腾讯、阿里巴巴和百度等知名互联网企业的青睐。
-            团队先后获评“全国五四红旗团支部”、“团中央新媒体专业工作室”、“重庆市IT杰出青年群体”等系列荣誉。
-            红岩网校工作站属于校级学生组织，其中包括五个部门：产品策划及运营部，视觉设计部，Web研发部，移动开发部和运维安全部。
-            工作中，各个部门相互协作、共同进步，开发上线了重邮小帮手微信公众号，掌上重邮、BTdown铺等一系列优秀的校园网络产品，深受广大师生的好评。
+            团队先后获评“全国五四红旗团支部”、“团中央新媒体专业工作室”、“重庆市 IT 杰出青年群体”等系列荣誉。
+            红岩网校工作站属于校级学生组织，其中包括五个部门：产品策划及运营部，视觉设计部，Web 研发部，移动开发部和运维安全部。
+            工作中，各个部门相互协作、共同进步，开发上线了重邮小帮手微信公众号，掌上重邮、BTdown 铺等一系列优秀的校园网络产品，深受广大师生的好评。
             红岩网校工作站被大家誉为“重邮互联网大咖的摇篮”。
           </p>
-          <h1>各部门简介：</h1>
+          <div><h1 class="title">各部门简介</h1></div>
           <h2>【产品策划及运营部】</h2>
           <p>
-            Ta是用户需求的倾听者，也是提出解决方案的总设计师。活跃在各部门之间，是促进各部门沟通的桥梁。
-            Ta是创意的缔造者，拥有独特严谨的产品思维。一份原型图、一篇PRD可以让程序员和设计师开启工作模式，
-            也可以写出优秀的文案对活动和产品形成强有力的助推，Office、Axure、Xmind等软件是Ta们的好帮手。
+            Ta 是用户需求的倾听者，也是提出解决方案的总设计师。活跃在各部门之间，是促进各部门沟通的桥梁。
+            Ta 是创意的缔造者，拥有独特严谨的产品思维。一份原型图、一篇 PRD 可以让程序员和设计师开启工作模式，
+            也可以写出优秀的文案对活动和产品形成强有力的助推，Office、Axure、Xmind 等软件是 Ta 们的好帮手。
             产品策划及运营部旨在培养出优秀的产品经理，产品运营者和新媒体运营师。
           </p>
           <h2>【视觉设计部】</h2>
           <p>
-            Ta是设计产品图形用户界面，跟踪产品视觉及体验效果的设计师。
-            需要经常同Photopshop、Adobe Illustrator打交道的Ta们，主要负责针对pc端、移动端、海报等界面的设计，
+            Ta 是设计产品图形用户界面，跟踪产品视觉及体验效果的设计师。
+            需要经常同 Photopshop、Adobe Illustrator 打交道的Ta们，主要负责针对 PC 端、移动端、海报等界面的设计，
             团队协作设定产品整体界面视觉风格与创意规划，对设计成果进行定期评估和研究，进行视觉元素的优化设计。
             视觉设计部旨在设计出优秀的互联网产品，培养视觉设计师和UI设计师。
           </p>
           <h2>【移动开发部】</h2>
           <p>
-            Ta主要负责移动端产品的开发，以 Java & Kotlin，Objective-C & Swift为主要开发语言，涵盖Android、
-            iOS两个平台。在这里你不但可以学到App开发，还能认识一大群志同道合的朋友。如果你对App开发感兴趣，
-            对App制作有欲望，移动开发部将是你的秀场。来吧，如果你曾抱怨被大神虐哭，现在一个成为大神的机会等着你！
+            Ta 主要负责移动端产品的开发，以 Java & Kotlin，Objective-C & Swift 为主要开发语言，涵盖 Android、
+            iOS 两个平台。在这里你不但可以学到 App 开发，还能认识一大群志同道合的朋友。如果你对 App 开发感兴趣，
+            对 App 制作有欲望，移动开发部将是你的秀场。来吧，如果你曾抱怨被大神虐哭，现在一个成为大神的机会等着你！
           </p>
           <h2>【Web研发部】</h2>
           <p>
-            Ta的职责包括“重邮小帮手”微信公众号、移动端／PC端网站开发、助力掌上重邮APP、提供强大的后台驱动等。
-            目前分为前端和后端方向，前端主要采用html、css、JavaScript等利器，针对PC端、
+            Ta 的职责包括“重邮小帮手”微信公众号、移动端／PC 端网站开发、助力掌上重邮 APP、提供强大的后台驱动等。
+            目前分为前端和后端方向，前端主要采用 HTML、CSS、JavaScript 等利器，针对 PC 端、
             移动端等不同交互领域采用不同的设计风格与技术，将视觉无限的创意以行行代码形式转化为交互良好的网站页面，
             并通过一系列优化手段使用户体验达到最佳。后端主要负责将产品细致入微的现实需求转化为清晰的数据模型与业务逻辑，
-            采用PHP、Java等开发语言操作数据库并进行严格的分析处理，掌控数据传递处理路上的每个流程，
+            采用 PHP、Java、Golang 等开发语言操作数据库并进行严格的分析处理，掌控数据传递处理路上的每个流程，
             从而为网校提供最为坚实的数据后盾。
           </p>
           <h2>【运维安全部】</h2>
           <p>
-            Ta既是红岩网校运维安全部(内部称之为 网校 SRE ( Site Reliability Engineering ))，
+            Ta 既是红岩网校运维安全部(内部称之为 网校 SRE ( Site Reliability Engineering ))，
             也是重庆邮电大学 Linux 协会( CQUPT Linux User Group )，主要负责维护网校的服务器稳定和安全，
             同时也负责新项目的部署、环境安全配置和性能优化，还负责了重庆邮电大学的公益项目：重庆邮电大学开源镜像站。
-            Ta们使用 Python语言来开发好玩有趣的项目，在这里你可以利用服务器资源来搭建自己想做的任何项目。
+            Ta 们使用 Python 语言来开发好玩有趣的项目，在这里你可以利用服务器资源来搭建自己想做的任何项目。
             你要对技术执着、对高性能孜孜不倦，“如果不能优雅的解决这个问题，那我们就有了两个问题”。
           </p>
         </div>
@@ -284,13 +284,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
-  height: 60px;
+  height: 85px;
+  padding-top: 25px;
 }
 .contents {
   .title-wrapper {
     width: 870px;
     height: 45px;
-    margin-top: 116px;
+    margin-top: 111px;
     display: flex;
     justify-content: space-between;
     .title {
@@ -327,20 +328,33 @@ export default {
     border: 3px solid #397dda;
     background: #b0cfff;
     .hongyan {
-      padding: 20px;
+      padding: 0 98.5px 24px;
       font-size: 14px;
-      color: #4f6ec5;
+      color: #547cec;
       font-family: '微软雅黑';
       p {
         margin: 10px 0;
       }
       h2 {
         font-size: 18px;
-        color: #0235c7;
+        color: #2348b3;
+      }
+      div {
+        width: max-content;
+        margin: 0 auto;
       }
       h1 {
-        margin-bottom: 10px;
+        margin: 34px auto 23px;
         color: #0235c7;
+        display: inline-block;
+        font-size: 26px;
+        color: #fff;
+        height: 53px;
+        background: #4d75e8;
+        background: linear-gradient(-135deg, transparent 6px, #4d75e8 0);
+        text-align: center;
+        line-height: 53px;
+        padding: 0 20px;
       }
     }
     .shetuan {

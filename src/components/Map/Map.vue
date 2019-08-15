@@ -741,6 +741,7 @@ export default {
     },
     clear() {
       this.searchText = ''
+      this.result = ''
       this.zoomToMin()
     },
   },

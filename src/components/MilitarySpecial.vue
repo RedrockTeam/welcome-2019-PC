@@ -117,7 +117,7 @@ ul {
             height: 60px;
             overflow: hidden;
             font-size: $contentFontSize;
-            font-family: "宋体";
+            font-family: '微软雅黑';
             color: white;
         }
         .img {

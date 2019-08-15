@@ -73,7 +73,7 @@ ul {
         p {
             margin-top: 3px;
             color: rgb(84, 124, 236);
-            font-family: "宋体";
+            font-family: '微软雅黑';
             font-size: 12px;
             line-height: 18px;
         }

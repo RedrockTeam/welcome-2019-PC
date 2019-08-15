@@ -138,11 +138,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
+  height: 85px;
+  padding-top: 25px;
 }
 .contents {
   @include frameContentStyle;
+  margin-top: 111px;
   width: 870px;
-  height: 376px;
+  height: 382px;
   background: #b0d7ff;
   border: 3px solid #397dda;
   display: flex;

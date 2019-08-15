@@ -100,12 +100,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
+  height: 85px;
+  padding-top: 25px;
 }
 .contents {
   .title-wrapper {
     width: 870px;
     height: 45px;
-    margin-top: 124px;
+    margin-top: 111px;
     display: flex;
     justify-content: space-between;
     .title {

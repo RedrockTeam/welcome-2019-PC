@@ -108,12 +108,12 @@ export default {
   justify-content: space-between;
   flex-wrap: wrap;
   background: #87a6ff;
-  padding-top: 20px;
+  padding-top: 17px;
 }
 .scroll-bar {
   width: 876px;
-  height: 322px;
-  margin-top: 18px;
+  height: 326px;
+  margin-top: 14px;
   border: 3px solid #397dda;
   background: #b0cfff;
 }

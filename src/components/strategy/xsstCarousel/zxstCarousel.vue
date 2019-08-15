@@ -21,9 +21,9 @@ export default {
         ],
       },
       img: [
-        require('../../../assets/img/Strategy/xueshengshitang/zxst/img1.jpg'),
-        require('../../../assets/img/Strategy/xueshengshitang/zxst/img3.jpg'),
-        require('../../../assets/img/Strategy/xueshengshitang/zxst/img2.jpg'),
+        require('../../../assets/img/Strategy/xueshengshitang/img/zx1.jpg'),
+        require('../../../assets/img/Strategy/xueshengshitang/img/zx3.jpg'),
+        require('../../../assets/img/Strategy/xueshengshitang/img/zx2.jpg'),
       ],
     }
   },

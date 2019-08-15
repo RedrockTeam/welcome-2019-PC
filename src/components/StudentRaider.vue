@@ -142,7 +142,7 @@ ul {
         height: 40px;
         width: 181px;
         font-size: $contentFontSize;
-        font-family: "宋体";
+        font-family: '微软雅黑';
         color: white;
         margin: 10px 0 0;
     }

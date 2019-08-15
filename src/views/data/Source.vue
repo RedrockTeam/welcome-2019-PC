@@ -146,12 +146,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
+  height: 85px;
+  padding-top: 25px;
 }
 .scroll-bar {
   width: 870px;
-  height: 376px;
+  height: 382px;
   position: absolute;
-  top: 126px;
+  top: 113px;
   border: 3px solid #397dda;
   background: #b0d7ff;
 }

@@ -162,8 +162,8 @@ export default {
   flex-wrap: wrap;
   position: absolute;
   background: #87a6ff;
-  padding-top: 39px;
   z-index: 1;
+  padding-top: 25px;
   .fill {
     width: 100%;
     height: 10px;
@@ -172,7 +172,7 @@ export default {
   .title-wrapper {
     width: 870px;
     height: 45px;
-    margin-top: 12px;
+    margin-top: 23px;
     display: flex;
     justify-content: space-between;
     .title {
@@ -211,6 +211,7 @@ export default {
   @include frameContentStyle;
   margin-top: 170px;
   padding-top: 0;
+  padding-bottom: 20px;
   width: 860px;
   display: flex;
   flex-wrap: wrap;
@@ -237,6 +238,7 @@ export default {
   }
   .content:nth-child(19) {
     margin-left: 0px;
+    margin-bottom: 0;
   }
   .content {
     width: 270px;

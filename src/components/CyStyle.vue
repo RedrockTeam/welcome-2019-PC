@@ -90,7 +90,7 @@ export default {
             margin-top: 20px;
             font-size: $contentFontSize;
             width: 346px;
-            font-family: "宋体";
+            font-family: '微软雅黑';
             color: white;
         }
         .img {

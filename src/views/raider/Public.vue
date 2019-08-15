@@ -74,6 +74,9 @@ export default {
   flex-wrap: wrap;
   font-size: 10px;
     list-style: none;
+    padding-top: 18px;
+  padding-left: 11px;
+  padding-bottom: 6px;
   .content {
     width: 262px;
     height: 369px;
@@ -160,22 +163,22 @@ export default {
 }
   }
   .content:nth-child(2) {
-    margin-left: 37px;
+    margin-left: 28px;
   }
   .content:nth-child(3n) {
-    margin-left: 37px;
+    margin-left: 28px;
   }
   .content:nth-child(2n + 3) {
-    margin-left: 37px;
+    margin-left: 28px;
   }
   .content:nth-child(7) {
     margin-left: 0;
   }
   .content:nth-child(8) {
-    margin-left: 37px;
+    margin-left: 28px;
   }
   .content {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 </style>

@@ -84,7 +84,7 @@ export default {
     padding: 15px 30px;
     border: 3px solid #397dda;
     background: #b7d2ff;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     .text {
       font-family: '微软雅黑';
       color: #1441b1;

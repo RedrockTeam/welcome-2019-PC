@@ -3,50 +3,45 @@
     <Track class="left-track" />
     <Track class="right-track" />
     <QRcode />
-    <div class="dialog" :style="{ display: isOpen ? 'flex' : 'none' }">
-      <div class="wrapper">
-        <div class="close" @click="close()">
-          <div class="close-icon"></div>
+    <Dialog class="dialog" :isOpen="isOpen" @close="onClose()">
+      <scroll-bar class="content" v-if="Object.keys(this.question).length">
+        <div class="question">
+          <div class="avatar" :style="{backgroundImage: `url(${question.author.avatar})`}">
+          </div>
+          <div class="con-wrapper">
+            <div class="name">
+              {{ question.author.name }}
+              <div class="createdAt">{{ question.createdAt }}</div>
+            </div>
+            <div class="con">{{ question.content }}</div>
+            <div class="foot">
+              <div class="talk">{{ question.answersCount }} 评论</div>
+            </div>
+          </div>
         </div>
-        <scroll-bar class="content" v-if="Object.keys(question).length">
-          <div class="question">
-            <div class="avatar" :style="{backgroundImage: `url(${question.author.avatar})`}">
+        <div class="answer-wrapper" v-if="answers.length">
+          <div
+            class="answer"
+            v-for="answer of answers"
+            :key="answer.id"
+          >
+            <div class="avatar" :style="{backgroundImage: `url(${answer.author.avatar})`}">
             </div>
             <div class="con-wrapper">
               <div class="name">
-                {{ question.author.name }}
-                <div class="createdAt">{{ question.createdAt }}</div>
+                {{ answer.author.name }}
+                <div class="createdAt">{{ answer.createdAt }}</div>
               </div>
-              <div class="con">{{ question.content }}</div>
+              <div class="con">{{ answer.content }}</div>
               <div class="foot">
-                <div class="talk">{{ question.answer.length }} 评论</div>
+                <div class="approval">赞 {{ answer.approvalNum }}</div>
+                <div class="oppose">踩 {{ answer.opposeNum }}</div>
               </div>
             </div>
           </div>
-          <div class="answer-wrapper">
-            <div
-              class="answer"
-              v-for="answer of question.answer"
-              :key="answer.id"
-            >
-              <div class="avatar" :style="{backgroundImage: `url(${answer.author.avatar})`}">
-              </div>
-              <div class="con-wrapper">
-                <div class="name">
-                  {{ answer.author.name }}
-                  <div class="createdAt">{{ answer.createdAt }}</div>
-                </div>
-                <div class="con">{{ answer.content }}</div>
-                <div class="foot">
-                  <div class="approval">赞 {{ answer.approvalNum }}</div>
-                  <div class="oppose">踩 {{ answer.opposeNum }}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </scroll-bar>
-      </div>
-    </div>
+        </div>
+      </scroll-bar>
+    </Dialog>
 
     <Frame styles="belt">
       <scroll-bar class="scroll-bar">
@@ -83,11 +78,17 @@
             <div class="pagination">
               <div class="left btn" @click="goPrev()"></div>
               <div
-                :class="{ page: true, active: number === page }"
-                v-for="(number, index) of Math.ceil(questions.length / 4)"
+                v-for="(number, index) of Math.floor(questions.length / 4)"
                 :key="index"
                 @click="changePage(number)"
-              >{{ number }}</div>
+              >
+                <div
+                  :class="{ page: true, active: number === page }"
+                  v-if="show(index)"
+                >
+                  {{ number }}
+                </div>
+              </div>
               <div class="right btn" @click="goNext()"></div>
             </div>
             <div class="look">关注重邮小帮手公众号，即可参与提问</div>
@@ -103,7 +104,7 @@ import Frame from '@/components/base/Frame.vue'
 import ScrollBar from '@/components/base/ScrollBar.vue'
 import Track from '@/components/layout/Track.vue'
 import QRcode from '@/components/layout/QRcode.vue'
-// import API from '@/config'
+import Dialog from '@/components/base/Dialog.vue'
 
 export default {
   components: {
@@ -111,56 +112,124 @@ export default {
     ScrollBar,
     Track,
     QRcode,
+    Dialog,
   },
   data() {
     return {
       activeTitle: '最热问题',
       page: 1,
+      hotDataPage: 1,
+      newDataPage: 1,
       titles: [
         '最热问题',
         '最新问题',
       ],
+      hotQuestions: [],
+      newQuestions: [],
       questions: [],
       question: {},
+      answers: [],
       isOpen: false,
+      isHotEnd: false,
+      isNewEnd: false,
     }
   },
   methods: {
-    changeTitle(title) {
-      this.activeTitle = title
-    },
-    async getQuestions() {
-      try {
-        const res = await fetch('/mock.json').then(r => r.json())
-        this.questions = res.filter(r => r.photoUrls.length === 0)
-        console.log(this.questions)
-      } catch (e) {
-        console.log(e)
+    show(index) {
+      if (index <= this.page + 1 && index >= this.page - 3) {
+        return true
+      } if (this.page <= 2 && index < 5) {
+        return true
+      } if (
+        this.page >= Math.floor(this.questions.length / 4) - 2
+        && index >= Math.floor(this.questions.length / 4) - 5
+      ) {
+        return true
       }
+      return false
+    },
+    async changeTitle(title) {
+      this.activeTitle = title
+      if (title === '最新问题') {
+        this.questions = this.newQuestions
+      } if (title === '最热问题') {
+        this.questions = this.hotQuestions
+      }
+      this.page = 1
+    },
+    async getQuestions(page, isNew = false) {
+      const res = await fetch(`/api?pageNo=${page}${isNew ? '&sortby=new' : ''}`).then(r => r.json())
+      return res.filter(r => r.photoUrls.length === 0)
     },
     changePage(page) {
-      this.page = page
+      let step = page - this.page
+      if (step > 0) {
+        for (; step > 0; step -= 1) {
+          this.goNext()
+        }
+      } if (step < 0) {
+        for (; step < 0; step += 1) {
+          this.goPrev()
+        }
+      }
     },
     goPrev() {
       if (this.page > 1) {
         this.page -= 1
       }
     },
-    goNext() {
-      if (this.page < Math.ceil(this.questions.length / 4)) {
+    async goNext() {
+      if (this.page < Math.floor(this.questions.length / 4)) {
         this.page += 1
+        if (!this.isHotEnd && this.activeTitle === '最热问题' && this.hotDataPage === this.page) {
+          const res = await this.getQuestions(this.hotDataPage += 1)
+          if (res.length) {
+            this.hotQuestions = [...this.hotQuestions, ...res]
+            this.questions = this.hotQuestions
+          } else {
+            this.isHotEnd = true
+          }
+        } if (!this.isNewEnd && this.activeTitle === '最新问题' && this.newDataPage === this.page) {
+          const res = await this.getQuestions(this.newDataPage += 1, true)
+          if (res.length) {
+            this.newQuestions = [...this.hotQuestions, ...res]
+            this.questions = this.newQuestions
+          } else {
+            this.isNewEnd = true
+          }
+        }
       }
     },
-    open(question) {
+    async open(question) {
       this.isOpen = true
       this.question = question
+      this.questionId = question.id
+      const res = await fetch(`/api/id?id=${this.questionId}`).then(r => r.json())
+      this.answers = res.answer
     },
-    close() {
+    onClose() {
       this.isOpen = false
+      this.answers = []
     },
   },
-  mounted() {
-    this.getQuestions()
+  async mounted() {
+    this.hotQuestions = await Promise.all([
+      this.getQuestions(1),
+      this.getQuestions(2),
+      this.getQuestions(3),
+      // this.getQuestions(4),
+      // this.getQuestions(5),
+    ]).then(r => r.flat())
+    this.newQuestions = await Promise.all([
+      this.getQuestions(1, true),
+      this.getQuestions(2, true),
+      this.getQuestions(3, true),
+      // this.getQuestions(4, true),
+      // this.getQuestions(5, true),
+    ]).then(r => r.flat())
+    this.newDataPage = 3
+    this.hotDataPage = 3
+    this.questions = this.hotQuestions
   },
 }
 </script>
@@ -241,129 +310,80 @@ export default {
 }
 
 .dialog {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, .3);
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .wrapper {
-    position: relative;
-    width: 960px;
-    height: 555px;
-    background: #7195fb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .close {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 38px;
-      height: 38px;
-      border: 1px solid #002dae;
-      background: #1965d7;
-      &:hover {
-        cursor: pointer;
-        .close-icon {
-          background: #ff90b0;
-          &::after {
-            background: #ff90b0;
-          }
-        }
-      }
-      .close-icon {
-        width: 30px;
-        height: 8px;
-        background: #fff;
-        transform: rotate(45deg) translate(12px, 8px);
-        position: relative;
-        &::after {
-          display: block;
-          position: absolute;
-          content: '';
-          width: 30px;
-          height: 8px;
-          background: #fff;
-          transform: rotate(90deg);
-        }
-      }
+  .content {
+    width: 886px;
+    height: 496px;
+    background: #8eaafd;
+    border: 4px solid #0235c7;
+    font-size: 14px;
+    .question {
+      @include question;
+      width: 829px;
+      margin: 16px;
     }
-    .content {
-      width: 886px;
-      height: 496px;
-      background: #8eaafd;
-      border: 4px solid #0235c7;
-      font-size: 14px;
-      .question {
-        @include question;
-        width: 829px;
-        margin: 16px;
-      }
-      .answer-wrapper {
-        width: 829px;
-        margin: 16px;
-        border: 3px solid #397dda;
-        .answer {
-          height: 86px;
-          font-size: 14px;
-          background: #b7d2ff;
-          position: relative;
-          border-bottom: 1px solid #9eb7fe;
-          padding-right: 20px;
-          .avatar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin: 15px;
-            width: 56px;
-            height: 56px;
-            background-image: url(../../assets/img/help/avatar.png);
-            background-repeat: no-repeat;
-            background-size: 83px 83px;
-            border-radius: 50%;
-            border: 2px solid #7ca0ff;
-          }
-          .con-wrapper {
-            margin-left: 86px;
-            height: 56px;
-            color: #3861c3;
-            .name {
-              font-family: '微软雅黑';
-              font-size: 16px;
-              line-height: 16px;
-              padding-top: 20px;
-              .createdAt {
-                float: right;
-                font-size: 12px;
-              }
-            }
-            .con {
-              width: 677px;
-              height: 20px;
-              margin-top: 10px;
-              font-size: 14px;
-              font-family: '微软雅黑';
-              word-break: keep-all;
-              word-wrap: break-word; // 只对英文起作用，以单词作为换行依据。
-              white-space: pre-wrap; //只对中文起作用，强制换行。
-              text-align:justify;  //css英文语句的两端对齐：
-              text-justify:inter-ideograph;
-              overflow: auto;
-            }
-            .foot {
-              display: flex;
-              justify-content: flex-end;
+    .answer-wrapper {
+      width: 829px;
+      margin: 16px;
+      border: 3px solid #397dda;
+      .answer {
+        height: 86px;
+        font-size: 14px;
+        background: #b7d2ff;
+        position: relative;
+        border-bottom: 1px solid #9eb7fe;
+        padding-right: 20px;
+        .avatar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 15px;
+          width: 56px;
+          height: 56px;
+          background-image: url(../../assets/img/help/avatar.png);
+          background-repeat: no-repeat;
+          background-size: 83px 83px;
+          border-radius: 50%;
+          border: 2px solid #7ca0ff;
+        }
+        .con-wrapper {
+          margin-left: 86px;
+          height: 56px;
+          color: #3861c3;
+          .name {
+            font-family: '微软雅黑';
+            font-size: 16px;
+            line-height: 16px;
+            padding-top: 20px;
+            .createdAt {
+              float: right;
               font-size: 12px;
-              font-family: '微软雅黑';
             }
-            .talk {
-              margin-right: 10px;
+          }
+          .con {
+            width: 677px;
+            height: 20px;
+            margin-top: 10px;
+            font-size: 14px;
+            font-family: '微软雅黑';
+            word-break: keep-all;
+            word-wrap: break-word; // 只对英文起作用，以单词作为换行依据。
+            white-space: pre-wrap; //只对中文起作用，强制换行。
+            text-align:justify;  //css英文语句的两端对齐：
+            text-justify:inter-ideograph;
+            overflow: auto;
+          }
+          .foot {
+            margin-top: -6px;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 12px;
+            font-family: '微软雅黑';
+            .oppose {
+              margin-left: 35px;
             }
+          }
+          .talk {
+            margin-right: 10px;
           }
         }
       }

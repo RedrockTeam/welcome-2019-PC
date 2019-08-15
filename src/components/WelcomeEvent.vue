@@ -117,7 +117,7 @@ export default {
       overflow: hidden;
       font-size: $contentFontSize;
       width: 318px;
-      font-family: "宋体";
+      font-family: '微软雅黑';
       color: white;
       text-align: center;
     }

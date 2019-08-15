@@ -1,15 +1,10 @@
 <template>
 <div>
-  <div class="dialog" :style="{ display: isOpen ? 'flex' : 'none' }">
-    <div class="wrapper">
-      <div class="close" @click="close()">
-        <div class="close-icon"></div>
-      </div>
-      <video ref="video" class="content" :src="videos[this.video]" controls>
-        求求你换个浏览器吧。。。1551。。。
-      </video>
-    </div>
-  </div>
+  <Dialog :isOpen="isOpen" @close="onClose()">
+    <video ref="video" class="content" :src="videos[this.video]" controls>
+      求求你换个浏览器吧。。。1551。。。
+    </video>
+  </Dialog>
 
   <Frame styles="bubble">
     <div class="header">
@@ -96,12 +91,14 @@
 import Frame from '@/components/base/Frame.vue'
 import FrameButton from '@/components/base/FrameButton.vue'
 import ScrollBar from '@/components/base/ScrollBar.vue'
+import Dialog from '@/components/base/Dialog.vue'
 
 export default {
   components: {
     Frame,
     FrameButton,
     ScrollBar,
+    Dialog,
   },
   data() {
     return {
@@ -144,7 +141,7 @@ export default {
       this.isOpen = true
       this.video = num
     },
-    close() {
+    onClose() {
       this.isOpen = false
       this.$refs.video.pause()
     },
@@ -155,72 +152,19 @@ export default {
 <style scoped lang="scss">
 @import '@/assets/style/mixin.scss';
 
+.content {
+  background: #8eaafd;
+  border: 4px solid #0235c7;
+  font-size: 14px;
+}
 .header {
   @include frameHeaderStyle;
   z-index: 1;
-  height: 60px;
-}
-.dialog {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, .3);
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .wrapper {
-    position: relative;
-    padding: 38px;
-    background: #7195fb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .close {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 38px;
-      height: 38px;
-      border: 1px solid #002dae;
-      background: #1965d7;
-      &:hover {
-        cursor: pointer;
-        .close-icon {
-          background: #ff90b0;
-          &::after {
-            background: #ff90b0;
-          }
-        }
-      }
-      .close-icon {
-        width: 30px;
-        height: 8px;
-        background: #fff;
-        transform: rotate(45deg) translate(12px, 8px);
-        position: relative;
-        &::after {
-          display: block;
-          position: absolute;
-          content: '';
-          width: 30px;
-          height: 8px;
-          background: #fff;
-          transform: rotate(90deg);
-        }
-      }
-    }
-    .content {
-      background: #8eaafd;
-      border: 4px solid #0235c7;
-      font-size: 14px;
-    }
-  }
+  height: 85px;
+  padding-top: 25px;
 }
 .scroll-bar {
-  margin-top: 120px;
+  margin-top: 111px;
   width: 870px;
   height: 382px;
   border: 3px solid #397dda;
@@ -228,8 +172,9 @@ export default {
     li {
         width: 235px;
         height: 235px;
-        margin-left: 38px;
-        margin-top: 26px;
+        margin-left: 31px;
+        margin-top: 30px;
+        margin-right: 8px;
         float: left;
         &:nth-child(7) {
           margin-bottom: 26px;
