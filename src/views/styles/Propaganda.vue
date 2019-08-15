@@ -5,7 +5,7 @@
       <div class="close" @click="close()">
         <div class="close-icon"></div>
       </div>
-      <video class="content" :src="videos[this.video]" controls>
+      <video ref="video" class="content" :src="videos[this.video]" controls>
         求求你换个浏览器吧。。。1551。。。
       </video>
     </div>
@@ -23,49 +23,49 @@
     </div>
     <scroll-bar class="scroll-bar">
       <li>
-          <div class="img4 img" @click="showIt(3)"></div>
+          <div class="img4 img" @click="showIt(0)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>2018年红岩网校招新视频</span>
           </div>
       </li>
       <li>
-          <div class="img3 img" @click="showIt(2)"></div>
+          <div class="img3 img" @click="showIt(1)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>2017年红岩网校招新视频</span>
           </div>
       </li>
       <li>
-          <div class="img5 img" @click="showIt(4)"></div>
+          <div class="img5 img" @click="showIt(2)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>2016年红岩网校招新视频</span>
           </div>
       </li>
       <li>
-          <div class="img6 img" @click="showIt(5)"></div>
+          <div class="img6 img" @click="showIt(3)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>鸟瞰新重邮</span>
           </div>
       </li>
       <li>
-          <div class="img7 img" @click="showIt(6)"></div>
+          <div class="img7 img" @click="showIt(4)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>重邮2018樱花季专题</span>
           </div>
       </li>
       <li>
-          <div class="img1 img"  @click="showIt(0)"></div>
+          <div class="img1 img"  @click="showIt(5)"></div>
           <div class="grey"></div>
           <div class="p">
               <span >重邮2017招生宣传片</span>
           </div>
       </li>
       <li>
-          <div class="img2 img" @click="showIt(1)"></div>
+          <div class="img2 img" @click="showIt(6)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>重邮2017级学生军训汇演</span>
@@ -109,15 +109,15 @@ export default {
       activeBtn: 'propaganda',
       video: 0,
       videos: [
-        require('../../assets/video/xuanchuan/1.mp4'),
-        require('../../assets/video/xuanchuan/2.mp4'),
-        require('../../assets/video/xuanchuan/3.mp4'),
-        require('../../assets/video/xuanchuan/4.mp4'),
-        require('../../assets/video/xuanchuan/5.mp4'),
-        require('../../assets/video/xuanchuan/6.mp4'),
-        require('../../assets/video/xuanchuan/7.mp4'),
-        require('../../assets/video/xuanchuan/8.mp4'),
-        require('../../assets/video/xuanchuan/9.mp4'),
+        require('../../assets/video/xuanchuan/2018.mp4'),
+        require('../../assets/video/xuanchuan/2017.mp4'),
+        require('../../assets/video/xuanchuan/2016.mp4'),
+        require('../../assets/video/xuanchuan/niao.mp4'),
+        require('../../assets/video/xuanchuan/yinghua.mp4'),
+        require('../../assets/video/xuanchuan/mengxiang.mp4'),
+        require('../../assets/video/xuanchuan/junxun.mp4'),
+        require('../../assets/video/xuanchuan/chunfeng.mp4'),
+        require('../../assets/video/xuanchuan/yundong.mp4'),
       ],
       btns: [
         {
@@ -146,6 +146,7 @@ export default {
     },
     close() {
       this.isOpen = false
+      this.$refs.video.pause()
     },
   },
 }
@@ -185,6 +186,15 @@ export default {
       height: 38px;
       border: 1px solid #002dae;
       background: #1965d7;
+      &:hover {
+        cursor: pointer;
+        .close-icon {
+          background: #ff90b0;
+          &::after {
+            background: #ff90b0;
+          }
+        }
+      }
       .close-icon {
         width: 30px;
         height: 8px;
@@ -215,7 +225,6 @@ export default {
   height: 382px;
   border: 3px solid #397dda;
   background: #b0cfff;
-
     li {
         width: 235px;
         height: 235px;

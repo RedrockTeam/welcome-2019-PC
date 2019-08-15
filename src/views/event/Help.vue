@@ -267,6 +267,15 @@ export default {
       height: 38px;
       border: 1px solid #002dae;
       background: #1965d7;
+      &:hover {
+        cursor: pointer;
+        .close-icon {
+          background: #ff90b0;
+          &::after {
+            background: #ff90b0;
+          }
+        }
+      }
       .close-icon {
         width: 30px;
         height: 8px;
