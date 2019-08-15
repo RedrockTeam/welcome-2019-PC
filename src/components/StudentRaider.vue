@@ -29,7 +29,7 @@
                 <li class="li4">
                     <span>网址大全</span>
                     <p>你想要的我都“邮”，通往各网站的窗口</p>
-                    <a href="https://www.google.com/" target="block">
+                    <a href="http://hongyan.cqupt.edu.cn/web/" target="block">
                       <button1 class="btn">了解更多</button1>
                     </a>
                 </li>

@@ -927,7 +927,7 @@ export default {
         left: -243px;
         overflow: hidden;
         #map {
-          background-image: url(../../assets/img/Map/map.png);
+          background-image: url(../../assets/img/Map/map.jpg);
           background-size: 654px 389px;
           width: 100%;
           height: 100%;

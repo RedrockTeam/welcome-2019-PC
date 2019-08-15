@@ -8,7 +8,7 @@
         v-for="(content, index) of contents"
         :key="index"
       >
-        <a href="https://www.google.com/" target="block" v-if="content.route === 'website'">
+        <a href="http://hongyan.cqupt.edu.cn/web/" target="block" v-if="content.route === 'website'">
           {{ content.title }}
         </a>
         <router-link :to="`/${route}/${content.route}`" v-else>

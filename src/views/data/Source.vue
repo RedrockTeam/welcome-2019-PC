@@ -72,6 +72,13 @@ export default {
           axisPointer: {
             type: 'none',
           },
+          formatter(params) {
+            console.log(params)
+            return `
+              ${params[0].axisValueLabel}<br />
+              <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params[0].color};"></span>${params[0].seriesName}：${params[0].value === 800 ? '2868' : params[0].value}
+            `
+          },
         },
         legend: {
           data: ['2011年', '2012年'],
