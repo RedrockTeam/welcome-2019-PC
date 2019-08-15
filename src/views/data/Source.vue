@@ -73,7 +73,6 @@ export default {
             type: 'none',
           },
           formatter(params) {
-            console.log(params)
             return `
               ${params[0].axisValueLabel}<br />
               <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params[0].color};"></span>${params[0].seriesName}：${params[0].value === 800 ? '2868' : params[0].value}
@@ -125,10 +124,12 @@ export default {
                   const colorList = ['#ff9dba', '#ffd1a0', '#fff5b4', '#7ef7ff', '#7095ff']
                   return colorList[params.dataIndex % 5]
                 },
+                opacity: 0.7,
               },
               emphasis: {
                 shadowBlur: 20,
                 shadowColor: 'rgba(0, 0, 0, 0.3)',
+                opacity: 1,
               },
             },
           },

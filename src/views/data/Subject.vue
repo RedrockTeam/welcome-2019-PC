@@ -154,7 +154,7 @@ export default {
                   const colorList = ['#ff9dba', '#7095ff', '#7ef7ff']
                   return colorList[params.dataIndex]
                 },
-                opacity: 0.6,
+                opacity: 0.7,
               },
             },
             emphasis: {
