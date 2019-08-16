@@ -19,9 +19,11 @@
         >{{ title }}<div class="dec"></div></div>
       </div>
       <div class="video-wrapper">
-        <video :poster="video[activeTitle].poster" :src="video[activeTitle].src" controls>
-          求求你换个浏览器吧。。。1551。。。
-        </video>
+        <div class="video-border">
+          <video :poster="video[activeTitle].poster" :src="video[activeTitle].src" controls>
+            求求你换个浏览器吧。。。1551。。。
+          </video>
+        </div>
         <div class="from">资料来源于重邮小卫士</div>
       </div>
     </div>
@@ -147,11 +149,16 @@ export default {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    video {
+    .video-border {
       margin-top: 14px;
+      font-size: 0;
+      border: 3px solid #0235c7;
       width: 483px;
       height: 276px;
-      border: 3px solid #0235c7;
+      video {
+        width: 100%;
+        height: 100%;
+      }
     }
     .from {
       font-size: 14px;

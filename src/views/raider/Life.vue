@@ -85,7 +85,7 @@ export default {
           },
           {
             title: '菜鸟驿站&丰巢',
-            location: '位于静园小区里面，老校门对面左手边大茶杯奶茶店旁斜坡上行右边巷子处。',
+            location: '老校门对面左手边大茶杯奶茶店旁斜坡上行右边巷子处。',
             imgUrl: cainiao,
           },
         ],

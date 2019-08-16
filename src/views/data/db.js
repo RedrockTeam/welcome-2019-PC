@@ -1,4 +1,8 @@
 export const genderRatio = {
+  全校: {
+    male: 13516,
+    female: 6256,
+  },
   软件工程学院: {
     male: 1643,
     female: 319,
@@ -62,10 +66,6 @@ export const genderRatio = {
   光电工程学院: {
     male: 905,
     female: 267,
-  },
-  学校: {
-    male: 13516,
-    female: 6256,
   },
 }
 

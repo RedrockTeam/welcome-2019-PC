@@ -271,7 +271,7 @@ export default {
   }
   .student {
     &:nth-child(2n) {
-      margin-left: 31px;
+      margin-left: 22px;
     }
     &:nth-child(2) {
       margin-top: 4px;
@@ -279,7 +279,7 @@ export default {
     &:nth-child(1) {
       margin-top: 4px;
     }
-    width: 414px;
+    width: 419px;
     height: 265px;
     border: 3px solid rgb(57, 125, 218);
     margin-top: 20px;

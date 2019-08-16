@@ -13,7 +13,7 @@
           />
           <div class="clear" @click="clear"></div>
           <header-btn @click="onSearch(searchText)">
-            <img width="21" height="21" src="../../assets/img/Map/search.png" />
+            <img class="img" width="20" height="20" src="../../assets/img/Map/search.png" />
           </header-btn>
           <div class="search-result" v-show="searched">
             <span class="result-tips" v-if="result">你要找的是不是：</span>
@@ -800,11 +800,15 @@ export default {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        .img {
+          margin-top: 13px;
+        }
         input {
           margin: 0 20px 0 74px;
           width: 238px;
           height: 39px;
-          border: 2px solid #33b0ff;
+          border-top: 3px solid #33b0ff;
+          border-left: 3px solid #33b0ff;
           background: #8bdaff;
           color: #666666;
           text-indent: 12px;

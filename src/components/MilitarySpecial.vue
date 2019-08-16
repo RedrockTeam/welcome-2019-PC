@@ -129,7 +129,7 @@ ul {
         }
         .button {
             position: relative;
-            top: 130px;
+            top: 122px;
             left: 25px;
         }
     }

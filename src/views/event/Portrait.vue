@@ -72,11 +72,12 @@ export default {
   flex-direction: column;
   .tit-bg {
     width: 862px;
-    height: 433px;
+    height: 418px;
     margin: 18px 0;
     background:
-      url(../../assets/img/help/helpBg.png) no-repeat center,
+      url(../../assets/img/help/huaxiang.png) no-repeat center,
       #e8f4ff;
+    background-size: cover;
     border: 3px solid #0235c7;
   }
   .contents {

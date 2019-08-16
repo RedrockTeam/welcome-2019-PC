@@ -110,7 +110,7 @@ export default {
                 textStyle: {
                   align: 'center',
                   baseline: 'middle',
-                  fontSize: 10,
+                  fontSize: 20,
                   fontWeight: 500,
                   color: '#567eea',
                   fontFamily: 'coolfont',
@@ -119,7 +119,7 @@ export default {
               emphasis: { // 选中时候的样式
                 show: true,
                 textStyle: {
-                  fontSize: '14',
+                  fontSize: 22,
                   fontWeight: 'bold',
                 },
               },

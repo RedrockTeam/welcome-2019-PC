@@ -1,9 +1,11 @@
 <template>
 <div>
   <Dialog :isOpen="isOpen" @close="onClose()">
-    <video ref="video" class="content" :src="videos[this.video]" controls>
-      求求你换个浏览器吧。。。1551。。。
-    </video>
+    <div class="video-border">
+      <video ref="video" class="content" :src="videos[this.video]" controls>
+        求求你换个浏览器吧。。。1551。。。
+      </video>
+    </div>
   </Dialog>
 
   <Frame styles="bubble">
@@ -152,9 +154,11 @@ export default {
 <style scoped lang="scss">
 @import '@/assets/style/mixin.scss';
 
-.content {
+.video-border {
   background: #8eaafd;
-  border: 4px solid #0235c7;
+  border: 3px solid #0235c7;
+}
+.content {
   font-size: 14px;
 }
 .header {

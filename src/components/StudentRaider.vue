@@ -7,7 +7,7 @@
             <ul>
                 <li class="li1">
                     <span>新生清单</span>
-                    <p>大学新生报道必备清单尽快启程新生活</p>
+                    <p>大学新生报道必备清单，尽快启程新生活</p>
                     <router-link to="/raider/list">
                       <button1 class="btn">了解更多</button1>
                     </router-link>

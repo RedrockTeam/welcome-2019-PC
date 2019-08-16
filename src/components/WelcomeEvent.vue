@@ -122,7 +122,7 @@ export default {
       text-align: center;
     }
     .button {
-      margin: 0 auto;
+      margin: -9px auto 0;
     }
     .left-content {
         position: absolute;

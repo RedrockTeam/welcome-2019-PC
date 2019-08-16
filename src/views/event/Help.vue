@@ -49,12 +49,13 @@
         <div class="contents">
           <div class="title-wrapper">
             <div
-              v-for="(title, index ) of titles"
+              v-for="(title, index) of titles"
               :class="{ title: true, active: title === activeTitle }"
               :key="index"
               @click="changeTitle(title)"
             >{{ title }}<div class="dec"></div></div>
           </div>
+          <div class="loading" v-if="!questions.length">Loading...</div>
           <div class="question-wrapper">
             <div
               class="question"
@@ -407,6 +408,12 @@ export default {
   }
   .contents {
     padding-right: 18px;
+    .loading {
+      font-size: 14px;
+      margin: 20px auto;
+      width: max-content;
+      color: #0235c7;
+    }
     .title-wrapper {
       height: 45px;
       display: flex;
@@ -445,6 +452,7 @@ export default {
           background: #b7d2ff;
           color: #3861c3;
           font-weight: bold;
+          cursor: pointer;
         }
       }
       .pagination {
