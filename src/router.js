@@ -120,7 +120,7 @@ router.afterEach((to) => {
     })
   } else {
     window.scrollTo({
-      top: 645,
+      top: 660,
       behavior: 'smooth',
     });
   }

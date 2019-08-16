@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       genderRatio,
-      selected: '软件工程学院',
+      selected: '全校',
       activeBtn: 'ratio',
       btns: [
         {
@@ -156,12 +156,15 @@ export default {
     position: absolute;
     top: 20px;
     right: 80px;
-    width: 150px;
+    width: 14.83333vw;
     height: 26px;
     color: #225bec;
     font-size: 14px;
-    background: #b7e8ff;
-    border: 1px solid #225bec;
+    background: url(../../assets/img/Chongyoufengcai/down.png) no-repeat right/22px, #b7e8ff;
+    border: 2px solid #1d88eb;
+    appearance:none;
+    border-radius: 0;
+    padding-left: 10px;
   }
   .male-label {
     position: absolute;

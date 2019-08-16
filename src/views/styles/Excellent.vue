@@ -32,10 +32,10 @@
           <img class="img" :src="stuimages[index]"
             :style="{
               height: index === stuimages.length - 1
-                ? '100px'
+                ? '6.94vw'
                 : index === stuimages.length - 2
-                  ? '150px'
-                  : '200px',
+                  ? '10.4vw'
+                  : '13.89vw',
             }"
           >
           <div class="info">

@@ -29,8 +29,7 @@ export default {
   width: 309px;
   height: 114px;
   z-index: 1;
-  background: url(../../assets/img/Title/Title.png) no-repeat;
-  background-size: 100% 100%;
+  background: url(../../assets/img/Title/Title.png) no-repeat top/100%;
   cursor: default;
 }
 .fire {

@@ -55,8 +55,9 @@
               @click="changeTitle(title)"
             >{{ title }}<div class="dec"></div></div>
           </div>
-          <div class="loading" v-if="!questions.length">Loading...</div>
-          <div class="question-wrapper">
+          <div class="loading" v-if="!questions.length && !isError">Loading...</div>
+          <div class="loading" v-if="isError">请等下再尝试</div>
+          <div class="question-wrapper" v-if="questions.length && !isError">
             <div
               class="question"
               v-for="question of questions.slice(4 * (page - 1), 4 * page)"
@@ -118,6 +119,7 @@ export default {
   data() {
     return {
       activeTitle: '最热问题',
+      isError: false,
       page: 1,
       hotDataPage: 1,
       newDataPage: 1,
@@ -214,23 +216,27 @@ export default {
     },
   },
   async mounted() {
-    this.hotQuestions = await Promise.all([
-      this.getQuestions(1),
-      this.getQuestions(2),
-      this.getQuestions(3),
-      // this.getQuestions(4),
-      // this.getQuestions(5),
-    ]).then(r => r.flat())
-    this.newQuestions = await Promise.all([
-      this.getQuestions(1, true),
-      this.getQuestions(2, true),
-      this.getQuestions(3, true),
-      // this.getQuestions(4, true),
-      // this.getQuestions(5, true),
-    ]).then(r => r.flat())
-    this.newDataPage = 3
-    this.hotDataPage = 3
-    this.questions = this.hotQuestions
+    try {
+      this.hotQuestions = await Promise.all([
+        this.getQuestions(1),
+        this.getQuestions(2),
+        this.getQuestions(3),
+        this.getQuestions(4),
+        // this.getQuestions(5),
+      ]).then(r => r.flat())
+      this.newQuestions = await Promise.all([
+        // this.getQuestions(1, true),
+        this.getQuestions(2, true),
+        this.getQuestions(3, true),
+        this.getQuestions(4, true),
+        // this.getQuestions(5, true),
+      ]).then(r => r.flat())
+      this.newDataPage = 5
+      this.hotDataPage = 5
+      this.questions = this.hotQuestions
+    } catch (e) {
+      this.isError = true
+    }
   },
 }
 </script>
@@ -277,6 +283,7 @@ export default {
     height: 88px;
     color: #3861c3;
     .name {
+      height: 15px;
       font-family: '微软雅黑';
       font-size: 16px;
       line-height: 16px;
@@ -351,6 +358,7 @@ export default {
           height: 56px;
           color: #3861c3;
           .name {
+            height: 15px;
             font-family: '微软雅黑';
             font-size: 16px;
             line-height: 16px;

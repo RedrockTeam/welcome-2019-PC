@@ -192,11 +192,11 @@ export default {
         }
 
 .img1 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/1.jpg);
+    background-image: url(../../assets/img/Landscape/xuanchuan/2017zhaosheng.png);
   background-size: 100% 100%;
 }
 .img2 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/2.jpg);
+    background-image: url(../../assets/img/Junxunteji/汇演poster.png);
   background-size: 100% 100%;
 }
 .img3 {
@@ -212,19 +212,19 @@ export default {
   background-size: 100% 100%;
 }
 .img6 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/6.jpg);
+    background-image: url(../../assets/img/Landscape/xuanchuan/niao.png);
   background-size: 100% 100%;
 }
 .img7 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/7.jpg);
+    background-image: url(../../assets/img/Landscape/xuanchuan/7.png);
   background-size: 100% 100%;
 }
 .img8 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/8.jpg);
+    background-image: url(../../assets/img/Landscape/xuanchuan/8.png);
   background-size: 100% 100%;
 }
 .img9 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/9.jpg);
+    background-image: url(../../assets/img/Landscape/xuanchuan/9.png);
   background-size: 100% 100%;
 }
         .grey {
