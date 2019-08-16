@@ -92,6 +92,7 @@ export default {
     width: 1116px;
     height: 440px;
     background: url("../assets/img/Junxunteji/jxtjBG.png");
+  background-size: 100% 100%;
     .btn-animation {
       position: absolute;
       top: 49px;

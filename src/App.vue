@@ -53,7 +53,7 @@ body {
 }
 
 #app {
-  width: 1440px;
+  width: 100vw;
   margin: 0 auto;
   font-family: 'coolfont';
   font-size: 0;

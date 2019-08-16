@@ -14,7 +14,7 @@ export default {
 #guidao {
     width: 20px;
     background:
-      url(../../assets/img/Connect/track.png) no-repeat,
-      url(../../assets/img/Connect/trackbg.png);
+      url(../../assets/img/Connect/track.png) no-repeat top/100%,
+      url(../../assets/img/Connect/trackbg.png) center/100%;
 }
 </style>

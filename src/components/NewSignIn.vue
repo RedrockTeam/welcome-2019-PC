@@ -56,6 +56,7 @@ export default {
     width: 1117px;
     height: 786px;
     background-image: url(../../assets/img/Strategy/xinshengqingdan/xsqdBG.png);
+  background-size: 100% 100%;
 }
 ul {
     position: relative;

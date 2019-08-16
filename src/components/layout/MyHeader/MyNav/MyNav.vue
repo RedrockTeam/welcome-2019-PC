@@ -162,9 +162,9 @@ nav {
   width: 100%;
   height: 63px;
   background:
-    url(../../../../assets/img/Nav/NavBgLeft.png) no-repeat left top,
-    url(../../../../assets/img/Nav/NavBgRight.png) no-repeat right top,
-    url(../../../../assets/img/Nav/NavBg.png) repeat center top;
+    url(../../../../assets/img/Nav/NavBgLeft.png) no-repeat left/auto 100%,
+    url(../../../../assets/img/Nav/NavBgRight.png) no-repeat right/auto 100%,
+    url(../../../../assets/img/Nav/NavBg.png) repeat center/ auto 100%;
   font-size: 0;
   position: fixed;
   top: 0;

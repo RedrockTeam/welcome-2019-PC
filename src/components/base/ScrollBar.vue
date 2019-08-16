@@ -22,18 +22,23 @@
     &::-webkit-scrollbar-thumb {
       width: 17px;
       background:
-        url(../../assets/img/Scroll/scroll-thumb-top.png) no-repeat top,
-        url(../../assets/img/Scroll/scroll-thumb-bottom.png) no-repeat bottom,
-        url(../../assets/img/Scroll/scroll-thumb-content.png);
+        url(../../assets/img/Scroll/scroll-thumb-top.png) no-repeat top/100%,
+        url(../../assets/img/Scroll/scroll-thumb-bottom.png) no-repeat bottom/100%,
+        url(../../assets/img/Scroll/scroll-thumb-content.png) center/100%;
     }
-    &::-webkit-scrollbar-button:start {
-      height: 16px;
-      background: url(../../assets/img/Scroll/arrowUp.png) no-repeat;
-    }
-    &::-webkit-scrollbar-button:end {
-      height: 16px;
-      background: url(../../assets/img/Scroll/arrowDown.png) no-repeat;
-    }
+  }
+  scrollbar-track-color {
+    width: 15px;
+    border-left: 1px solid #5e93ff;
+    border-right: 1px solid #5e93ff;
+    background: #82c3ff;
+  }
+  scrollbar-face-color {
+    width: 17px;
+    background:
+      url(../../assets/img/Scroll/scroll-thumb-top.png) no-repeat top/100%,
+      url(../../assets/img/Scroll/scroll-thumb-bottom.png) no-repeat bottom/100%,
+      url(../../assets/img/Scroll/scroll-thumb-content.png) center/100%;
   }
 }
 </style>

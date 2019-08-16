@@ -114,63 +114,63 @@ export default {
       list: [
         {
           name: '第八教学楼',
-          position: [167, 115],
+          position: [136, 114],
         },
         {
           name: '传媒艺术学院',
-          position: [167, 115],
+          position: [136, 114],
         },
         {
           name: '兴业苑',
-          position: [270, 108],
+          position: [253, 99],
         },
         {
           name: '兴业苑7舍（23A栋）',
-          position: [240, 99],
+          position: [236, 97],
         },
         {
           name: '兴业苑8舍（23B栋）',
-          position: [265, 101],
+          position: [216, 96],
         },
         {
           name: '兴业苑6舍（22栋）',
-          position: [295, 101],
+          position: [285, 98],
         },
         {
           name: '兴业苑5舍（21栋）',
-          position: [338, 101],
+          position: [337, 97],
         },
         {
           name: '兴业苑4舍（20栋）',
-          position: [247, 123],
+          position: [218, 122],
         },
         {
           name: '兴业苑3舍（19栋）',
-          position: [263, 122],
+          position: [246, 121],
         },
         {
           name: '兴业苑2舍（18栋）',
-          position: [286, 122],
+          position: [262, 120],
         },
         {
           name: '兴业苑1舍（17栋）',
-          position: [301, 122],
+          position: [290, 120],
         },
         {
           name: '红高粱食堂',
-          position: [333, 120],
+          position: [325, 119],
         },
         {
           name: '经济管理学院',
-          position: [192, 126],
+          position: [198, 129],
         },
         {
           name: '现代邮政学院',
-          position: [192, 126],
+          position: [198, 129],
         },
         {
           name: '留学生楼',
-          position: [212, 152],
+          position: [195, 156],
         },
         {
           name: '第五教学楼',
@@ -726,6 +726,7 @@ export default {
       }
     },
     addFlag(position) {
+      console.log(position.left, position.top)
       // 防止重复
       if (this.flags.some(flag => flag.left === position.left && flag.top === position.top)) return
       this.flags.push(position)
@@ -789,6 +790,7 @@ export default {
     width: 1166px;
     height: 550px;
     background: url(../../assets/img/Map/border.png) no-repeat;
+  background-size: 100% 100%;
     .header {
       display: flex;
       justify-content: space-between;

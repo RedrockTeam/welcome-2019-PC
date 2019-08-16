@@ -402,7 +402,7 @@ export default {
     height: 433px;
     margin: 18px 0;
     background:
-      url(../../assets/img/help/helpBg.png) no-repeat center,
+      url(../../assets/img/help/helpBg.png) no-repeat center/auto 100%,
       #e8f4ff;
     border: 3px solid #0235c7;
   }

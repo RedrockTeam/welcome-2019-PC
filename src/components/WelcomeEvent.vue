@@ -80,6 +80,7 @@ export default {
     left: 42px;
     margin: 0 auto;
     background: url(../assets/img/Yingxinhuodong/bg.png);
+  background-size: 100% 100%;
     .right-content {
         position: absolute;
         right: 140px;
@@ -91,6 +92,7 @@ export default {
         width: 225px;
         height: 144px;
         background: url(../assets/img/Yingxinhuodong/right-head.png);
+  background-size: 100% 100%;
         animation: shake 2s infinite;
       }
       .gantanhao {
@@ -100,6 +102,7 @@ export default {
         width: 23px;
         height: 37px;
         background: url(../assets/img/Yingxinhuodong/gantanhao.png);
+  background-size: 100% 100%;
         animation: doudong 2s infinite;
         transform-origin: center bottom;
       }
@@ -110,6 +113,7 @@ export default {
         width: 243px;
         height: 99px;
         background: url(../assets/img/Yingxinhuodong/right-title.png);
+  background-size: 100% 100%;
       }
     }
     .content {
@@ -135,6 +139,7 @@ export default {
         width: 213px;
         height: 120px;
         background: url(../assets/img/Yingxinhuodong/left-head.png);
+  background-size: 100% 100%;
         animation: shake 2s infinite;
       }
       .wenhao {
@@ -144,6 +149,7 @@ export default {
         width: 32px;
         height: 40px;
         background: url(../assets/img/Yingxinhuodong/wenhao.png);
+  background-size: 100% 100%;
         animation: doudong 2s infinite;
         transform-origin: center bottom;
       }
@@ -154,6 +160,7 @@ export default {
         width: 227px;
         height: 66px;
         background: url(../assets/img/Yingxinhuodong/left-title.png);
+  background-size: 100% 100%;
       }
     }
 }

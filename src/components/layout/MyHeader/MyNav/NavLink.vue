@@ -36,6 +36,7 @@ export default {
   width: 107px;
   height: 59px;
   background: url(../../../../assets/img/Nav/NavLinkBg.png);
+  background-size: 100% 100%;
   line-height: 59px;
   text-align: center;
   font-size: $navFontSize;
@@ -49,6 +50,7 @@ export default {
     .filler-bottom {
       min-height: 15px;
       background: url(../../../../assets/img/Nav/NavLink-bottom.png);
+  background-size: 100% 100%;
     }
     transform: translate(0, -13px);
     transition: max-height .6s ease-out;
@@ -81,6 +83,7 @@ export default {
 
 .nav-link:hover {
   background: url(../../../../assets/img/Nav/NavLinkHoverBg.png);
+  background-size: 100% 100%;
   color: #2d5eff;
   .contents {
     max-height: 1000px;

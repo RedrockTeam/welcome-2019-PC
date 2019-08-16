@@ -70,6 +70,7 @@ export default {
     width: 1066px;
     height: 514px;
     background: url("../assets/img/Chongyoufengcai/cyfcBG.png") no-repeat;
+  background-size: 100% 100%;
     .left {
       left: 60px;
     }

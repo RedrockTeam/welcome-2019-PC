@@ -21,8 +21,8 @@
         <div
           class="lunbo-content"
           ref="lbcontent"
-          style="left: -563px;transition-duration: 0.5s;"
-          :style="{width:(imglist.length+2)*563+'px'}"
+          style="left: -39.1vw;transition-duration: 0.5s;"
+          :style="{width:(imglist.length+2)*39.1+'vw'}"
         >
           <div
             :style="{
@@ -101,7 +101,7 @@ export default {
       if (this.lightedbutton === -1) {
         this.lightedbutton = this.imglist.length - 1;
       }
-      this.move(563);
+      this.move(39.1);
       this.lightbutton();
       this.go();
     },
@@ -114,7 +114,7 @@ export default {
       if (this.lightedbutton === this.imglist.length) {
         this.lightedbutton = 0;
       }
-      this.move(-563);
+      this.move(-39.1);
       this.lightbutton();
       this.go();
     },
@@ -126,20 +126,20 @@ export default {
     move(distance) {
       this.boolen = true;
       if (
-        parseInt(this.$refs.lbcontent.style.left, 10) >= (-563 * this.imglist.length)
-        && parseInt(this.$refs.lbcontent.style.left, 10) <= -563
+        parseFloat(this.$refs.lbcontent.style.left, 10) >= (-39.1 * this.imglist.length)
+        && parseFloat(this.$refs.lbcontent.style.left, 10) <= -39.1
       ) {
         this.$refs.lbcontent.style.transitionDuration = '0.5s';
       }
-      this.$refs.lbcontent.style.left = `${parseInt(this.$refs.lbcontent.style.left, 10) + distance}px`;
+      this.$refs.lbcontent.style.left = `${parseFloat(this.$refs.lbcontent.style.left, 10) + distance}vw`;
       this.timer2 = setTimeout(() => {
-        if (parseInt(this.$refs.lbcontent.style.left, 10) > -563) {
+        if (parseFloat(this.$refs.lbcontent.style.left, 10) > -39.1) {
           this.$refs.lbcontent.style.transitionDuration = '0s'
-          this.$refs.lbcontent.style.left = `${-563 * this.imglist.length}px`;
+          this.$refs.lbcontent.style.left = `${-39.1 * this.imglist.length}vw`;
         }
-        if (parseInt(this.$refs.lbcontent.style.left, 10) < -563 * this.imglist.length) {
+        if (parseFloat(this.$refs.lbcontent.style.left, 10) < -39.1 * this.imglist.length) {
           this.$refs.lbcontent.style.transitionDuration = '0s';
-          this.$refs.lbcontent.style.left = `${-563}px`;
+          this.$refs.lbcontent.style.left = `${-39.1}vw`;
         }
         this.boolen = false;
       }, 500);
@@ -159,7 +159,7 @@ export default {
       }
       this.stop();
       this.$refs.lbcontent.style.transitionDuration = '0.5s';
-      this.$refs.lbcontent.style.left = `${-563 * (i + 1)}px`;
+      this.$refs.lbcontent.style.left = `${-39.1 * (i + 1)}vw`;
       this.lightedbutton = i;
       this.lightbutton();
       this.go();
@@ -186,9 +186,13 @@ export default {
         align-items: center;
         #prev {
             cursor: pointer;
+            width: 1.6vw;
+            height: 2.85vw;
         }
         #next {
             cursor: pointer;
+            width: 1.6vw;
+            height: 2.85vw;
         }
         .lunbo-main {
             .lunbo-box {

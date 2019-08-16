@@ -70,6 +70,7 @@ export default {
     width: 1136px;
     height: 422px;
     background: url(../assets/img/Guanyuwomen/guanyuwomen.png) no-repeat;
+  background-size: 100% 100%;
     div {
         float: left;
     }

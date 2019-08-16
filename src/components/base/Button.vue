@@ -21,10 +21,12 @@ export default {
   width: 133px ;
   height: 48px ;
   background: url(../../assets/img/Button/button.png);
+  background-size: 100% 100%;
   cursor: pointer;
 }
 #button:hover {
   background-image: url(../../assets/img/Button/buttonHover.png);
+  background-size: 100% 100%;
   color: white;
 }
 </style>

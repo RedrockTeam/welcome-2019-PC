@@ -197,43 +197,56 @@ export default {
       float: left;
     }
     .img1 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img1.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img1.jpg);
+  background-size: 100% 100%;
     }
     .img2 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img2.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img2.jpg);
+  background-size: 100% 100%;
     }
     .img3 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img3.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img3.jpg);
+  background-size: 100% 100%;
     }
     .img4 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img4.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img4.jpg);
+  background-size: 100% 100%;
     }
     .img5 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img5.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img5.jpg);
+  background-size: 100% 100%;
     }
     .img6 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img6.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img6.jpg);
+  background-size: 100% 100%;
     }
     .img7 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img7.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img7.jpg);
+  background-size: 100% 100%;
     }
     .img8 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img8.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img8.jpg);
+  background-size: 100% 100%;
     }
     .img9 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img9.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img9.jpg);
+  background-size: 100% 100%;
     }
     .img10 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img10.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img10.jpg);
+  background-size: 100% 100%;
     }
     .img11 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img11.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img11.jpg);
+  background-size: 100% 100%;
     }
     .img12 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img12.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img12.jpg);
+  background-size: 100% 100%;
     }
     .img13 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img13.jpg)
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/img13.jpg);
+  background-size: 100% 100%;
     }
   }
 }

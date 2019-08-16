@@ -227,6 +227,7 @@ export default {
           width: 125px;
           height: 95px;
           background: url(../../assets/img/Junxunteji/clock.png);
+  background-size: 100% 100%;
           text-align: center;
           line-height: 114px;
           font-size: 24px;

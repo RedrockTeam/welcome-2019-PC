@@ -13,10 +13,12 @@
     color: #1646c4;
     font-size: 16px;
     background: url(../../assets/img/Map/btn.png);
+  background-size: 100% 100%;
     cursor: pointer;
     &:hover {
       color: #fff;
       background: url(../../assets/img/Map/btn-hover.png);
+  background-size: 100% 100%;
     }
   }
 </style>

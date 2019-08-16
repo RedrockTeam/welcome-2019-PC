@@ -8,8 +8,8 @@
         @click.native="changePage(btn.tag)"
         :style="{
           margin: btn.tag === 'qianxihe' || btn.tag === 'honggaoliang'
-            ? '0 100px 20px'
-            : '0 0 20px'
+            ? '0 6.944vw 1.389vw'
+            : '0 0 1.389vw'
         }"
       >{{ btn.content }}</frame-button>
     </div>

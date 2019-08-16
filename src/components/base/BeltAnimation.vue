@@ -43,37 +43,37 @@
 }
 @keyframes car {
     0% {
-        top: 10px;
+        top: 0.7vw;
         left: 0;
         transform: rotate(0deg);
     }
     80% {
-        top: 10px;
-        left: 668px;
+        top: 0.7vw;
+        left: 46.4vw;
         transform: rotate(0deg);
     }
     85% {
-        top: 10px;
-        left: 674px;
+        top: 0.7vw;
+        left: 46.8vw;
         transform: rotate(45deg);
     }
     90% {
-        top: 20px;
-        left: 682px;
+        top: 1.4vw;
+        left: 47.36vw;
         transform: rotate(90deg);
     }
     95% {
-        top: 80px;
-        left: 690px;
+        top: 5.6vw;
+        left: 47.9vw;
         transform: rotate(90deg);
     }
     98% {
-        top: 80px;
+        top: 5.6vw;
         left: 0;
         transform: rotate(0deg);
     }
     100% {
-        top: 10px;
+        top: 0.7vw;
         left: 0;
         transform: rotate(0deg);
     }

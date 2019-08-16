@@ -192,31 +192,40 @@ export default {
         }
 
 .img1 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/1.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/1.jpg);
+  background-size: 100% 100%;
 }
 .img2 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/2.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/2.jpg);
+  background-size: 100% 100%;
 }
 .img3 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/3.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/3.jpg);
+  background-size: 100% 100%;
 }
 .img4 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/4.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/4.jpg);
+  background-size: 100% 100%;
 }
 .img5 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/5.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/5.jpg);
+  background-size: 100% 100%;
 }
 .img6 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/6.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/6.jpg);
+  background-size: 100% 100%;
 }
 .img7 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/7.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/7.jpg);
+  background-size: 100% 100%;
 }
 .img8 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/8.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/8.jpg);
+  background-size: 100% 100%;
 }
 .img9 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/9.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/9.jpg);
+  background-size: 100% 100%;
 }
         .grey {
             width: 231px;

@@ -96,6 +96,7 @@ export default {
     width: 1117px;
     height: 406px;
     background: url(../assets/img/Youzigonglue/yzglBG.png) no-repeat;
+  background-size: 100% 100%;
     position: relative;
     margin: 0 auto;
     left: 25px;
