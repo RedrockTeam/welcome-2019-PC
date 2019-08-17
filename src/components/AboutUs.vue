@@ -77,7 +77,7 @@ export default {
 }
 .left {
     width: 300px;
-    height: 212px;
+    height: 213px;
     background-color: antiquewhite;
     position: relative;
     top: 110px;

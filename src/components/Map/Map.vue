@@ -1069,17 +1069,19 @@ export default {
       }
       .map {
         float: right;
-        width: 654px;
-        height: 389px;
+        width: 654Px;
+        height: 389Px;
         border: 4px solid #0235c7;
+        background-color: #96ecbb;
         margin: 500px;
         position: absolute;
-        top: -448px;
-        left: -243px;
+        top: -53%;
+        left: 8.5%;
+        transform:translate(-50%,-50%);
         overflow: hidden;
         #map {
           background-image: url(../../assets/img/Map/map.jpg);
-          background-size: 654px 389px;
+          background-size: 654Px 389Px;
           width: 100%;
           height: 100%;
           transition: transform .6s;

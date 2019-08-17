@@ -126,7 +126,7 @@ ul {
             left: 5px;
             top: 110px;
             width: 172px;
-            height: 175px;
+            height: 173px;
         }
         .button {
             position: relative;
