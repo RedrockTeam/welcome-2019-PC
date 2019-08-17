@@ -15,42 +15,42 @@
             <div class="img1 img"></div>
             <span>落英缤纷</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>信科大厦</p>
             </div>
         </li>
         <li>
             <div class="img2 img"></div>
             <span>八十万</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>八十万厕所</p>
             </div>
         </li>
         <li>
             <div class="img3 img"></div>
             <span>别有洞天</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>风雨操场</p>
             </div>
         </li>
         <li>
             <div class="img4 img"></div>
             <span>春华秋实</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>第二教学楼</p>
             </div>
         </li>
         <li>
             <div class="img5 img"></div>
             <span>二教夕阳</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>第二教学楼</p>
             </div>
         </li>
         <li>
             <div class="img6 img"></div>
             <span>高山流水</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>信科大厦前</p>
             </div>
         </li>
         <li>
@@ -71,35 +71,28 @@
             <div class="img9 img"></div>
             <span>情人坡</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>老图书馆旁</p>
             </div>
         </li>
         <li>
             <div class="img10 img"></div>
             <span>数字图书馆</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>数字图书馆</p>
             </div>
         </li>
         <li>
             <div class="img11 img"></div>
             <span>仰望八教</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>第八教学楼</p>
             </div>
         </li>
         <li>
             <div class="img12 img"></div>
             <span>逸夫楼</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
-            </div>
-        </li>
-        <li>
-            <div class="img13 img"></div>
-            <span>雨红莲</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>逸夫科技楼</p>
             </div>
         </li>
       </div>
