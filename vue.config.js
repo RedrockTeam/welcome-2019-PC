@@ -11,6 +11,17 @@ module.exports = {
     // eslint-disable-next-line no-param-reassign
     config.entry.app = ['babel-polyfill', './src/main.js'];
   },
+  pwa: {
+    name: 'welcome-2019-pc',
+    themeColor: '#b0ceff',
+    msTileColor: '#000000',
+    appleMobileWebAppCapable: 'yes',
+    appleMobileWebAppStatusBarStyle: 'black',
+    workboxPluginMode: 'GenerateSW',
+    workboxOptions: {
+      include: [/\.html$/, /\.js$/, /\.(?:png|gif|jpg|jpeg|svg)$/, /\.css$/],
+    },
+  },
   devServer: {
     proxy: {
       '/api': {

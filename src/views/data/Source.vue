@@ -20,10 +20,32 @@
 </template>
 
 <script>
+/* eslint-disable no-cond-assign */
+/* eslint-disable func-names */
 import Frame from '@/components/base/Frame.vue'
 import FrameButton from '@/components/base/FrameButton.vue'
 import ScrollBar from '@/components/base/ScrollBar.vue'
 import { sourceRatio } from './db'
+
+if (!Object.entries) {
+  Object.entries = function (obj) {
+    const ownProps = Object.keys(obj);
+    let i = ownProps.length;
+    const resArray = new Array(i); // preallocate the Array
+    while (i -= 1) { resArray[i] = [ownProps[i], obj[ownProps[i]]]; }
+    return resArray;
+  };
+}
+
+if (!Object.fromEntries) {
+  Object.fromEntries = function fromEntries(iterable) {
+    return [...iterable].reduce((obj, [key, val]) => {
+      // eslint-disable-next-line no-param-reassign
+      obj[key] = val
+      return obj
+    }, {})
+  }
+}
 
 export default {
   components: {

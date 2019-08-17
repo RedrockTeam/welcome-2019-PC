@@ -7,6 +7,7 @@ import router from './router'
 import 'echarts/lib/chart/bar'
 import 'echarts/lib/component/tooltip'
 import 'echarts/lib/chart/pie'
+import './registerServiceWorker'
 
 // 注册组件后即可使用
 Vue.component('v-chart', ECharts)
