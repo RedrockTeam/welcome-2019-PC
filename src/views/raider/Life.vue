@@ -28,7 +28,6 @@ import shangye from '@/assets/img/Strategy/zhoubianshenghuo/yinhang/img4.jpg'
 import jingdong from '@/assets/img/Strategy/zhoubianshenghuo/kuaidi/img1.jpg'
 import yunda from '@/assets/img/Strategy/zhoubianshenghuo/kuaidi/img2.jpg'
 import zhongtong from '@/assets/img/Strategy/zhoubianshenghuo/kuaidi/img3.jpg'
-import youzhengC from '@/assets/img/Strategy/zhoubianshenghuo/kuaidi/img4.jpg'
 import ems from '@/assets/img/Strategy/zhoubianshenghuo/kuaidi/img5.jpg'
 import baishi from '@/assets/img/Strategy/zhoubianshenghuo/kuaidi/img6.jpg'
 import cainiao from '@/assets/img/Strategy/zhoubianshenghuo/kuaidi/img7.jpg'
@@ -61,49 +60,44 @@ export default {
         courier: [
           {
             title: '京东&顺丰&圆通',
-            location: '位于樱花园6栋，二教与马克思主义学院下面居民区石碑处',
+            location: '位于樱花园6栋，二教与马克思主义学院下面居民区石碑处。',
             imgUrl: jingdong,
           },
           {
             title: '韵达&申通',
-            location: '位于15栋楼下靠近太极操场一侧',
+            location: '位于15栋楼下靠近太极操场一侧。',
             imgUrl: yunda,
           },
           {
             title: '中通快递',
-            location: '位于学生公寓知行苑5栋背后超市旁边',
+            location: '位于学生公寓知行苑5栋背后超市旁边。',
             imgUrl: zhongtong,
           },
           {
-            title: '邮政包裹',
-            location: '位于邮政银行外面',
-            imgUrl: youzhengC,
-          },
-          {
             title: '邮政自提柜&EMS快递',
-            location: '位于香樟园四号，八十万厕所旁边',
+            location: '位于香樟园四号，八十万厕所旁边。',
             imgUrl: ems,
           },
           {
             title: '百世快递',
-            location: '位于阳光图文后面',
+            location: '位于阳光图文后面。',
             imgUrl: baishi,
           },
           {
             title: '菜鸟驿站&丰巢',
-            location: '位于静园小区里面，老校门对面左手边大茶杯奶茶店旁斜坡上行右边巷子处',
+            location: '老校门对面左手边大茶杯奶茶店旁斜坡上行右边巷子处。',
             imgUrl: cainiao,
           },
         ],
         bank: [
           {
             title: '农业银行',
-            location: '新校门出门右转，新世纪超市旁边',
+            location: '新校门出门右转，新世纪超市旁边。',
             imgUrl: nongye,
           },
           {
             title: '中国邮政储蓄银行',
-            location: '老校门出门右转，绝味鸭脖旁边',
+            location: '老校门出门右转，绝味鸭脖旁边。',
             imgUrl: youzheng,
           },
           {
@@ -125,7 +119,7 @@ export default {
           },
           {
             title: '永辉超市',
-            location: '新校门出门过马路，右转直走',
+            location: '新校门出门过马路，右转直走。',
             imgUrl: yonghui,
           },
           {

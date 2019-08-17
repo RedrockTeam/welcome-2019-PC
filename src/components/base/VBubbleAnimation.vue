@@ -14,18 +14,18 @@ export default {
     width: 36px;
     height: 77px;
     background-image: url(../../assets/img/Flash/vBubble.png);
+  background-size: 100% 100%;
     animation: bubble 5s infinite;
 }
-$myTop : 290px;
 @keyframes bubble {
     0% {
-      transform:  translate(0, $myTop);
+      transform:  translate(0, 20.4vw);
     }
     50% {
-      transform:  translate(0, $myTop + 10);
+      transform:  translate(0, 21.2vw);
     }
     100% {
-      transform:  translate(0, $myTop);
+      transform:  translate(0, 20.4vw);
     }
 }
 </style>

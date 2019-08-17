@@ -1,6 +1,7 @@
 <template>
     <div id="yingxinhuodong">
         <title1 class="title" :isFire="isFire">迎新活动</title1>
+        <v-bubble-animation class="v-bubble-animation" />
         <div class="bg" ref="bg">
             <div class="right-content">
               <div class="right-head"></div>
@@ -34,6 +35,7 @@
 import Title from '@/components/base/Title.vue'
 import Button from '@/components/base/Button.vue'
 import ContentBg from '@/components/base/ContentBg.vue'
+import VBubbleAnimation from '@/components/base/VBubbleAnimation.vue'
 
 export default {
   name: 'yingxinhuodong',
@@ -41,6 +43,7 @@ export default {
     title1: Title,
     button1: Button,
     ContentBg,
+    VBubbleAnimation,
   },
   data() {
     return {
@@ -58,8 +61,17 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/style/variable.scss';
 
+#yingxinhuodong {
+  position: relative;
+}
 .title {
   margin: 70px auto 12px;
+}
+.v-bubble-animation {
+  position: absolute;
+  top: 58px;
+  right: 145px;
+  z-index: 1;
 }
 .bg {
     width: 1083px;
@@ -68,6 +80,7 @@ export default {
     left: 42px;
     margin: 0 auto;
     background: url(../assets/img/Yingxinhuodong/bg.png);
+  background-size: 100% 100%;
     .right-content {
         position: absolute;
         right: 140px;
@@ -79,6 +92,7 @@ export default {
         width: 225px;
         height: 144px;
         background: url(../assets/img/Yingxinhuodong/right-head.png);
+  background-size: 100% 100%;
         animation: shake 2s infinite;
       }
       .gantanhao {
@@ -88,6 +102,7 @@ export default {
         width: 23px;
         height: 37px;
         background: url(../assets/img/Yingxinhuodong/gantanhao.png);
+  background-size: 100% 100%;
         animation: doudong 2s infinite;
         transform-origin: center bottom;
       }
@@ -98,6 +113,7 @@ export default {
         width: 243px;
         height: 99px;
         background: url(../assets/img/Yingxinhuodong/right-title.png);
+  background-size: 100% 100%;
       }
     }
     .content {
@@ -105,12 +121,12 @@ export default {
       overflow: hidden;
       font-size: $contentFontSize;
       width: 318px;
-      font-family: "宋体";
+      font-family: '微软雅黑';
       color: white;
       text-align: center;
     }
     .button {
-      margin: 0 auto;
+      margin: -9px auto 0;
     }
     .left-content {
         position: absolute;
@@ -123,6 +139,7 @@ export default {
         width: 213px;
         height: 120px;
         background: url(../assets/img/Yingxinhuodong/left-head.png);
+  background-size: 100% 100%;
         animation: shake 2s infinite;
       }
       .wenhao {
@@ -132,6 +149,7 @@ export default {
         width: 32px;
         height: 40px;
         background: url(../assets/img/Yingxinhuodong/wenhao.png);
+  background-size: 100% 100%;
         animation: doudong 2s infinite;
         transform-origin: center bottom;
       }
@@ -142,6 +160,7 @@ export default {
         width: 227px;
         height: 66px;
         background: url(../assets/img/Yingxinhuodong/left-title.png);
+  background-size: 100% 100%;
       }
     }
 }

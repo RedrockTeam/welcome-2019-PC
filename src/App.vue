@@ -44,8 +44,15 @@ export default {
 @import '@/assets/style/animation.scss';
 
 @font-face {
-  font-family: coolfont;
-  src: url(./assets/font/MFLiHei.ttf);
+  font-family: 'coolfont';
+  font-display: swap;
+  src: url('./assets/font/MFLiHei.eot'); /* IE9 */
+  src: url('./assets/font/MFLiHei.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/font/MFLiHei.woff2') format('woff2'),
+  url('./assets/font/MFLiHei.woff') format('woff'), /* chrome、firefox */
+  url('./assets/font/MFLiHei.ttf') format('truetype'),
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('./assets/font/MFLiHei.svg#webfont') format('svg'); /* iOS 4.1- */
 }
 
 body {
@@ -53,7 +60,7 @@ body {
 }
 
 #app {
-  width: 1440px;
+  width: 100vw;
   margin: 0 auto;
   font-family: 'coolfont';
   font-size: 0;

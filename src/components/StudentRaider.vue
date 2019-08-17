@@ -7,7 +7,7 @@
             <ul>
                 <li class="li1">
                     <span>新生清单</span>
-                    <p>大学新生报道必备清单尽快启程新生活</p>
+                    <p>大学新生报道必备清单，尽快启程新生活</p>
                     <router-link to="/raider/list">
                       <button1 class="btn">了解更多</button1>
                     </router-link>
@@ -29,7 +29,7 @@
                 <li class="li4">
                     <span>网址大全</span>
                     <p>你想要的我都“邮”，通往各网站的窗口</p>
-                    <a href="https://www.google.com/" target="block">
+                    <a href="http://hongyan.cqupt.edu.cn/web/" target="block">
                       <button1 class="btn">了解更多</button1>
                     </a>
                 </li>
@@ -96,6 +96,7 @@ export default {
     width: 1117px;
     height: 406px;
     background: url(../assets/img/Youzigonglue/yzglBG.png) no-repeat;
+  background-size: 100% 100%;
     position: relative;
     margin: 0 auto;
     left: 25px;
@@ -142,7 +143,7 @@ ul {
         height: 40px;
         width: 181px;
         font-size: $contentFontSize;
-        font-family: "宋体";
+        font-family: '微软雅黑';
         color: white;
         margin: 10px 0 0;
     }

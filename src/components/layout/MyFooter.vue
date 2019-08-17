@@ -36,6 +36,7 @@ export default {
     width: 1440px;
     height: 285px;
     background: url(../../assets/img/Footer/footerBG.png) no-repeat;
+    background-size: 100% 100%;
 }
 .car {
     width: 90px;
@@ -43,7 +44,9 @@ export default {
     position: relative;
     left: 960px;
     background-image: url(../../assets/img/Footer/car.png);
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     animation: carMove 6s infinite;
 }
 .content {
@@ -60,39 +63,65 @@ export default {
 }
 @keyframes carMove {
     0% {
+    width: 4vw;
         background-image: url(../../assets/img/Footer/carHead.png);
+        background-position: center;
+        background-size: 100% 100%;
         position: relative;
-        left: 960px;
+        left: 67vw;
     }
     5% {
+    width: 6vw;
         background-image: url(../../assets/img/Footer/car.png);
+        /* transform: rotateY(180deg); */
+        background-position: center;
+  background-size: 100% 100%;
         position: relative;
-        left: 960px;
+        left: 67vw;
     }
     45% {
-        background-image: url(../../assets/img/Footer/car.png);
-        position: relative;
-        left: 360px;
+      width: 6vw;
+      background-image: url(../../assets/img/Footer/car.png);
+      transform: rotate(0deg);
+      background-position: center;
+      background-size: 100% 100%;
+      position: relative;
+      left: 25vw;
     }
     50% {
+      width: 4vw;
         position: relative;
-        left: 360px;
+        left: 25vw;
         background-image: url(../../assets/img/Footer/carHead.png);
+      transform: rotate(0deg);
+        background-position: center;
+  background-size: 100% 100%;
     }
     55% {
+      width: 6vw;
         position: relative;
-        left: 360px;
-        background-image: url(../../assets/img/Footer/carRight.png);
+        left: 25vw;
+        background-image: url(../../assets/img/Footer/car.png);
+        transform: rotateY(180deg);
+        background-position: center;
+  background-size: 100% 100%;
     }
     95% {
+      width: 6vw;
         position: relative;
-        left: 960px;
-        background-image: url(../../assets/img/Footer/carRight.png);
+        left: 67vw;
+        background-image: url(../../assets/img/Footer/car.png);
+        transform: rotateY(180deg);
+        background-position: center;
+  background-size: 100% 100%;
     }
     100% {
+      width: 4vw;
         background-image: url(../../assets/img/Footer/carHead.png);
+        background-position: center;
+  background-size: 100% 100%;
         position: relative;
-        left: 960px;
+        left: 67vw;
     }
 }
 

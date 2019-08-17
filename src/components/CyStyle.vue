@@ -70,6 +70,7 @@ export default {
     width: 1066px;
     height: 514px;
     background: url("../assets/img/Chongyoufengcai/cyfcBG.png") no-repeat;
+  background-size: 100% 100%;
     .left {
       left: 60px;
     }
@@ -85,12 +86,10 @@ export default {
         top: 107px;
         p {
           text-align: center;
-            height: 40px;
-            overflow: hidden;
             margin-top: 20px;
-            font-size: $contentFontSize;
-            width: 346px;
-            font-family: "宋体";
+            font-size: 14px;
+            width: 350px;
+            font-family: '微软雅黑';
             color: white;
         }
         .img {

@@ -85,7 +85,7 @@ export default {
             },
             {
               number: '四',
-              content: '请假半天以上，3天以下的，由学生本人提出书面申请（请假条见附页），经辅导员签字后报校武装部审批，并由学生本人将审批后的申请交军训排排长实施；',
+              content: '请假半天以上，3天以下的，由学生本人提出书面申请，经辅导员签字后报校武装部审批，并由学生本人将审批后的申请交军训排排长实施；',
             },
             {
               number: '五',
@@ -159,12 +159,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
+  height: 85px;
+  padding-top: 25px;
 }
 .scroll-bar {
   width: 870px;
   height: 382px;
   position: absolute;
-  top: 122px;
+  top: 111px;
   border: 3px solid #397dda;
   background: #b0cfff;
 }
@@ -172,7 +174,7 @@ export default {
   @include frameContentStyle;
   margin-top: 0;
   font-size: 10px;
-  padding: 20px;
+  padding: 30px;
   padding-top: 0;
   .content {
     .content-title {
@@ -184,19 +186,19 @@ export default {
       background: linear-gradient(-135deg, transparent 6px, #4d75e8 0);
       text-align: center;
       line-height: 53px;
-      margin: 20px auto;
+      margin: 45px auto;
     }
     .content-wrapper {
       .content-tips {
         color: #1340b1;
         font-size: 14px;
         font-family: '微软雅黑';
-        line-height: 24px;
-        margin: 10px 0;
+        line-height: 18px;
+        margin: 20px 0;
         .content-span {
           margin: auto 0;
           float: left;
-          font-size: 20px;
+          font-size: 16px;
         }
       }
     }
@@ -211,7 +213,7 @@ export default {
       background: linear-gradient(-135deg, transparent 6px, #4d75e8 0);
       text-align: center;
       line-height: 53px;
-      margin: 20px auto;
+      margin: 45px auto;
     }
     .time-wrapper {
       width: 666px;
@@ -225,6 +227,7 @@ export default {
           width: 125px;
           height: 95px;
           background: url(../../assets/img/Junxunteji/clock.png);
+  background-size: 100% 100%;
           text-align: center;
           line-height: 114px;
           font-size: 24px;

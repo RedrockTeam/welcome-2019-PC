@@ -70,13 +70,14 @@ export default {
     width: 1136px;
     height: 422px;
     background: url(../assets/img/Guanyuwomen/guanyuwomen.png) no-repeat;
+  background-size: 100% 100%;
     div {
         float: left;
     }
 }
 .left {
     width: 300px;
-    height: 212px;
+    height: 213px;
     background-color: antiquewhite;
     position: relative;
     top: 110px;
@@ -86,7 +87,7 @@ export default {
 }
 .right {
     position: relative;
-    left: 282px;
+    left: 266px;
     top: 115px;
     width: 455px;
     line-height: 24px;
@@ -98,7 +99,7 @@ export default {
         height: 150px;
         width: 456px;
         font-size: $contentFontSize;
-        font-family: "宋体";
+        font-family: '微软雅黑';
         color: white;
     }
     .button {

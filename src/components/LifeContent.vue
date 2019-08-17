@@ -34,7 +34,7 @@ export default {
     border: 2px solid #0235c7;
   }
   .title {
-    font-size: 18px;
+    font-size: 0.0125vw;
     margin: 10px 0 7px;
     font-family: '微软雅黑';
     font-size: 18px;
@@ -46,7 +46,8 @@ export default {
       width: 13px;
       height: 17px;
       float: left;
-      background: url(../assets/img/life/locationIcon.png);
+      background: url(../assets/img/life/locationIcon.png) no-repeat;
+  background-size: 100% 100%;
     }
     text-indent: 6px;
     font-size: 14px;

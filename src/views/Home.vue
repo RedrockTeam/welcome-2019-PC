@@ -58,12 +58,14 @@ export default {
   margin: 0 auto;
   position: relative;
   .left-track {
+    height: 4585px;
     position: absolute;
     top: -406px;
     left: 0;
     transform: rotateY(180deg);
   }
   .right-track {
+    height: 4585px;
     position: absolute;
     top: -406px;
     right: 0;
@@ -76,6 +78,7 @@ export default {
     width: 69px;
     height: 692px;
     background-image: url(../assets/img/Strategy/connect.png);
+  background-size: 100% 100%;
   }
   .map-raider-pipline-right {
     float: right;
@@ -83,6 +86,7 @@ export default {
     top: 744px;
     right: 288px;
     background-image: url(../assets/img/Connect/img6.png);
+  background-size: 100% 100%;
     width: 79px;
     height: 196px;
   }
@@ -90,8 +94,10 @@ export default {
     float: left;
     position: absolute;
     top: 744px;
-    left: 310px;
+    left: 318px;
     background-image: url(../assets/img/Connect/img7.png);
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
     width: 95px;
     height: 210px;
   }
@@ -100,6 +106,7 @@ export default {
     top: 1223px;
     left: 98px;
     background-image: url(../assets/img/Connect/img1.png);
+  background-size: 100% 100%;
     width: 89px;
     height: 468px;
   }
@@ -109,6 +116,7 @@ export default {
     top: 1840px;
     right: 118px;
     background-image: url(../assets/img/Connect/img2.png);
+  background-size: 100% 100%;
     width: 69px;
     height: 623px;
   }
@@ -119,6 +127,7 @@ export default {
     left: 319px;
     background-image: url(../assets/img/Connect/img3.png);
     width: 79px;
+  background-size: 100% 100%;
     height: 198px;
   }
   .special-event-pipline {
@@ -127,6 +136,7 @@ export default {
     top: 2692px;
     right: 288px;
     background-image: url(../assets/img/Connect/img4.png);
+  background-size: 100% 100%;
     width: 79px;
     height: 198px;
   }
@@ -136,6 +146,7 @@ export default {
     top: 3409px;
     right: 288px;
     background-image: url(../assets/img/Connect/img4.png);
+  background-size: 100% 100%;
     width: 79px;
     height: 198px;
   }

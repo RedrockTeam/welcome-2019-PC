@@ -1,4 +1,8 @@
 <template>
+<div>
+  <Track class="left-track" />
+  <Track class="right-track" />
+  <QRcode />
   <Frame styles="bubble">
     <scroll-bar class="scroll-bar">
       <div class="tit-bg"></div>
@@ -10,16 +14,21 @@
       </div>
     </scroll-bar>
   </Frame>
+</div>
 </template>
 
 <script>
 import Frame from '@/components/base/Frame.vue'
 import ScrollBar from '@/components/base/ScrollBar.vue'
+import Track from '@/components/layout/Track.vue'
+import QRcode from '@/components/layout/QRcode.vue'
 
 export default {
   components: {
     Frame,
     ScrollBar,
+    Track,
+    QRcode,
   },
   data() {
     return {
@@ -33,7 +42,7 @@ export default {
           content: '2019.XX.XX',
         },
         {
-          title: '活动形式',
+          title: '参与形式',
           content: '线上公众号“重游小帮手”中参与',
         },
       ],
@@ -43,6 +52,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.left-track {
+  height: 1146px;
+  position: absolute;
+  top: 288px;
+  left: 0;
+  transform: rotateY(180deg);
+}
+.right-track {
+  height: 1146px;
+  position: absolute;
+  top: 288px;
+  right: 0;
+}
 .scroll-bar {
   width: 100%;
   height: 100%;
@@ -50,11 +72,12 @@ export default {
   flex-direction: column;
   .tit-bg {
     width: 862px;
-    height: 433px;
+    height: 418px;
     margin: 18px 0;
     background:
-      url(../../assets/img/help/helpBg.png) no-repeat center,
+      url(../../assets/img/help/huaxiang.jpg) no-repeat center,
       #e8f4ff;
+    background-size: cover;
     border: 3px solid #0235c7;
   }
   .contents {
@@ -62,7 +85,7 @@ export default {
     padding: 15px 30px;
     border: 3px solid #397dda;
     background: #b7d2ff;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     .text {
       font-family: '微软雅黑';
       color: #1441b1;

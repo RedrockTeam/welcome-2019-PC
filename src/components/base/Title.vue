@@ -29,7 +29,7 @@ export default {
   width: 309px;
   height: 114px;
   z-index: 1;
-  background: url(../../assets/img/Title/Title.png) no-repeat;
+  background: url(../../assets/img/Title/Title.png) no-repeat top/100%;
   cursor: default;
 }
 .fire {
@@ -39,6 +39,7 @@ export default {
   width: 40px;
   height: 30px;
   background: url(../../assets/img/Title/fire.png) no-repeat;
+  background-size: 100% 100%;
   animation: shack 1s infinite;
 }
 .right-fire {

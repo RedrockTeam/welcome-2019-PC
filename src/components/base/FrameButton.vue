@@ -33,8 +33,10 @@ export default {
   color: #1645c4;
   cursor: pointer;
   background: url(../../assets/img/Button/frameButton.png);
+  background-size: 100% 100%;
   &:hover, &.active {
     background: url(../../assets/img/Button/frameButtonHover.png);
+    background-size: 100% 100%;
     color: #fff;
   }
 }

@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "echarts": "^4.2.1",
+    "postcss-pxtorem": "^4.0.1",
     "vue": "^2.6.10",
     "vue-echarts": "^4.0.3",
     "vue-router": "^3.0.3"
@@ -24,6 +25,8 @@
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^8.1.5",
     "node-sass": "^4.9.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "babel-polyfill": "^6.26.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.39.1"

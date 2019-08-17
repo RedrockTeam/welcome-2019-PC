@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       difficultSubject,
-      selected: '自动化学院',
+      selected: '通信与信息工程学院',
       activeBtn: 'subject',
       btns: [
         {
@@ -71,7 +71,7 @@ export default {
         tooltip: {
           trigger: 'axis',
           axisPointer: { // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow', // 默认为直线，可选为：'line' | 'shadow'
+            type: 'none', // 默认为直线，可选为：'line' | 'shadow'
           },
         },
         grid: {
@@ -145,15 +145,21 @@ export default {
             barWidth: '30%',
             data: this.difficultSubject[this.selected].map(s => s.percentage),
             itemStyle: {
-              normal: {
-                barBorderRadius: [10, 10, 0, 0],
-                barBorderColor: '#432a92',
-                barBorderWidth: 2,
-                color(params) {
-                  // build a color map as your need.
-                  const colorList = ['#ff9dba', '#7095ff', '#7ef7ff']
-                  return colorList[params.dataIndex]
-                },
+              barBorderRadius: [10, 10, 0, 0],
+              barBorderColor: '#432a92',
+              barBorderWidth: 2,
+              color(params) {
+                // build a color map as your need.
+                const colorList = ['#ff9dba', '#7095ff', '#7ef7ff']
+                return colorList[params.dataIndex]
+              },
+              opacity: 0.7,
+            },
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 20,
+                shadowColor: 'rgba(0, 0, 0, 0.3)',
+                opacity: 1,
               },
             },
           },
@@ -170,11 +176,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
+  height: 85px;
+  padding-top: 25px;
 }
 .contents {
   @include frameContentStyle;
+  margin-top: 111px;
   width: 870px;
-  height: 376px;
+  height: 382px;
   background: #b0d7ff;
   border: 3px solid #397dda;
   display: flex;
@@ -185,12 +194,15 @@ export default {
     position: absolute;
     top: 20px;
     right: 80px;
-    width: 150px;
+    width: 14.83333vw;
     height: 26px;
     color: #225bec;
     font-size: 14px;
-    background: #b7e8ff;
-    border: 1px solid #225bec;
+    background: url(../../assets/img/Chongyoufengcai/down.png) no-repeat right/22px, #b7e8ff;
+    border: 2px solid #1d88eb;
+    appearance:none;
+    border-radius: 0;
+    padding-left: 10px;
   }
   .chart-wrapper {
     width: 400px;

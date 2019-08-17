@@ -23,7 +23,6 @@
         <div v-for="(image,index) in images" :key="index" class="content">
             <img class="img" :src="images[index]">
             <div class="info">
-                <span class="sp1">姓名：</span>
                 <span class="p1">{{name[index]}}</span>
             </div>
         </div>
@@ -33,16 +32,18 @@
           <img class="img" :src="stuimages[index]"
             :style="{
               height: index === stuimages.length - 1
-                ? '100px'
+                ? '6.94vw'
                 : index === stuimages.length - 2
-                  ? '150px'
-                  : '200px',
+                  ? '10.4vw'
+                  : '13.89vw',
             }"
           >
           <div class="info">
-              <span class="sp1">姓名:</span>
+              <span class="sp1" v-if="index === stuimages.length - 2">寝室：</span>
+              <span class="sp1" v-else-if="index === stuimages.length - 1">班级：</span>
+              <span class="sp1" v-else>姓名：</span>
               <p class="p1">{{stuname[index]}}</p>
-              <span class="sp2">简介:</span>
+              <span class="sp2">简介：</span>
               <article class="p2">{{stuinfo[index]}}</article>
           </div>
       </div></div>
@@ -161,8 +162,8 @@ export default {
   flex-wrap: wrap;
   position: absolute;
   background: #87a6ff;
-  padding-top: 39px;
   z-index: 1;
+  padding-top: 25px;
   .fill {
     width: 100%;
     height: 10px;
@@ -171,7 +172,7 @@ export default {
   .title-wrapper {
     width: 870px;
     height: 45px;
-    margin-top: 12px;
+    margin-top: 23px;
     display: flex;
     justify-content: space-between;
     .title {
@@ -210,6 +211,7 @@ export default {
   @include frameContentStyle;
   margin-top: 170px;
   padding-top: 0;
+  padding-bottom: 20px;
   width: 860px;
   display: flex;
   flex-wrap: wrap;
@@ -236,6 +238,7 @@ export default {
   }
   .content:nth-child(19) {
     margin-left: 0px;
+    margin-bottom: 0;
   }
   .content {
     width: 270px;
@@ -261,12 +264,14 @@ export default {
       line-height: 22px;
       font-family: '微软雅黑';
       color: #0231a9;
+        font-size: 16px;
+        color: #0a3cca;
       }
     }
   }
   .student {
     &:nth-child(2n) {
-      margin-left: 31px;
+      margin-left: 22px;
     }
     &:nth-child(2) {
       margin-top: 4px;
@@ -274,25 +279,24 @@ export default {
     &:nth-child(1) {
       margin-top: 4px;
     }
-    width: 414px;
+    width: 419px;
     height: 265px;
     border: 3px solid rgb(57, 125, 218);
     margin-top: 20px;
     background-color: rgb(176, 207, 255);
     overflow: hidden;
+    position: relative;
     .img {
-        float: left;
-        position: relative;
-        top: 30px;
-        left: 15px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 20px;
         width: 158px;
         height: 231px;
         border: 2px solid rgb(1, 52, 199);
     }
     .info {
-        position: relative;
-        left: 30px;
-        float: left;
+        float: right;
         width: 220px;
         height: 250px;
         padding-top: 10px;
@@ -311,7 +315,6 @@ export default {
         position: relative;
         top: 23px;
         width: 200px;
-        left: 10px;
     }
     .sp1 {
         float: left;
@@ -321,7 +324,7 @@ export default {
     }
     .sp2 {
         position: relative;
-        right:35px ;
+        right:48px;
         top: 40px;
     }
     .p2 {

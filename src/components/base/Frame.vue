@@ -39,9 +39,11 @@ export default {
 <style lang="scss" scoped>
 .lantern {
   background: url(../../assets/img/Frame/lanternFrame.png) no-repeat;
+  background-size: 100% 100%;
 }
 .belt {
   background: url(../../assets/img/Frame/beltFrame.png) no-repeat;
+  background-size: 100% 100%;
   div.wrapper {
     margin-top: 112px;
     height: 514px;
@@ -49,6 +51,7 @@ export default {
 }
 .bubble {
   background: url(../../assets/img/Frame/bubbleFrame.png) no-repeat;
+  background-size: 100% 100%;
 }
 .frame {
   position: relative;

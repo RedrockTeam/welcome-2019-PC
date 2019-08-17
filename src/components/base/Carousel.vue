@@ -1,45 +1,26 @@
 <template>
-    <div class="all">
-        <div class="carousel">
-                <div class="left" @click="left()">
-                </div>
-                <div class="mid">
-                    <transition-group tag="ul" name="image" class="tran">
-                        <li
-                          v-for="(image,index) in img"
-                          :key="index+1" class="li" v-show="index === mark">
-                            <a><img :src="image"></a>
-                        </li>
-                    </transition-group>
-                </div>
-                    <div class="smallBtn">
-                        <ul>
-                            <li
-                              class="sbtn"
-                              v-for="(item,index) in img.length"
-                              :key="index" @click="change(index)"
-                              v-bind:class="{'redbtn' : index === mark}"
-                            ></li>
-                        </ul>
-                    </div>
-                <div class="right" @click="right()">
-                </div>
-            </div>
-            <div class="info">
-                <div>{{canteen.title}}：</div>
-                <p>
-                  {{canteen.content[0]}}<br />
-                  {{canteen.content[1]}}<br />
-                  {{canteen.content[2]}}</p>
-            </div>
+  <div class="all">
+    <lunbo :imglist="img.map(img => ({ imgsrc: img }))" class="lunbo" />
+    <div class="info">
+        <div>{{canteen.title}}：</div>
+        <p>
+          {{canteen.content[0]}}<br />
+          {{canteen.content[1]}}<br />
+          {{canteen.content[2]}}</p>
     </div>
+  </div>
 </template>
 
-<script>/* eslint-disable eqeqeq */
+<script>
+/* eslint-disable eqeqeq */
 /* eslint-disable consistent-return */
+import lunbo from '@/components/base/lunbo.vue'
 
 export default {
   name: 'zxstCarousel',
+  components: {
+    lunbo,
+  },
   props: {
     img: Array,
     canteen: Object,
@@ -121,84 +102,6 @@ export default {
 .all {
     position: relative;
 }
-.smallBtn {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 295px;
-    height: 20px;
-    margin: 0 auto;
-    ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-      width: 70px;
-        list-style: none;
-        li:hover {
-            width: 9px;
-            height: 9px;
-            background-color: rgb(255, 121, 156)
-        }
-    }
-}
-.sbtn {
-    top: 10px;
-    float: left;
-    width: 7px;
-    height: 8px;
-    background-color: rgb(109, 146, 254);
-    cursor: pointer;
-}
-
-.carousel {
-    position: relative;
-}
-.left {
-    position: absolute;
-    left: 107px;
-    top: 126px;
-    width: 23px;
-    height: 41px;
-    background-image: url(../../assets/img/Strategy/xueshengshitang/arrowL.png);
-
-}
-.left:hover {
-    background-image: url(../../assets/img/Strategy/xueshengshitang/arrowLhover.png);
-}
-.right {
-    position: absolute;
-    right: 107px;
-    top: 126px;
-    width: 23px;
-    height: 41px;
-    background-image: url(../../assets/img/Strategy/xueshengshitang/arrowR.png);
-    :hover {
-        background-image: url(../../assets/img/Strategy/xueshengshitang/arrowRhover.png);
-    }
-}
-.right:hover {
-    background-image: url(../../assets/img/Strategy/xueshengshitang/arrowRhover.png);
-}
-.mid {
-    position: absolute;
-    top: 14px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 559px;
-    height: 268px;
-    border: 2px solid #0235c7;
-    float: left;
-    overflow: hidden;
-}
-.tran {
-    clear: both;
-    display: block;
-    width: 559px;
-}
-.li {
-    list-style: none;
-    position: absolute;
-}
 .info {
   width: 715px;
     position: absolute;
@@ -213,33 +116,12 @@ export default {
         margin-bottom: 20px;
     }
     p {
-        height: 100px;
-        position: relative;
-        font-size: 14px;
-        font-family: "宋体";
-        color: rgb(84, 124, 236);
+      height: auto;
+      padding-bottom: 10px;
+      position: relative;
+      font-size: 14px;
+      font-family: '微软雅黑';
+      color: #124ce3;
     }
-}
-
-
-.image-enter-active {
-    transform: translateX(0);
-    transition: all 1s ease;
-}
-.image-leave-active {
-    transform: translateX(-100%);
-    transition: all 1s ease;
-}
-.image-enter {
-    transform: translateX(100%);
-}
-.image-leave {
-    transform: translateX(0);
-}
-
-.redbtn {
-    width: 9px;
-    height: 9px;
-    background-color: rgb(255, 121, 156)
 }
 </style>

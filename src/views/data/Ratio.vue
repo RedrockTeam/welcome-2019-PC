@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       genderRatio,
-      selected: '软件工程学院',
+      selected: '全校',
       activeBtn: 'ratio',
       btns: [
         {
@@ -82,7 +82,7 @@ export default {
           {
             name: '男女比例',
             type: 'pie',
-            radius: '55%',
+            radius: '94%',
             center: ['50%', '50%'],
             color: ['#97ffff', '#ff9dba'],
             hoverOffset: 5,
@@ -91,9 +91,16 @@ export default {
               { value: this.genderRatio[this.selected].female, name: '女' },
             ],
             itemStyle: {
-              show: false,
-              borderColor: '#4d75e8',
-              borderWidth: 1,
+              normal: {
+                show: false,
+                borderColor: '#4d75e8',
+                borderWidth: 3,
+              },
+              emphasis: {
+                shadowBlur: 30,
+                shadowOffsetX: 10,
+                shadowColor: 'rgba(0, 0, 0, 0.2)',
+              },
             },
             label: {
               normal: {
@@ -103,7 +110,7 @@ export default {
                 textStyle: {
                   align: 'center',
                   baseline: 'middle',
-                  fontSize: 10,
+                  fontSize: 20,
                   fontWeight: 500,
                   color: '#567eea',
                   fontFamily: 'coolfont',
@@ -112,7 +119,7 @@ export default {
               emphasis: { // 选中时候的样式
                 show: true,
                 textStyle: {
-                  fontSize: '14',
+                  fontSize: 22,
                   fontWeight: 'bold',
                 },
               },
@@ -131,11 +138,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
+  height: 85px;
+  padding-top: 25px;
 }
 .contents {
   @include frameContentStyle;
+  margin-top: 111px;
   width: 870px;
-  height: 376px;
+  height: 382px;
   background: #b0d7ff;
   border: 3px solid #397dda;
   display: flex;
@@ -146,12 +156,15 @@ export default {
     position: absolute;
     top: 20px;
     right: 80px;
-    width: 150px;
+    width: 14.83333vw;
     height: 26px;
     color: #225bec;
     font-size: 14px;
-    background: #b7e8ff;
-    border: 1px solid #225bec;
+    background: url(../../assets/img/Chongyoufengcai/down.png) no-repeat right/22px, #b7e8ff;
+    border: 2px solid #1d88eb;
+    appearance:none;
+    border-radius: 0;
+    padding-left: 10px;
   }
   .male-label {
     position: absolute;
@@ -203,11 +216,13 @@ export default {
     border: 3px solid #4d75e8;
     border-radius: 50%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .echarts {
   width: 100%;
   height: 100%;
-  transform: scale(1.65);
 }
 </style>

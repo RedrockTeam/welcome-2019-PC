@@ -28,15 +28,15 @@
 import Frame from '@/components/base/Frame.vue'
 import ScrollBar from '@/components/base/ScrollBar.vue'
 import FrameButton from '@/components/base/FrameButton.vue'
-import huiyan from '@/assets/img/Junxunteji/huiyan.png'
-import jingli from '@/assets/img/Junxunteji/jingli.png'
-import zhengbu from '@/assets/img/Junxunteji/zhengbu.png'
-import qibu from '@/assets/img/Junxunteji/qibu.png'
-import shouyucao from '@/assets/img/Junxunteji/shouyucao.png'
-import juntiquan from '@/assets/img/Junxunteji/juntiquan.png'
-import gedoushu from '@/assets/img/Junxunteji/gedoushu.png'
-import zhanjunzi from '@/assets/img/Junxunteji/zhanjunzi.png'
-import fangkongyanxi from '@/assets/img/Junxunteji/fangkongyanxi.png'
+import huiyan from '@/assets/img/Junxunteji/huiyan.jpg'
+import jingli from '@/assets/img/Junxunteji/jingli.jpg'
+import zhengbu from '@/assets/img/Junxunteji/zhengbu.jpg'
+import qibu from '@/assets/img/Junxunteji/qibu.jpg'
+import shouyucao from '@/assets/img/Junxunteji/shouyucao.jpg'
+import juntiquan from '@/assets/img/Junxunteji/juntiquan.jpg'
+import gedoushu from '@/assets/img/Junxunteji/gedoushu.jpg'
+import zhanjunzi from '@/assets/img/Junxunteji/zhanjunzi.jpg'
+import fangkongyanxi from '@/assets/img/Junxunteji/fangkongyanxi.jpg'
 
 export default {
   components: {
@@ -114,12 +114,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
+  height: 85px;
+  padding-top: 25px;
 }
 .scroll-bar {
   width: 870px;
   height: 382px;
   position: absolute;
-  top: 122px;
+  top: 111px;
   border: 3px solid #397dda;
   background: #b0cfff;
 }

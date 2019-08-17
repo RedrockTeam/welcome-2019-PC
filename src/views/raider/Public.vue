@@ -74,6 +74,9 @@ export default {
   flex-wrap: wrap;
   font-size: 10px;
     list-style: none;
+    padding-top: 18px;
+  padding-left: 11px;
+  padding-bottom: 6px;
   .content {
     width: 262px;
     height: 369px;
@@ -90,7 +93,7 @@ export default {
     }
     p {
       width: 80%;
-      color: #124ce3;
+      color: #3a6dea;
       margin: 0 auto;
       font-size: 14px;
     }
@@ -100,7 +103,8 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img1.jpg)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img1.jpg);
+  background-size: 100% 100%;
 }
 .img2 {
   margin: 27px;
@@ -108,7 +112,8 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img2.jpg)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img2.jpg);
+  background-size: 100% 100%;
 }
 .img3 {
   margin: 27px;
@@ -116,7 +121,8 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img3.jpg)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img3.jpg);
+  background-size: 100% 100%;
 }
 .img4 {
   margin: 27px;
@@ -124,7 +130,8 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img4.jpg)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img4.jpg);
+  background-size: 100% 100%;
 }
 .img5 {
   margin: 27px;
@@ -132,7 +139,8 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img5.jpg)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img5.jpg);
+  background-size: 100% 100%;
 }
 .img6 {
   margin: 27px;
@@ -140,7 +148,8 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img6.jpg)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img6.jpg);
+  background-size: 100% 100%;
 }
 .img7 {
   margin: 27px;
@@ -148,7 +157,8 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img7.jpg)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img7.jpg);
+  background-size: 100% 100%;
 }
 .img8 {
   margin: 27px;
@@ -156,26 +166,27 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img8.jpg)
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img8.jpg);
+  background-size: 100% 100%;
 }
   }
   .content:nth-child(2) {
-    margin-left: 37px;
+    margin-left: 28px;
   }
   .content:nth-child(3n) {
-    margin-left: 37px;
+    margin-left: 28px;
   }
   .content:nth-child(2n + 3) {
-    margin-left: 37px;
+    margin-left: 28px;
   }
   .content:nth-child(7) {
     margin-left: 0;
   }
   .content:nth-child(8) {
-    margin-left: 37px;
+    margin-left: 28px;
   }
   .content {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 </style>

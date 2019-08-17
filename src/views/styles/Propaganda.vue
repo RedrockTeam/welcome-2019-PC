@@ -1,15 +1,12 @@
 <template>
 <div>
-  <div class="dialog" :style="{ display: isOpen ? 'flex' : 'none' }">
-    <div class="wrapper">
-      <div class="close" @click="close()">
-        <div class="close-icon"></div>
-      </div>
-      <video class="content" :src="videos[this.video]" controls>
+  <Dialog :isOpen="isOpen" @close="onClose()">
+    <div class="video-border">
+      <video ref="video" class="content" :src="videos[this.video]" controls>
         求求你换个浏览器吧。。。1551。。。
       </video>
     </div>
-  </div>
+  </Dialog>
 
   <Frame styles="bubble">
     <div class="header">
@@ -23,52 +20,52 @@
     </div>
     <scroll-bar class="scroll-bar">
       <li>
-          <div class="img1 img"  @click="showIt(0)"></div>
+          <div class="img4 img" @click="showIt(0)"></div>
           <div class="grey"></div>
           <div class="p">
-              <span >重邮2017招生宣传片</span>
+              <span>2018年红岩网校招新视频</span>
           </div>
       </li>
       <li>
-          <div class="img2 img" @click="showIt(1)"></div>
-          <div class="grey"></div>
-          <div class="p">
-              <span>重邮2017级学生军训汇演</span>
-          </div>
-      </li>
-      <li>
-          <div class="img3 img" @click="showIt(2)"></div>
+          <div class="img3 img" @click="showIt(1)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>2017年红岩网校招新视频</span>
           </div>
       </li>
       <li>
-          <div class="img4 img" @click="showIt(3)"></div>
-          <div class="grey"></div>
-          <div class="p">
-              <span>2015年红岩网校招新视频</span>
-          </div>
-      </li>
-      <li>
-          <div class="img5 img" @click="showIt(4)"></div>
+          <div class="img5 img" @click="showIt(2)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>2016年红岩网校招新视频</span>
           </div>
       </li>
       <li>
-          <div class="img6 img" @click="showIt(5)"></div>
+          <div class="img6 img" @click="showIt(3)"></div>
           <div class="grey"></div>
           <div class="p">
-              <span>乌瞰新重邮</span>
+              <span>鸟瞰新重邮</span>
           </div>
       </li>
       <li>
-          <div class="img7 img" @click="showIt(6)"></div>
+          <div class="img7 img" @click="showIt(4)"></div>
           <div class="grey"></div>
           <div class="p">
               <span>重邮2018樱花季专题</span>
+          </div>
+      </li>
+      <li>
+          <div class="img1 img"  @click="showIt(5)"></div>
+          <div class="grey"></div>
+          <div class="p">
+              <span >重邮2017招生宣传片</span>
+          </div>
+      </li>
+      <li>
+          <div class="img2 img" @click="showIt(6)"></div>
+          <div class="grey"></div>
+          <div class="p">
+              <span>重邮2017级学生军训汇演</span>
           </div>
       </li>
       <li>
@@ -96,12 +93,14 @@
 import Frame from '@/components/base/Frame.vue'
 import FrameButton from '@/components/base/FrameButton.vue'
 import ScrollBar from '@/components/base/ScrollBar.vue'
+import Dialog from '@/components/base/Dialog.vue'
 
 export default {
   components: {
     Frame,
     FrameButton,
     ScrollBar,
+    Dialog,
   },
   data() {
     return {
@@ -109,15 +108,15 @@ export default {
       activeBtn: 'propaganda',
       video: 0,
       videos: [
-        require('../../assets/video/xuanchuan/1.mp4'),
-        require('../../assets/video/xuanchuan/2.mp4'),
-        require('../../assets/video/xuanchuan/3.mp4'),
-        require('../../assets/video/xuanchuan/4.mp4'),
-        require('../../assets/video/xuanchuan/5.mp4'),
-        require('../../assets/video/xuanchuan/6.mp4'),
-        require('../../assets/video/xuanchuan/7.mp4'),
-        require('../../assets/video/xuanchuan/8.mp4'),
-        require('../../assets/video/xuanchuan/9.mp4'),
+        require('../../assets/video/xuanchuan/2018.mp4'),
+        require('../../assets/video/xuanchuan/2017.mp4'),
+        require('../../assets/video/xuanchuan/2016.mp4'),
+        require('../../assets/video/xuanchuan/niao.mp4'),
+        require('../../assets/video/xuanchuan/yinghua.mp4'),
+        require('../../assets/video/xuanchuan/mengxiang.mp4'),
+        require('../../assets/video/xuanchuan/junxun.mp4'),
+        require('../../assets/video/xuanchuan/chunfeng.mp4'),
+        require('../../assets/video/xuanchuan/yundong.mp4'),
       ],
       btns: [
         {
@@ -144,8 +143,9 @@ export default {
       this.isOpen = true
       this.video = num
     },
-    close() {
+    onClose() {
       this.isOpen = false
+      this.$refs.video.pause()
     },
   },
 }
@@ -154,73 +154,31 @@ export default {
 <style scoped lang="scss">
 @import '@/assets/style/mixin.scss';
 
+.video-border {
+  background: #8eaafd;
+  border: 3px solid #0235c7;
+}
+.content {
+  font-size: 14px;
+}
 .header {
   @include frameHeaderStyle;
   z-index: 1;
-  height: 60px;
-}
-.dialog {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, .3);
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .wrapper {
-    position: relative;
-    padding: 38px;
-    background: #7195fb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .close {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 38px;
-      height: 38px;
-      border: 1px solid #002dae;
-      background: #1965d7;
-      .close-icon {
-        width: 30px;
-        height: 8px;
-        background: #fff;
-        transform: rotate(45deg) translate(12px, 8px);
-        position: relative;
-        &::after {
-          display: block;
-          position: absolute;
-          content: '';
-          width: 30px;
-          height: 8px;
-          background: #fff;
-          transform: rotate(90deg);
-        }
-      }
-    }
-    .content {
-      background: #8eaafd;
-      border: 4px solid #0235c7;
-      font-size: 14px;
-    }
-  }
+  height: 85px;
+  padding-top: 25px;
 }
 .scroll-bar {
-  margin-top: 120px;
+  margin-top: 111px;
   width: 870px;
   height: 382px;
   border: 3px solid #397dda;
   background: #b0cfff;
-
     li {
         width: 235px;
         height: 235px;
-        margin-left: 38px;
-        margin-top: 26px;
+        margin-left: 31px;
+        margin-top: 30px;
+        margin-right: 8px;
         float: left;
         &:nth-child(7) {
           margin-bottom: 26px;
@@ -234,31 +192,40 @@ export default {
         }
 
 .img1 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/1.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/2017zhaosheng.jpg);
+  background-size: 100% 100%;
 }
 .img2 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/2.jpg)
+    background-image: url(../../assets/img/Junxunteji/汇演poster.jpg);
+  background-size: 100% 100%;
 }
 .img3 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/3.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/3.jpg);
+  background-size: 100% 100%;
 }
 .img4 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/4.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/4.jpg);
+  background-size: 100% 100%;
 }
 .img5 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/5.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/5.jpg);
+  background-size: 100% 100%;
 }
 .img6 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/6.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/niao.jpg);
+  background-size: 100% 100%;
 }
 .img7 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/7.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/7.jpg);
+  background-size: 100% 100%;
 }
 .img8 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/8.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/8.jpg);
+  background-size: 100% 100%;
 }
 .img9 {
-    background-image: url(../../assets/img/Landscape/xuanchuan/9.jpg)
+    background-image: url(../../assets/img/Landscape/xuanchuan/9.jpg);
+  background-size: 100% 100%;
 }
         .grey {
             width: 231px;
@@ -282,7 +249,7 @@ export default {
             font-family: '微软雅黑';
             color: white;
             position: relative;
-            top: 10px;
+            top: 7px;
             opacity: 1;
         }
         img {

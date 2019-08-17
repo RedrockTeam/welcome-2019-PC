@@ -19,9 +19,11 @@
         >{{ title }}<div class="dec"></div></div>
       </div>
       <div class="video-wrapper">
-        <video :poster="video[activeTitle].poster" :src="video[activeTitle].src" controls>
-          求求你换个浏览器吧。。。1551。。。
-        </video>
+        <div class="video-border">
+          <video :poster="video[activeTitle].poster" :src="video[activeTitle].src" controls>
+            求求你换个浏览器吧。。。1551。。。
+          </video>
+        </div>
         <div class="from">资料来源于重邮小卫士</div>
       </div>
     </div>
@@ -34,9 +36,9 @@ import FrameButton from '@/components/base/FrameButton.vue'
 import huiyan from '@/assets/video/汇演.mp4'
 import xuanchuanpian from '@/assets/video/宣传片.mp4'
 import pianduan from '@/assets/video/片段.mp4'
-import huiyanPoster from '@/assets/img/Junxunteji/汇演poster.png'
-import pianduanPoster from '@/assets/img/Junxunteji/片段poster.png'
-import xuanchuanpisnPoster from '@/assets/img/Junxunteji/宣传片poster.png'
+import huiyanPoster from '@/assets/img/Junxunteji/汇演poster.jpg'
+import pianduanPoster from '@/assets/img/Junxunteji/片段poster.jpg'
+import xuanchuanpisnPoster from '@/assets/img/Junxunteji/宣传片poster.jpg'
 
 export default {
   components: {
@@ -100,12 +102,14 @@ export default {
 .header {
   @include frameHeaderStyle;
   z-index: 1;
+  height: 85px;
+  padding-top: 25px;
 }
 .contents {
   .title-wrapper {
     width: 870px;
     height: 45px;
-    margin-top: 124px;
+    margin-top: 111px;
     display: flex;
     justify-content: space-between;
     .title {
@@ -145,16 +149,22 @@ export default {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    video {
-      margin-top: 24px;
+    .video-border {
+      margin-top: 14px;
+      font-size: 0;
+      border: 3px solid #0235c7;
       width: 483px;
       height: 276px;
-      border: 3px solid #0235c7;
+      video {
+        width: 100%;
+        height: 100%;
+      }
     }
     .from {
-      font-size: 10px;
-      margin-top: 3px;
+      font-size: 14px;
+      margin-top: 6px;
       font-family: '微软雅黑';
+      color: #fff;
     }
   }
 }
