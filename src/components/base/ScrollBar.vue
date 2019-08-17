@@ -12,7 +12,8 @@
   .scroll-overflow {
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     &::-webkit-scrollbar {
       width: 15px;
       border-left: 1px solid #5e93ff;

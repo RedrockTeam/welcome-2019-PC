@@ -36,9 +36,9 @@ import FrameButton from '@/components/base/FrameButton.vue'
 import huiyan from '@/assets/video/汇演.mp4'
 import xuanchuanpian from '@/assets/video/宣传片.mp4'
 import pianduan from '@/assets/video/片段.mp4'
-import huiyanPoster from '@/assets/img/Junxunteji/汇演poster.png'
-import pianduanPoster from '@/assets/img/Junxunteji/片段poster.png'
-import xuanchuanpisnPoster from '@/assets/img/Junxunteji/宣传片poster.png'
+import huiyanPoster from '@/assets/img/Junxunteji/汇演poster.jpg'
+import pianduanPoster from '@/assets/img/Junxunteji/片段poster.jpg'
+import xuanchuanpisnPoster from '@/assets/img/Junxunteji/宣传片poster.jpg'
 
 export default {
   components: {

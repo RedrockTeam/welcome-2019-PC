@@ -130,7 +130,7 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img4.png);
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img4.jpg);
   background-size: 100% 100%;
 }
 .img5 {
@@ -148,7 +148,7 @@ export default {
   width: 204px;
   height: 204px;
   margin-top: 20px;
-    background-image: url(../../assets/img/Strategy/gongzhonghao/img6.png);
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img6.jpg);
   background-size: 100% 100%;
 }
 .img7 {

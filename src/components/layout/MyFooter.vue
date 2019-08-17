@@ -73,6 +73,7 @@ export default {
     5% {
     width: 6vw;
         background-image: url(../../assets/img/Footer/car.png);
+        /* transform: rotateY(180deg); */
         background-position: center;
   background-size: 100% 100%;
         position: relative;
@@ -80,17 +81,19 @@ export default {
     }
     45% {
       width: 6vw;
-        background-image: url(../../assets/img/Footer/car.png);
-        background-position: center;
-  background-size: 100% 100%;
-        position: relative;
-        left: 25vw;
+      background-image: url(../../assets/img/Footer/car.png);
+      transform: rotate(0deg);
+      background-position: center;
+      background-size: 100% 100%;
+      position: relative;
+      left: 25vw;
     }
     50% {
       width: 4vw;
         position: relative;
         left: 25vw;
         background-image: url(../../assets/img/Footer/carHead.png);
+      transform: rotate(0deg);
         background-position: center;
   background-size: 100% 100%;
     }
@@ -98,7 +101,8 @@ export default {
       width: 6vw;
         position: relative;
         left: 25vw;
-        background-image: url(../../assets/img/Footer/carRight.png);
+        background-image: url(../../assets/img/Footer/car.png);
+        transform: rotateY(180deg);
         background-position: center;
   background-size: 100% 100%;
     }
@@ -106,7 +110,8 @@ export default {
       width: 6vw;
         position: relative;
         left: 67vw;
-        background-image: url(../../assets/img/Footer/carRight.png);
+        background-image: url(../../assets/img/Footer/car.png);
+        transform: rotateY(180deg);
         background-position: center;
   background-size: 100% 100%;
     }

@@ -108,6 +108,8 @@ import Track from '@/components/layout/Track.vue'
 import QRcode from '@/components/layout/QRcode.vue'
 import Dialog from '@/components/base/Dialog.vue'
 
+const API = 'https://wx.idsbllp.cn/234/seniorhelpme/question'
+
 export default {
   components: {
     Frame,
@@ -161,7 +163,7 @@ export default {
       this.page = 1
     },
     async getQuestions(page, isNew = false) {
-      const res = await fetch(`/api?pageNo=${page}${isNew ? '&sortby=new' : ''}`).then(r => r.json())
+      const res = await fetch(`${API}?pageNo=${page}${isNew ? '&sortby=new' : ''}`).then(r => r.json())
       return res.filter(r => r.photoUrls.length === 0)
     },
     changePage(page) {
@@ -207,7 +209,7 @@ export default {
       this.isOpen = true
       this.question = question
       this.questionId = question.id
-      const res = await fetch(`/api/id?id=${this.questionId}`).then(r => r.json())
+      const res = await fetch(`${API}/id?id=${this.questionId}`).then(r => r.json())
       this.answers = res.answer
     },
     onClose() {
@@ -222,14 +224,14 @@ export default {
         this.getQuestions(2),
         this.getQuestions(3),
         this.getQuestions(4),
-        // this.getQuestions(5),
+        this.getQuestions(5),
       ]).then(r => r.flat())
       this.newQuestions = await Promise.all([
-        // this.getQuestions(1, true),
+        this.getQuestions(1, true),
         this.getQuestions(2, true),
         this.getQuestions(3, true),
         this.getQuestions(4, true),
-        // this.getQuestions(5, true),
+        this.getQuestions(5, true),
       ]).then(r => r.flat())
       this.newDataPage = 5
       this.hotDataPage = 5
@@ -362,15 +364,15 @@ export default {
             font-family: '微软雅黑';
             font-size: 16px;
             line-height: 16px;
-            padding-top: 20px;
+            padding-top: 18px;
             .createdAt {
               float: right;
               font-size: 12px;
             }
           }
           .con {
-            width: 677px;
-            height: 20px;
+            width: 640px;
+            height: 38px;
             margin-top: 10px;
             font-size: 14px;
             font-family: '微软雅黑';
@@ -410,7 +412,7 @@ export default {
     height: 433px;
     margin: 18px 0;
     background:
-      url(../../assets/img/help/helpBg.png) no-repeat center/auto 100%,
+      url(../../assets/img/help/helpBg.jpg) no-repeat center/auto 100%,
       #e8f4ff;
     border: 3px solid #0235c7;
   }

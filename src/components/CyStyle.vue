@@ -86,11 +86,9 @@ export default {
         top: 107px;
         p {
           text-align: center;
-            height: 40px;
-            overflow: hidden;
             margin-top: 20px;
-            font-size: $contentFontSize;
-            width: 346px;
+            font-size: 14px;
+            width: 350px;
             font-family: '微软雅黑';
             color: white;
         }

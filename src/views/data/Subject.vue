@@ -145,17 +145,15 @@ export default {
             barWidth: '30%',
             data: this.difficultSubject[this.selected].map(s => s.percentage),
             itemStyle: {
-              normal: {
-                barBorderRadius: [10, 10, 0, 0],
-                barBorderColor: '#432a92',
-                barBorderWidth: 2,
-                color(params) {
-                  // build a color map as your need.
-                  const colorList = ['#ff9dba', '#7095ff', '#7ef7ff']
-                  return colorList[params.dataIndex]
-                },
-                opacity: 0.7,
+              barBorderRadius: [10, 10, 0, 0],
+              barBorderColor: '#432a92',
+              barBorderWidth: 2,
+              color(params) {
+                // build a color map as your need.
+                const colorList = ['#ff9dba', '#7095ff', '#7ef7ff']
+                return colorList[params.dataIndex]
               },
+              opacity: 0.7,
             },
             emphasis: {
               itemStyle: {

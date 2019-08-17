@@ -115,18 +115,18 @@ export default {
             data: Object.values(this.sourceRatio),
             barWidth: '50%',
             itemStyle: {
-              normal: {
-                barBorderRadius: [0, 10, 10, 0],
-                barBorderColor: '#432a92',
-                barBorderWidth: 2,
-                color(params) {
-                  // build a color map as your need.
-                  const colorList = ['#ff9dba', '#ffd1a0', '#fff5b4', '#7ef7ff', '#7095ff']
-                  return colorList[params.dataIndex % 5]
-                },
-                opacity: 0.7,
+              barBorderRadius: [0, 10, 10, 0],
+              barBorderColor: '#432a92',
+              barBorderWidth: 2,
+              color(params) {
+                // build a color map as your need.
+                const colorList = ['#ff9dba', '#ffd1a0', '#fff5b4', '#7ef7ff', '#7095ff']
+                return colorList[params.dataIndex % 5]
               },
-              emphasis: {
+              opacity: 0.7,
+            },
+            emphasis: {
+              itemStyle: {
                 shadowBlur: 20,
                 shadowColor: 'rgba(0, 0, 0, 0.3)',
                 opacity: 1,

@@ -178,9 +178,8 @@ nav {
     margin: 0 auto;
     width: 1000px;
     .logo {
-      margin-right: 30px;
-      width: 141px;
-      height: 48px;
+      margin-right: 20px;
+      width: 151px;
       align-self: center;
     }
     .link {

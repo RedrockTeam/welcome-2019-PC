@@ -48,7 +48,7 @@ export default {
     },
   },
   mounted() {
-    this.body = document.documentElement.scrollTop ? document.documentElement : document.body
+    this.body = document.documentElement
     this.platformHeight = PLATFORMHEIGHT * this.body.scrollHeight
     this.showHeight = SHOWHEIGHT * this.body.scrollHeight
     document.addEventListener('scroll', this.showUp)

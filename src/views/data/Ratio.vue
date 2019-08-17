@@ -216,6 +216,9 @@ export default {
     border: 3px solid #4d75e8;
     border-radius: 50%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .echarts {

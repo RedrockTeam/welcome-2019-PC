@@ -6,28 +6,28 @@
           <btn-animation class="btn-animation" />
             <ul>
                 <li>
-                    <img class="img" src="../assets/img/Junxunteji/img1.png">
+                    <img class="img" src="../assets/img/Junxunteji/img1.jpg">
                     <p>军训锻炼的是胆量和意识，但也别折了身体。</p>
                     <router-link to="/training/tips">
                       <button1 class="button">军训贴士</button1>
                     </router-link>
                 </li>
                 <li>
-                    <img class="img" src="../assets/img/Junxunteji/img2.png">
+                    <img class="img" src="../assets/img/Junxunteji/img2.jpg">
                     <p>立正，稍息，正步走，各司其职。消防，手语，大汇报。</p>
                     <router-link to="/training/content">
                       <button1 class="button">训练内容</button1>
                     </router-link>
                 </li>
                 <li>
-                    <img class="img" src="../assets/img/Junxunteji/img3.png">
+                    <img class="img" src="../assets/img/Junxunteji/img3.jpg">
                     <p>迈着矫健的步伐，挺拔的身姿，跑道上留下他们勇往直前的足迹。</p>
                     <router-link to="/training/video">
                       <button1 class="button">历年视频</button1>
                     </router-link>
                 </li>
                 <li>
-                    <img class="img" src="../assets/img/Junxunteji/img4.png">
+                    <img class="img" src="../assets/img/Junxunteji/img4.jpg">
                     <p>以军人的标准严格要求自己，别开生面“开学第一课”。</p>
                     <router-link to="/training/discipline">
                       <button1 class="button">军训纪律</button1>
