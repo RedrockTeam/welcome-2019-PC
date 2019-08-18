@@ -965,7 +965,7 @@ export default {
           width: 18px;
           height: 4px;
           position: absolute;
-          top: 36px;
+          top: 38px;
           left: 284px;
           transform: rotate(45deg);
           background: #87a6ff;

@@ -23,7 +23,7 @@ export default {
 .title {
   position: relative;
   text-align: center;
-  line-height: 100px;
+  line-height: 102px;
   font-size: 32px;
   color: white;
   width: 309px;
