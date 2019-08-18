@@ -11,7 +11,7 @@
         <router-link to="/" v-if="index === 0">
           <div class="link">{{ data.title }}</div>
         </router-link>
-        <a href="https://redrock.team/aboutus/" target="block" v-else-if="index === navLinkData.length - 1">
+        <a href="http://hongyan.cqupt.edu.cn/aboutus/" target="block" v-else-if="index === navLinkData.length - 1">
           <div class="link">{{ data.title }}</div>
         </a>
         <div class="link" v-else>{{ data.title }}</div>

@@ -15,7 +15,7 @@
             <div class="img1 img"></div>
             <span>落英缤纷</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>信科大厦</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>信科大楼</p>
             </div>
         </li>
         <li>

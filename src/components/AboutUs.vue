@@ -12,7 +12,7 @@
                   红岩网校工作站在校团委老师的指导下，由学生自我管理，多年来走出了一大批优秀的IT人才，深受电信运营商和BAT等知名互联网企业的青睐。
                   团队先后获评“全国五四红旗团支部”“团中央新媒体专业工作室”“重庆市IT杰出青年群体”等系列荣誉。
                 </article>
-                <a href="https://redrock.team/aboutus/" target="block">
+                <a href="http://hongyan.cqupt.edu.cn/aboutus/" target="block">
                   <button1 class="button">了解更多</button1>
                 </a>
             </div>
@@ -96,7 +96,7 @@ export default {
         overflow: hidden;
         text-indent: 20px;
         position: relative;
-        height: 150px;
+        height: 170px;
         width: 456px;
         font-size: $contentFontSize;
         font-family: '微软雅黑';
@@ -104,7 +104,6 @@ export default {
     }
     .button {
         float: right;
-        margin-top: 20px;
     }
 }
 </style>
