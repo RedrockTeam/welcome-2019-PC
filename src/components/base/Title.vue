@@ -25,7 +25,7 @@ export default {
   text-align: center;
   line-height: 102px;
   font-size: 32px;
-  color: white;
+  color: #cbfffa;
   width: 309px;
   height: 114px;
   z-index: 1;
