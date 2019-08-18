@@ -99,7 +99,7 @@ export default {
               emphasis: {
                 shadowBlur: 30,
                 shadowOffsetX: 10,
-                shadowColor: 'rgba(0, 0, 0, 0.2)',
+                shadowColor: 'rgba(0, 0, 0, 0.1)',
               },
             },
             label: {

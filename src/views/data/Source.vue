@@ -145,12 +145,12 @@ export default {
                 const colorList = ['#ff9dba', '#ffd1a0', '#fff5b4', '#7ef7ff', '#7095ff']
                 return colorList[params.dataIndex % 5]
               },
-              opacity: 0.7,
+              opacity: 0.8,
             },
             emphasis: {
               itemStyle: {
                 shadowBlur: 20,
-                shadowColor: 'rgba(0, 0, 0, 0.3)',
+                shadowColor: 'rgba(0, 0, 0, 0.2)',
                 opacity: 1,
               },
             },

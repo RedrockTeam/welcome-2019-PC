@@ -295,7 +295,7 @@ export default {
       }
     }
     .con {
-      width: 677px;
+      width: 670px;
       height: 45px;
       margin-top: 10px;
       font-size: 14px;
@@ -305,7 +305,12 @@ export default {
       white-space: pre-wrap; //只对中文起作用，强制换行。
       text-align:justify;  //css英文语句的两端对齐：
       text-justify:inter-ideograph;
-      overflow: auto;
+      /* overflow: auto; */
+      overflow: hidden;
+      text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
     }
     .foot {
       display: flex;
@@ -371,7 +376,7 @@ export default {
             }
           }
           .con {
-            width: 640px;
+            width: 630px;
             height: 38px;
             margin-top: 10px;
             font-size: 14px;
@@ -381,7 +386,12 @@ export default {
             white-space: pre-wrap; //只对中文起作用，强制换行。
             text-align:justify;  //css英文语句的两端对齐：
             text-justify:inter-ideograph;
-            overflow: auto;
+            /* overflow: auto; */
+      overflow: hidden;
+      text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
           }
           .foot {
             margin-top: -6px;
@@ -412,8 +422,7 @@ export default {
     height: 433px;
     margin: 18px 0;
     background:
-      url(../../assets/img/help/helpBg.jpg) no-repeat center/auto 100%,
-      #e8f4ff;
+      url(../../assets/img/help/helpBg.jpg) no-repeat center/100% 100%;
     border: 3px solid #0235c7;
   }
   .contents {
