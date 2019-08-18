@@ -54,7 +54,6 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  width: 1440px;
   margin: 0 auto;
   position: relative;
   .left-track {

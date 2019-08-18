@@ -231,7 +231,6 @@ export default {
   top:63px;
   margin: 0 auto;
   height: 631px;
-  width: 100vw;
   background-image: url(../../../assets/img/Banner/banner.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;

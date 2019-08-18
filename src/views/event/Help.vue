@@ -281,7 +281,7 @@ export default {
     border: 2px solid #7ca0ff;
   }
   .con-wrapper {
-    margin: 20px 18px 14px 123px;
+    margin: 24px 18px 14px 123px;
     height: 88px;
     color: #3861c3;
     .name {
@@ -378,7 +378,7 @@ display: -webkit-box;
           .con {
             width: 630px;
             height: 38px;
-            margin-top: 10px;
+            margin-top: 21px;
             font-size: 14px;
             font-family: '微软雅黑';
             word-break: keep-all;
@@ -394,7 +394,8 @@ display: -webkit-box;
 -webkit-box-orient: vertical;
           }
           .foot {
-            margin-top: -6px;
+            float: right;
+            margin-top: -12px;
             display: flex;
             justify-content: flex-end;
             font-size: 12px;

@@ -95,6 +95,7 @@ export default {
             },
             zlevel: 1,
             axisLabel: {
+              margin: 14,
               textStyle: {
                 fontWeight: 'bold',
               },

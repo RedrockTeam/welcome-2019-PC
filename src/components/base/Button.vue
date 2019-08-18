@@ -18,8 +18,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 133px ;
-  height: 48px ;
+  width: 133px;
+  height: 48px;
+  line-height: 2px;
   background: url(../../assets/img/Button/button.png);
   background-size: 100% 100%;
   cursor: pointer;

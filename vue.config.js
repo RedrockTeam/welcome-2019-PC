@@ -12,14 +12,18 @@ module.exports = {
     config.entry.app = ['babel-polyfill', './src/main.js'];
   },
   pwa: {
-    name: 'welcome-2019-pc',
+    name: '邮你造未来 | 2019 迎新网',
     themeColor: '#b0ceff',
-    msTileColor: '#000000',
+    msTileColor: '#b0ceff',
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
+    appleMobileWebAppStatusBarStyle: '#b0ceff',
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
       include: [/\.html$/, /\.js$/, /\.(?:png|gif|jpg|jpeg|svg)$/, /\.css$/],
+    },
+    iconPaths: {
+      favicon32: 'img/icons/logo192x192.png',
+      favicon16: 'img/icons/logo192x192.png',
     },
   },
   devServer: {

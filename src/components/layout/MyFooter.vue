@@ -34,7 +34,6 @@ export default {
 <style lang="scss" scoped>
 #footer {
     margin: 0 auto;
-    width: 1440px;
     height: 285px;
     background: url(../../assets/img/Footer/footerBG.png) no-repeat;
     background-size: 100% 100%;
