@@ -94,13 +94,14 @@ export default {
         }
         .img {
             position: relative;
-            top: 3px;
-            width: 338px;
-            height: 245px;
-            left: 4px;
+            top: 1px;
+            width: 342px;
+            height: 249px;
+            left: 2px;
+            border: 3px solid #0235c7;
         }
         .button {
-            margin-top: 10px;
+            margin-top: 14px;
             margin-left: 100px;
         }
 

@@ -113,7 +113,7 @@ export default {
     display: flex;
     justify-content: space-between;
     .title {
-      width: 290px;
+      width: 292px;
       height: 45px;
       border: 2px solid #1644c5;
       background: #174bdd;

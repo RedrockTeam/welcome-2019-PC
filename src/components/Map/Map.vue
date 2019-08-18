@@ -13,7 +13,7 @@
           />
           <div class="clear" @click="clear"></div>
           <header-btn @click="onSearch(searchText)">
-            <img class="img" width="20" height="20" src="../../assets/img/Map/search.png" />
+            <img class="img" src="../../assets/img/Map/search.png" />
           </header-btn>
           <div class="search-result" v-show="searched">
             <span class="result-tips" v-if="result">你要找的是不是：</span>
@@ -947,6 +947,8 @@ export default {
         justify-content: space-around;
         align-items: center;
         .img {
+          width: 17px;
+          height: 19px;
           margin-top: 13px;
         }
         input {
@@ -1013,6 +1015,7 @@ export default {
             width: 16px;
             height: 4px;
             margin-bottom: 2px;
+            margin-right: 1px;
             background: #fff;
           }
           margin-right: 25px;
@@ -1023,6 +1026,7 @@ export default {
             width: 16px;
             height: 4px;
             margin-bottom: 2px;
+            margin-right: 1px;
             background: #fff;
             position: relative;
             &::before {
@@ -1108,7 +1112,7 @@ export default {
       .tips {
         color: #fff;
         height: 30px;
-        margin-left: 366px;
+        margin-left: 352px;
         margin-top: 400px;
         font-size: 14px;
       }

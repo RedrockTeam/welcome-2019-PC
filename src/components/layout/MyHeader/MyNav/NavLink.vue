@@ -49,8 +49,9 @@ export default {
     }
     .filler-bottom {
       min-height: 15px;
+      margin-top: 2px;
       background: url(../../../../assets/img/Nav/NavLink-bottom.png);
-  background-size: 100% 100%;
+      background-size: 100% 100%;
     }
     transform: translate(0, -13px);
     transition: max-height .6s ease-out;

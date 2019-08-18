@@ -29,7 +29,7 @@ export default {
   height: 60px;
   font-size: $frameButtonFontSize;
   text-align: center;
-  line-height: 65px;
+  line-height: 67px;
   color: #1645c4;
   cursor: pointer;
   background: url(../../assets/img/Button/frameButton.png);

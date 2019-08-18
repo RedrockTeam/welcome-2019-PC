@@ -160,7 +160,9 @@ export default {
     height: 26px;
     color: #225bec;
     font-size: 14px;
-    background: url(../../assets/img/Chongyoufengcai/down.png) no-repeat right/22px, #b7e8ff;
+    background:
+      url(../../assets/img/Chongyoufengcai/down.png) no-repeat right center/23px 23px,
+      #b7e8ff;
     border: 2px solid #1d88eb;
     appearance:none;
     border-radius: 0;

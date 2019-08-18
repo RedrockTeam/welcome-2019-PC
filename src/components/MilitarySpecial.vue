@@ -123,10 +123,11 @@ ul {
         }
         .img {
             position: relative;
-            left: 5px;
-            top: 110px;
-            width: 172px;
-            height: 173px;
+            left: 2px;
+            top: 107px;
+            width: 178px;
+            height: 179px;
+            border: 3px solid #0235c7;
         }
         .button {
             position: relative;

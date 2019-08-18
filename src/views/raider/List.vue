@@ -71,7 +71,7 @@ height: 53px;
 background: #4d75e8;
 background: linear-gradient(-135deg, transparent 6px, #4d75e8 0);
 text-align: center;
-line-height: 53px;
+line-height: 54px;
 margin: 30px auto 20px;
 }
 ul {

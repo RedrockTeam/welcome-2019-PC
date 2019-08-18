@@ -354,7 +354,7 @@ export default {
         background: #4d75e8;
         background: linear-gradient(-135deg, transparent 6px, #4d75e8 0);
         text-align: center;
-        line-height: 53px;
+        line-height: 54px;
         padding: 0 20px;
       }
     }
@@ -388,7 +388,9 @@ export default {
       height: 26px;
       color: #225bec;
       font-size: 14px;
-      background: url(../../assets/img/Chongyoufengcai/down.png) no-repeat right/22px, #b7e8ff;
+      background:
+        url(../../assets/img/Chongyoufengcai/down.png) no-repeat right center/23px 23px,
+        #b7e8ff;
       border: 2px solid #1d88eb;
       appearance:none;
       border-radius: 0;
@@ -405,7 +407,7 @@ export default {
         background: #4d75e8;
         background: linear-gradient(-135deg, transparent 6px, #4d75e8 0);
         text-align: center;
-        line-height: 53px;
+        line-height: 54px;
         margin: 30px auto 20px;
         padding: 0 20px;
       }
