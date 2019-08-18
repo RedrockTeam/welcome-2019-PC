@@ -1046,8 +1046,8 @@ export default {
       padding: 50px 34px;
       margin: -20px auto 0;
       position: relative;
+      display: flex;
       .sidebar {
-        float: left;
         width: 198px;
         height: 389px;
         .title {
@@ -1068,9 +1068,10 @@ export default {
         }
       }
       .map {
-        float: right;
         width: 654Px;
+        max-width: 654px;
         height: 389Px;
+        max-height: 389px;
         border: 4px solid #0235c7;
         background-color: #96ecbb;
         margin: 500px;
@@ -1105,9 +1106,9 @@ export default {
         }
       }
       .tips {
-        float: right;
         color: #fff;
-        margin-right: 20px;
+        height: 30px;
+        margin-left: 366px;
         margin-top: 400px;
         font-size: 14px;
       }

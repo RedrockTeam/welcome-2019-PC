@@ -161,27 +161,27 @@ export default {
           },
           {
             title: '柒露营自助烤肉',
-            location: '老校门对面左手边直走可见一公共厕所，巷子处进入依次可见。',
+            location: '老校门对面左手边直走可见一公共厕所，巷子处进入。',
             imgUrl: kao,
           },
           {
             title: '无届青年餐馆',
-            location: '老校门对面左手边直走可见一公共厕所，巷子处进入依次可见。',
+            location: '老校门对面左手边直走可见一公共厕所，巷子处进入。',
             imgUrl: wu,
           },
           {
             title: '毛哥老鸭汤',
-            location: '校门对面左手边直走依次可见，公交车站附近。',
+            location: '校门对面左手边直走，公交车站附近。',
             imgUrl: mao,
           },
           {
             title: '九村烤脑花',
-            location: '校门对面左手边直走依次可见，公交车站附近。',
+            location: '校门对面左手边直走，公交车站附近。',
             imgUrl: jiu,
           },
           {
             title: '鹅掌老鸭汤',
-            location: '校门对面左手边直走依次可见，公交车站附近。',
+            location: '校门对面左手边直走，公交车站附近。',
             imgUrl: e,
           },
         ],

@@ -20,79 +20,79 @@
         </li>
         <li>
             <div class="img2 img"></div>
-            <span>八十万</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>八十万厕所</p>
-            </div>
-        </li>
-        <li>
-            <div class="img3 img"></div>
-            <span>别有洞天</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>风雨操场</p>
-            </div>
-        </li>
-        <li>
-            <div class="img4 img"></div>
-            <span>春华秋实</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>第二教学楼</p>
-            </div>
-        </li>
-        <li>
-            <div class="img5 img"></div>
-            <span>二教夕阳</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>第二教学楼</p>
-            </div>
-        </li>
-        <li>
-            <div class="img6 img"></div>
-            <span>高山流水</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>信科大厦前</p>
-            </div>
-        </li>
-        <li>
-            <div class="img7 img"></div>
-            <span>林荫大道</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
-            </div>
-        </li>
-        <li>
-            <div class="img8 img"></div>
-            <span>鸟瞰重邮</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
-            </div>
-        </li>
-        <li>
-            <div class="img9 img"></div>
-            <span>情人坡</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>老图书馆旁</p>
-            </div>
-        </li>
-        <li>
-            <div class="img10 img"></div>
-            <span>数字图书馆</span>
-            <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>数字图书馆</p>
-            </div>
-        </li>
-        <li>
-            <div class="img11 img"></div>
             <span>仰望八教</span>
             <div class="bottom">
                 <img src="../../assets/img/life/locationIcon.png"><p>第八教学楼</p>
             </div>
         </li>
         <li>
-            <div class="img12 img"></div>
-            <span>逸夫楼</span>
+            <div class="img3 img"></div>
+            <span>二教绿茵</span>
             <div class="bottom">
-                <img src="../../assets/img/life/locationIcon.png"><p>逸夫科技楼</p>
+                <img src="../../assets/img/life/locationIcon.png"><p>第二教学楼</p>
+            </div>
+        </li>
+        <li>
+            <div class="img4 img"></div>
+            <span>老图书馆</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>老图书馆</p>
+            </div>
+        </li>
+        <li>
+            <div class="img5 img"></div>
+            <span>仰望信科</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>信科大楼</p>
+            </div>
+        </li>
+        <li>
+            <div class="img6 img"></div>
+            <span>游泳池</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>风华操场旁</p>
+            </div>
+        </li>
+        <li>
+            <div class="img7 img"></div>
+            <span>重邮校徽</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>腾飞门</p>
+            </div>
+        </li>
+        <li>
+            <div class="img8 img"></div>
+            <span>别有洞天</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>风雨操场</p>
+            </div>
+        </li>
+        <li>
+            <div class="img9 img"></div>
+            <span>二教夕阳</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>第二教学楼</p>
+            </div>
+        </li>
+        <li>
+            <div class="img10 img"></div>
+            <span>高山流水</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>信科大楼旁</p>
+            </div>
+        </li>
+        <li>
+            <div class="img11 img"></div>
+            <span>林荫大道</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
+            </div>
+        </li>
+        <li>
+            <div class="img12 img"></div>
+            <span>鸟瞰重邮</span>
+            <div class="bottom">
+                <img src="../../assets/img/life/locationIcon.png"><p>重庆邮电大学</p>
             </div>
         </li>
       </div>
@@ -190,55 +190,55 @@ export default {
       float: left;
     }
     .img1 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img1.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/落英缤纷.png);
   background-size: 100% 100%;
     }
     .img2 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img2.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/八教.jpg);
   background-size: 100% 100%;
     }
     .img3 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img3.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/二教绿茵.jpg);
   background-size: 100% 100%;
     }
     .img4 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img4.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/老图.jpg);
   background-size: 100% 100%;
     }
     .img5 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img5.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/仰望信科.jpg);
   background-size: 100% 100%;
     }
     .img6 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img6.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/游泳池.jpg);
   background-size: 100% 100%;
     }
     .img7 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img7.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/重邮校徽.jpg);
   background-size: 100% 100%;
     }
     .img8 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img8.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/别有洞天.png);
   background-size: 100% 100%;
     }
     .img9 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img9.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/二教夕阳.png);
   background-size: 100% 100%;
     }
     .img10 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img10.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/高山流水.png);
   background-size: 100% 100%;
     }
     .img11 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img11.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/林荫大道.png);
   background-size: 100% 100%;
     }
     .img12 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img12.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/鸟瞰重邮.png);
   background-size: 100% 100%;
     }
     .img13 {
-        background-image: url(../../assets/img/Landscape/youyuanfengguang/img13.jpg);
+        background-image: url(../../assets/img/Landscape/youyuanfengguang/数字图书馆.png);
   background-size: 100% 100%;
     }
   }

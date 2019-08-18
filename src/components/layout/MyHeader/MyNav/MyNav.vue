@@ -137,7 +137,7 @@ export default {
               route: 'excellent',
             },
             {
-              title: '邮苑风采',
+              title: '邮苑风光',
               route: 'style',
             },
           ],

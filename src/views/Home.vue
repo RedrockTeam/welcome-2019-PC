@@ -94,7 +94,7 @@ export default {
     float: left;
     position: absolute;
     top: 744px;
-    left: 318px;
+    left: 310px;
     background-image: url(../assets/img/Connect/img7.png);
   background-size: 100% 100%;
     background-repeat: no-repeat;

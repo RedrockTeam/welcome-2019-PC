@@ -12,9 +12,10 @@
             </p>
             <p>本网站由红岩网校工作站负责开发，管理，不经红岩网校委员会书面同意，不得进行转载</p>
             <p>地址：重庆市南岸区崇文路2号（重庆邮电大学内）400065
-              <a href="https://redrock.team/aboutus/" target="block">
-                E-mail: redrock@cqupt.edu.cn (023-62461084)
+              <a href="mailto:redrock@cqupt.edu.cn" target="block">
+                E-mail: redrock@cqupt.edu.cn
               </a>
+              <span>(023-62461084)</span>
             </p>
         </div>
     </div>

@@ -124,9 +124,10 @@ export default {
 .deng {
   margin: 0 auto;
   width: 7px;
-  height: 30px;
-  position: relative;
-  top: 4px;
+  height: 20px;
+  position: absolute;
+  bottom: -24px;
+  left: 32px;
   .deng1 {
     width: 7px;
     height: 3px;

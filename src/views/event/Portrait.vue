@@ -43,7 +43,7 @@ export default {
         },
         {
           title: '参与形式',
-          content: '线上公众号“重游小帮手”中参与',
+          content: '线上公众号“重邮小帮手”中参与',
         },
       ],
     }
