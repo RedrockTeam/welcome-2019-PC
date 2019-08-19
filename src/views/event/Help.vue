@@ -292,6 +292,7 @@ export default {
       .createdAt {
         float: right;
         font-size: 12px;
+        font-family: '微软雅黑';
       }
     }
     .con {
@@ -315,11 +316,13 @@ display: -webkit-box;
     .foot {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       font-size: 12px;
       font-family: '微软雅黑';
     }
     .talk {
       margin-right: 10px;
+      line-height: 14px;
     }
   }
 }
@@ -371,6 +374,7 @@ display: -webkit-box;
             line-height: 16px;
             padding-top: 18px;
             .createdAt {
+              font-family: '微软雅黑';
               float: right;
               font-size: 12px;
             }
@@ -404,9 +408,6 @@ display: -webkit-box;
               margin-left: 35px;
             }
           }
-          .talk {
-            margin-right: 10px;
-          }
         }
       }
     }
@@ -427,6 +428,7 @@ display: -webkit-box;
     border: 3px solid #0235c7;
   }
   .contents {
+    width: 880px;
     padding-right: 18px;
     .loading {
       font-size: 14px;
@@ -473,6 +475,9 @@ display: -webkit-box;
           color: #3861c3;
           font-weight: bold;
           cursor: pointer;
+          font-size: 14px;
+          font-family: '微软雅黑';
+          line-height: 14px;
         }
       }
       .pagination {
