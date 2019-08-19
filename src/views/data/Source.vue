@@ -97,7 +97,7 @@ export default {
           formatter(params) {
             return `
               ${params[0].axisValueLabel}<br />
-              <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params[0].color};"></span>${params[0].seriesName}：${params[0].value === 800 ? '2868' : params[0].value}
+              <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params[0].color};"></span>${params[0].seriesName}：${params[0].value === 760 ? '2868' : params[0].value}
             `
           },
         },
@@ -136,16 +136,28 @@ export default {
             type: 'bar',
             data: Object.values(this.sourceRatio),
             barWidth: '50%',
+            label: {
+              show: true,
+              position: 'right',
+              textStyle: { // 数值样式
+                color: '#7297ff',
+                fontSize: 14,
+                fontWeight: 'bold',
+              },
+              // eslint-disable-next-line consistent-return
+              formatter(params) {
+                if (params.name === '重庆') {
+                  return '2868'
+                }
+              },
+            },
             itemStyle: {
-              barBorderRadius: [0, 10, 10, 0],
-              barBorderColor: '#432a92',
-              barBorderWidth: 2,
               color(params) {
                 // build a color map as your need.
                 const colorList = ['#ff9dba', '#ffd1a0', '#fff5b4', '#7ef7ff', '#7095ff']
                 return colorList[params.dataIndex % 5]
               },
-              opacity: 0.8,
+              opacity: 0.9,
             },
             emphasis: {
               itemStyle: {

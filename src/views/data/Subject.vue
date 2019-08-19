@@ -145,16 +145,22 @@ export default {
             type: 'bar',
             barWidth: '30%',
             data: this.difficultSubject[this.selected].map(s => s.percentage),
+            label: {
+              show: true,
+              position: 'top',
+              textStyle: { // 数值样式
+                color: '#7297ff',
+                fontSize: 14,
+                fontWeight: 'bold',
+              },
+            },
             itemStyle: {
-              barBorderRadius: [10, 10, 0, 0],
-              barBorderColor: '#432a92',
-              barBorderWidth: 2,
               color(params) {
                 // build a color map as your need.
                 const colorList = ['#ff9dba', '#7095ff', '#7ef7ff']
                 return colorList[params.dataIndex]
               },
-              opacity: 0.8,
+              opacity: 0.9,
             },
             emphasis: {
               itemStyle: {
