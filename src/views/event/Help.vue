@@ -93,7 +93,7 @@
               </div>
               <div class="right btn" @click="goNext()"></div>
             </div>
-            <div class="look">关注重邮小帮手公众号，即可参与提问</div>
+            <div class="look">关注重邮小帮手公众号，即可参与提问，并查看带有图片的提问和回答。</div>
           </div>
         </div>
       </scroll-bar>
@@ -297,7 +297,7 @@ export default {
     }
     .con {
       width: 670px;
-      height: 45px;
+      height: 42px;
       margin-top: 10px;
       font-size: 14px;
       font-family: '微软雅黑';

@@ -33,9 +33,6 @@
 <script>
 import Frame from '@/components/base/Frame.vue'
 import FrameButton from '@/components/base/FrameButton.vue'
-import huiyan from '@/assets/video/汇演.mp4'
-import xuanchuanpian from '@/assets/video/宣传片.mp4'
-import pianduan from '@/assets/video/片段.mp4'
 import huiyanPoster from '@/assets/img/Junxunteji/汇演poster.jpg'
 import pianduanPoster from '@/assets/img/Junxunteji/片段poster.jpg'
 import xuanchuanpisnPoster from '@/assets/img/Junxunteji/宣传片poster.jpg'
@@ -74,15 +71,15 @@ export default {
       ],
       video: {
         军训汇演: {
-          src: huiyan,
+          src: 'http://video.nalgd.top/junHui.mp4',
           poster: huiyanPoster,
         },
         军训宣传片: {
-          src: xuanchuanpian,
+          src: 'http://video.nalgd.top/xuanchuan.mp4',
           poster: xuanchuanpisnPoster,
         },
         军训片段: {
-          src: pianduan,
+          src: 'http://video.nalgd.top/pianDuan.mp4',
           poster: pianduanPoster,
         },
       },
