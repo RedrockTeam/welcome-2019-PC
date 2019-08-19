@@ -178,7 +178,7 @@ nav {
     margin: 0 auto;
     width: 1000px;
     .logo {
-      margin-right: 20px;
+      margin-right: 16px;
       width: 151px;
       align-self: center;
     }
