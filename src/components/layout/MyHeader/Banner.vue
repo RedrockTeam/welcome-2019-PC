@@ -300,6 +300,7 @@ export default {
     font-family: 'coolfont';
     li {
       width: 70px;
+      height: 45px;
       text-align: center;
     }
     .day {
