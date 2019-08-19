@@ -55,7 +55,17 @@ export default {
   url('./assets/font/MFLiHei.svg#webfont') format('svg'); /* iOS 4.1- */
 }
 
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
 body {
+  width: 100vw;
   background: #b0ceff;
   overflow-x: hidden;
 }

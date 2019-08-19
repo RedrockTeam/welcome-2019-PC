@@ -11,7 +11,7 @@
       <div class="contents">
         <ul>
           <li>
-              <p class="pp1">重庆江北机场（距离学校约40公里）</p>
+              <p class="pp1">重庆江北机场(距离学校约40公里)</p>
               <p class="pp2">30分钟</p>
               <p class="pp3">70元</p>
               <p class="pp4">
@@ -19,20 +19,20 @@
               </p>
           </li>
           <li>
-              <p class="pp1">龙头寺火车站、重庆北站（距离学校约20公里）</p>
+              <p class="pp1">龙头寺火车站、重庆北站(约20公里)</p>
               <p class="pp2">26分钟</p>
               <p class="pp3">40元</p>
               <p class="pp4">
                 乘323路或168路公交车至南坪，转乘346或347路公交车至学校；或乘轻轨三号线到南坪，再转乘346或347路公交车到学校。</p>
           </li>
           <li>
-              <p class="pp1">菜园坝火车站、汽车站（距离学校约12公里）</p>
+              <p class="pp1">菜园坝火车站、汽车站(约12公里)</p>
               <p class="pp2">26分钟</p>
               <p class="pp3">25元</p>
               <p class="pp4">可在菜园坝广场乘347路公交车至学校。</p>
           </li>
           <li>
-              <p class="pp1">重庆西站（距离学校约25公里）</p>
+              <p class="pp1">重庆西站(约25公里)</p>
               <p class="pp2">48分钟</p>
               <p class="pp3">70元</p>
               <p class="pp4">
@@ -41,13 +41,13 @@
               </p>
           </li>
           <li>
-              <p class="pp1">朝天门码头（距离学校约9公里）</p>
+              <p class="pp1">朝天门码头(约9公里)</p>
               <p class="pp2">34分钟</p>
               <p class="pp3">20元</p>
               <p class="pp4">可乘车至南坪后转乘346或347路公交车至学校。</p>
           </li>
           <li>
-              <p class="pp1">崇文路2号（距离学校0公里）</p>
+              <p class="pp1">崇文路2号(0公里)</p>
               <p class="pp2">1分钟</p>
               <p class="pp3">1元</p>
               <p class="pp4">可乘坐校内观光车到教学楼、宿舍楼等；每人需自备一元现金车票。</p>
@@ -132,6 +132,7 @@ export default {
       font-family: '微软雅黑';
       color: rgb(58, 96, 207);
       width: 140px;
+      overflow: hidden;
     }
     .pp2 {
         font-size: 16px;
