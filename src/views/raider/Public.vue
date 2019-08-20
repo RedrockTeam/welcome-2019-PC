@@ -42,6 +42,11 @@
                     <span>重庆邮电大学就业中心</span>
                     <p>重庆邮电大学就业中心官方微信，实时发布校内招聘信息，就业动态等相关信息。</p>
                 </li>
+                <li class="content">
+                    <div class="img9"></div>
+                    <span>重庆邮电大学宿管会</span>
+                    <p>面向全校学生，提供最优质的服务和最新的校园动态，及时为同学推送有关宿舍的信息以及通知，为同学解决有关宿舍方面的问题，展现宿舍风采。</p>
+                </li>
       </div>
     </scroll-bar>
   </Frame>
@@ -167,6 +172,15 @@ export default {
   height: 204px;
   margin-top: 20px;
     background-image: url(../../assets/img/Strategy/gongzhonghao/img8.jpg);
+  background-size: 100% 100%;
+}
+.img9 {
+  margin: 27px;
+  border: 2px solid #0235c7;
+  width: 204px;
+  height: 204px;
+  margin-top: 20px;
+    background-image: url(../../assets/img/Strategy/gongzhonghao/img9.jpg);
   background-size: 100% 100%;
 }
   }

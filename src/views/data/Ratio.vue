@@ -22,6 +22,7 @@
       <div class="chart-wrapper">
         <v-chart :options="opt" />
       </div>
+      <div class="from">数据来源于招生办</div>
     </div>
   </Frame>
 </template>
@@ -211,6 +212,16 @@ export default {
       height: 16px;
       background: #ff9dba;
     }
+  }
+  .from {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+    font-family: '微软雅黑';
+    color: #fff;
   }
   .chart-wrapper {
     width: 320px;

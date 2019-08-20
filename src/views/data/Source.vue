@@ -13,6 +13,7 @@
       <scroll-bar class="scroll-bar">
         <div class="chart-wrapper">
           <v-chart :options="opt" />
+          <div class="from">数据来源于招生办</div>
         </div>
       </scroll-bar>
     <!-- </div> -->
@@ -192,9 +193,20 @@ export default {
   background: #b0d7ff;
 }
 .chart-wrapper {
+  position: relative;
   width: 700px;
   height: 1500px;
   margin: 0 auto;
+  .from {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+    font-family: '微软雅黑';
+    color: #fff;
+  }
 }
 .echarts {
   width: 100%;

@@ -2,11 +2,12 @@
   <div class="all">
     <lunbo :imglist="img.map(img => ({ imgsrc: img }))" class="lunbo" />
     <div class="info">
-        <div>{{canteen.title}}：</div>
+        <div class="tit">{{canteen.title}}：</div>
         <p>
           {{canteen.content[0]}}<br />
           {{canteen.content[1]}}<br />
           {{canteen.content[2]}}</p>
+        <div class="from">图片来源于宿管会</div>
     </div>
   </div>
 </template>
@@ -110,18 +111,27 @@ export default {
     top: 338px;
     text-align: left;
     margin: 0 auto;
-    div {
+    .tit {
         font-size: 18px;
         color: rgb(35, 72, 179);
         margin-bottom: 20px;
     }
     p {
       height: auto;
-      padding-bottom: 10px;
-      position: relative;
       font-size: 14px;
       font-family: '微软雅黑';
       color: #124ce3;
+      padding-bottom: 10px;
+    }
+    .from {
+      position: absolute;
+      bottom: 7px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 14px;
+      font-family: '微软雅黑';
+      color: #fff;
     }
 }
 </style>

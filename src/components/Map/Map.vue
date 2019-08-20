@@ -182,7 +182,7 @@ export default {
         },
         {
           name: '16栋',
-          position: [338, 162],
+          position: [348, 143],
         },
         {
           name: '24栋',
@@ -301,6 +301,10 @@ export default {
           position: [325, 119],
         },
         {
+          name: '兴业苑食堂',
+          position: [325, 119],
+        },
+        {
           name: '理学院',
           position: [371, 278],
         },
@@ -342,6 +346,14 @@ export default {
         },
         {
           name: '红岩网校',
+          position: [249, 169],
+        },
+        {
+          name: '团委',
+          position: [249, 169],
+        },
+        {
+          name: '学生会',
           position: [249, 169],
         },
         {
@@ -870,7 +882,7 @@ export default {
       }
     },
     addFlag(position) {
-      // console.log(position.left, position.top)
+      console.log(position.left, position.top)
       // 防止重复
       if (this.flags.some(flag => flag.left === position.left && flag.top === position.top)) return
       this.flags.push(position)
