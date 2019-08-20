@@ -19,7 +19,7 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: '#b0ceff',
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
-      include: [/\.html$/, /\.js$/, /\.(?:png|gif|jpg|jpeg|svg)$/, /\.css$/],
+      include: [/\.html$/, /\.js$/, /\.(?:png|gif|jpg|jpeg|svg)$/, /\.css$/, /\.(?:eot|svg|ttf|woff|woff2)$/],
     },
     iconPaths: {
       favicon32: 'img/icons/logo192x192.png',
