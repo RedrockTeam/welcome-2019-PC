@@ -297,7 +297,7 @@ export default {
     }
     .con {
       width: 670px;
-      height: 42px;
+      height: 40px;
       margin-top: 10px;
       font-size: 14px;
       font-family: '微软雅黑';
@@ -306,12 +306,12 @@ export default {
       white-space: pre-wrap; //只对中文起作用，强制换行。
       text-align:justify;  //css英文语句的两端对齐：
       text-justify:inter-ideograph;
-      /* overflow: auto; */
+      line-height: 21px;
       overflow: hidden;
       text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 2;
--webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
     .foot {
       display: flex;

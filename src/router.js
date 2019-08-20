@@ -110,6 +110,17 @@ const router = new Router({
       component: () => import('./views/styles/Style.vue'),
     },
   ],
+  // edge 就是 low
+  scrollBehavior(to) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        if (to.name === 'home') {
+          resolve({ x: 0, y: 0 })
+        }
+        resolve({ x: 0, y: 660 })
+      }, 500)
+    })
+  },
 })
 
 router.afterEach((to) => {
