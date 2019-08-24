@@ -35,11 +35,11 @@ export default {
       texts: [
         {
           title: '活动主题',
-          content: '简单选择形成叙述自我，绘出完整邮子画像，由你碰撞发现更多精彩。',
+          content: '通过邮子专属的小测试，绘出独一无二的“自我画像”，大数据统计来pick相同选择的“邮苑新知”。',
         },
         {
           title: '活动时间',
-          content: '2019.XX.XX',
+          content: '敬请期待',
         },
         {
           title: '参与形式',
