@@ -50,12 +50,12 @@ export default {
   font-family: 'coolfont';
   font-display: swap;
   src: url('./assets/font/MFLiHei.eot'); /* IE9 */
-  src: url('./assets/font/MFLiHei.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  src: url('./assets/font/MFLiHei.eot?#font-spider') format('embedded-opentype'), /* IE6-IE8 */
   url('./assets/font/MFLiHei.woff2') format('woff2'),
   url('./assets/font/MFLiHei.woff') format('woff'), /* chrome、firefox */
   url('./assets/font/MFLiHei.ttf') format('truetype'),
   /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('./assets/font/MFLiHei.svg#webfont') format('svg'); /* iOS 4.1- */
+  url('./assets/font/MFLiHei.svg') format('svg'); /* iOS 4.1- */
 }
 
 html {

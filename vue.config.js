@@ -3,6 +3,7 @@ module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
     ? '/game/welcome2019/pc/'
     : '/',
+  // publicPath: './',
   transpileDependencies: [
     'vue-echarts',
     'resize-detector',

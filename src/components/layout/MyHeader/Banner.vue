@@ -55,6 +55,7 @@ export default {
     }
   },
   mounted() {
+    // console.log(new Date())
     this.countTime()
     this.showTime()
   },
@@ -71,7 +72,7 @@ export default {
     countTime() {
       const date = new Date();
       const now = date.getTime();
-      const endDate = new Date('2019-9-4 23:23:23');
+      const endDate = new Date('2019-9-4 23:23:23'.replace(/-/g, '/'));
       const end = endDate.getTime();
       const leftTime = end - now;
       if (leftTime >= 0) {
