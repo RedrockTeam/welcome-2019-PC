@@ -882,7 +882,7 @@ export default {
       }
     },
     addFlag(position) {
-      console.log(position.left, position.top)
+      // console.log(position.left, position.top)
       // 防止重复
       if (this.flags.some(flag => flag.left === position.left && flag.top === position.top)) return
       this.flags.push(position)
