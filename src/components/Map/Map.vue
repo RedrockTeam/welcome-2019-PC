@@ -458,7 +458,7 @@ export default {
         },
         {
           name: '中通',
-          position: [327, 189],
+          position: [559, 242],
         },
         {
           name: '知行苑1舍（1栋）',

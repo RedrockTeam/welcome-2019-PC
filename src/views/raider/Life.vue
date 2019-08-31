@@ -70,7 +70,7 @@ export default {
           },
           {
             title: '中通快递',
-            location: '位于学生公寓知行苑5栋背后超市旁边。',
+            location: '重邮南部校区62栋二单元',
             imgUrl: zhongtong,
           },
           {
