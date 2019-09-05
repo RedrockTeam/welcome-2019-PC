@@ -300,25 +300,25 @@ export default {
     color: white;
     font-family: 'coolfont';
     li {
-      width: 70px;
+      width: 62px;
+      overflow: hidden;
       height: 45px;
-      text-align: center;
     }
     .day {
       position: absolute;
-      left: 461px;
+      left: 465px;
     }
     .hour {
       position: absolute;
-      left: 585px;
+      left: 589px;
     }
     .minute {
       position: absolute;
-      right: 566px;
+      right: 570px;
     }
     .seconds {
       position: absolute;
-      right: 442px;
+      right: 446px;
     }
   }
   .lanterns {
